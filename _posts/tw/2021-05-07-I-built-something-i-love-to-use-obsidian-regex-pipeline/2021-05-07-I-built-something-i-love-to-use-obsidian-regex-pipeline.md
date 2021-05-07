@@ -115,4 +115,4 @@ Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算
 ## 發布前官方會認真審核插件
 想要發布插件，讓插件會在 Obsidian 內建的第三方插件搜尋清單中出現，必須向 *Obsidian-Releases* 提交 PR，[例](https://github.com/obsidianmd/obsidian-releases/pull/239#issuecomment-817929015)。
 
-官方的開發者會認真的看過你的程式碼之後才 Merge。
+官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。
