@@ -35,6 +35,15 @@ layout: default
             <a class="black-link post-link-layout" href="{% link {{ post.path }} %}">
               {{ post.title | escape }}
             </a>
+            {%- if post.language -%}
+                <span class="language_tag">{{ post.language | upcase }}</span>
+            {%- endif -%}
+            {%- if post.other_language_versions.size > 0 -%}
+              {%- for L in post.other_language_versions -%}
+                {%- assign data =  L | split: "="  -%}
+                <span class="language_option"><a href="{% link _posts/{{ data[0] }} %}">{{ data[1] | upcase }}</a></span>
+              {%- endfor -%}
+            {%- endif -%}
         </li>
     
         {% if forloop.last %}
