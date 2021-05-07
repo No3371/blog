@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog//"/>
- <updated>2021-05-07T18:23:41+00:00</updated>
+ <updated>2021-05-07T18:52:48+00:00</updated>
  <id>https://no3371.github.io/blog/</id>
  <author>
    <name></name>
@@ -15,9 +15,9 @@
    
    <entry>
      <title>寫一個自己愛不釋手的工具：Obsidian Regex Pipeline</title>
-     <link href="https://no3371.github.io/blog//posts/2021/05/07/I-built-something-i-love-to-use-obsidian-regex-pipeline-tw/tw"/>
+     <link href="https://no3371.github.io/blog//posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw"/>
      <updated>2021-05-07T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/blog//posts/2021/05/07/I-built-something-i-love-to-use-obsidian-regex-pipeline-tw/I-built-something-i-love-to-use-obsidian-regex-pipeline-tw</id>
+     <id>https://no3371.github.io/blog//posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/I-built-something-i-love-to-use-obsidian-regex-pipeline</id>
      <content type="html">&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
 &lt;p&gt;自從開始使用 &lt;a href=&quot;obisidian.md&quot;&gt;Obsidian&lt;/a&gt; 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…&lt;/p&gt;
 
@@ -112,9 +112,9 @@
 
 &lt;h2 id=&quot;obsidian-的插件不難寫&quot;&gt;Obsidian 的插件不難寫&lt;/h2&gt;
 
-&lt;p&gt;Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算是滿生疏的一個領域，但仔細觀察了一下之後還是很容易上手了。個人心得是不像一般是一般為了推出 API 而推出的 API，實際使用上，感覺 Obsidian 官方有認真在思考，根據開發者可能會有的需求去設計實用方便的 API。&lt;/p&gt;
+&lt;p&gt;Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算是滿生疏的一個領域，但仔細觀察了一下之後還是很容易上手了。個人心得是不像一般為了推出 API 而推出 API，實際使用上，感覺官方有認真在思考，根據開發者可能會有的需求去設計實用方便的 API。&lt;/p&gt;
 
-&lt;p&gt;比如，我本來預期，這類型的 API 會提供我「現在選取的文字 Index 開頭&amp;amp;結尾」，但它實際上直接提供了一個 &lt;code class=&quot;highlighter-rouge&quot;&gt;getSelection()&lt;/code&gt; 可以取得完整的已選取文字，還提供了 &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceSelection()&lt;/code&gt; 讓你直接替換掉以選取的文字，相關的還有 &lt;code class=&quot;highlighter-rouge&quot;&gt;somethingSelected()&lt;/code&gt;… 可以說是相當高階且人性化的 API 了，插件作者完全可以 Focus 在實現插件功能。&lt;/p&gt;
+&lt;p&gt;比如，我本來預期，這類型的 API 會提供我「現在選取的文字開頭&amp;amp;結尾的 Index」，但它實際上直接提供了一個 &lt;code class=&quot;highlighter-rouge&quot;&gt;getSelection()&lt;/code&gt; 可以取得完整的已選取文字，還提供了 &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceSelection()&lt;/code&gt; 讓你直接替換掉以選取的文字，相關的還有 &lt;code class=&quot;highlighter-rouge&quot;&gt;somethingSelected()&lt;/code&gt;… 可以說是相當高階且人性化的 API 了，插件作者完全可以 Focus 在實現插件功能。&lt;/p&gt;
 
 &lt;p&gt;範例插件的架構也是簡單，且參數、變數、方法的命名可讀性高，我一看就大概就能對照 Obsidian 的介面看出代表什麼東西。&lt;/p&gt;
 
@@ -128,6 +128,10 @@
 &lt;p&gt;官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。&lt;/p&gt;
 </content>
    </entry>
+   
+ 
+   
+ 
    
  
 
