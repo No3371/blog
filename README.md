@@ -1,1 +1,1 @@
-blog_notafork
+Personal blog. Based on [Moving](github.com/huangyz0918/moving) theme.

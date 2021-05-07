@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+gem "jekyll", "~> 4.0.0"
+gem "rake", "~> 12.0"
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+
+group :jekyll_plugins do
+    gem 'jekyll-pug'
+    gem "jekyll-placeholders", "~> 1.0.0", git: 'https://github.com/ample/jekyll-placeholders.git'
+    gem 'jekyll-paginate-v2'
+    gem 'jekyll-feed'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-postfiles'
+  end

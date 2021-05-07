@@ -1,0 +1,13 @@
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+Gemfile.lock
+
+.DS_Store
+
+.vscode/
+
+.pug-cache/
+
+_site/
