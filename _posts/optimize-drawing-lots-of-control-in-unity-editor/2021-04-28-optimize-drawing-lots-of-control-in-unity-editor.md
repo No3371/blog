@@ -2,7 +2,7 @@
 layout: post
 title: "Optimize Drawing Lots of Controls in Unity Editor"
 tags: unity optimization
-published: true
+published: false
 language: en
 other_language_versions:
   - optimize-drawing-lots-of-control-in-unity-editor/2021-05-01-optimize-drawing-lots-of-control-in-unity-editor.md=tw
