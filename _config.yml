@@ -49,7 +49,7 @@ collections:
     output: true
   posts:
     output: true
-    permalink: /posts/:year/:month/:day/:title/:language
+    permalink: posts/:title/:language
 
 plugins:
   - jekyll-feed

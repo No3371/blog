@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Optimize Drawing Lots of Controls in Unity Editor"
+title: "如何優化複雜的編輯器介面"
 tags: unity optimization
-published: false
-language: en
+published: true
+language: tw
 other_language_versions:
-  - optimize-drawing-lots-of-control-in-unity-editor/2021-05-01-optimize-drawing-lots-of-control-in-unity-editor-tw.md=tw
+  - optimize-drawing-lots-of-control-in-unity-editor/2021-04-28-optimize-drawing-lots-of-control-in-unity-editor.md=en
 ---
 
-## IMGUI draws immediately
+## IMGUI 立刻繪製
 
 I've personally not yet tried the new UI System (UIElement), still sticking with the old IMGUI. Immediate Mode GUI, as its name implies, means the GUI get drawn immediately by CPU along with the GUI code statements get executed.
 
@@ -18,7 +18,7 @@ Things like this happens: You are checking out a project that worked by others, 
 
 Take a tool I found on Github today as example. It's a logcat viewer that help us read adb logcat output easily. While any program can easily accept and store thousands of log strings, the author decided that it can only show 200 items at once. And I have a simple explanation for that: It can't, without being painful to use.
 
-## Which ones are visible?
+## 可見元件
 
 When creating editor tools we often need to display a lot of GUI controls, for example, a complex panel composed of a lot of functional components, or simply a selection panel that shows a lot of options.
 

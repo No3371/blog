@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "如何優化複雜的編輯器介面"
+title: "Optimize Drawing Lots of Controls in Unity Editor"
 tags: unity optimization
-published: false
-language: tw
+published: true
+language: en
 other_language_versions:
-  - optimize-drawing-lots-of-control-in-unity-editor/2021-04-28-optimize-drawing-lots-of-control-in-unity-editor-en.md=en
+  - optimize-drawing-lots-of-control-in-unity-editor/2021-05-01-optimize-drawing-lots-of-control-in-unity-editor.md=tw
 ---
 
-## IMGUI 立刻繪製
+## IMGUI draws immediately
 
 I've personally not yet tried the new UI System (UIElement), still sticking with the old IMGUI. Immediate Mode GUI, as its name implies, means the GUI get drawn immediately by CPU along with the GUI code statements get executed.
 
@@ -18,7 +18,7 @@ Things like this happens: You are checking out a project that worked by others, 
 
 Take a tool I found on Github today as example. It's a logcat viewer that help us read adb logcat output easily. While any program can easily accept and store thousands of log strings, the author decided that it can only show 200 items at once. And I have a simple explanation for that: It can't, without being painful to use.
 
-## 可見元件
+## Which ones are visible?
 
 When creating editor tools we often need to display a lot of GUI controls, for example, a complex panel composed of a lot of functional components, or simply a selection panel that shows a lot of options.
 
@@ -26,7 +26,7 @@ It's important to have this in mind at the early design phase: It's not all cont
 
 In this post I'll take a simple scrollview as example.
 
-![](/assets\2021-04-28-optimize-drawing-lots-of-control-in-unity-editor\visibility.png)
+![](visibility.png)
 
 The above figure shows 3 types of blocks in the content block, which filled with different colors. Green means it's a control that is fully visible, Yellow means it's partially visible, Red means it's totally invisble.
 
