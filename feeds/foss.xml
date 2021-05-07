@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-05-07T19:54:33+00:00</updated>
+ <updated>2021-05-07T20:03:39+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -19,7 +19,7 @@
      <updated>2021-05-07T00:00:00+00:00</updated>
      <id>https://no3371.github.io/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/I-built-something-i-love-to-use-obsidian-regex-pipeline</id>
      <content type="html">&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
-&lt;p&gt;自從開始使用 &lt;a href=&quot;obisidian.md&quot;&gt;Obsidian&lt;/a&gt; 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…&lt;/p&gt;
+&lt;p&gt;自從開始使用 &lt;a href=&quot;https://obisidian.md&quot;&gt;Obsidian&lt;/a&gt; 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…&lt;/p&gt;
 
 &lt;p&gt;Obsidian 是一套網路化知識管理工具，是近年變得比較熱門的一種工具類型，其始祖是 Roam Research。這類工具的特色是基於知識具有關聯性的理念，使用者在編寫筆記的時候，標註筆記與筆記之間的關聯，而它們可以計算筆記之間的關聯，視覺化地呈現出一個網路圖表！隨著我們填入越多筆記，資料庫網路就會對我們越來越有價值，成為我們的虛擬大腦、外接記憶儲存空間，更棒的是在這個過程中，借助筆記之間的彼此連結，我們對於一個知識體系的學習效率也會大幅提高。&lt;/p&gt;
 
