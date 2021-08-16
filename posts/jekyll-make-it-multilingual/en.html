@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Jekyll: Make it Multi-Lingual" />
+<meta name="author" content="BA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called jekyll-placeholders." />
+<meta property="og:description" content="As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called jekyll-placeholders." />
+<link rel="canonical" href="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en" />
+<meta property="og:url" content="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en" />
+<meta property="og:site_name" content="#" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jekyll: Make it Multi-Lingual" />
+<script type="application/ld+json">
+{"headline":"Jekyll: Make it Multi-Lingual","dateModified":"2021-05-07T00:00:00+00:00","datePublished":"2021-05-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en"},"author":{"@type":"Person","name":"BA"},"@type":"BlogPosting","description":"As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called jekyll-placeholders.","url":"https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?" />
+  <link rel="stylesheet" href="/blog/assets/css/agate.css" />
+  <link rel="stylesheet" href="/blog/assets/css/custom.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script><link type="application/atom+xml" rel="alternate" href="https://no3371.github.io/blog/feed.xml" title="#" /></head><body>
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <head>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Jekyll: Make it Multi-Lingual</title>
+  </head>
+  <header class="post-header">
+    <div class="post-back">
+      <a class="black-link" href="/blog">
+        ← Home
+      </a>
+    </div>
+
+    <h1 class="post-title p-name" itemprop="name headline">
+      Jekyll: Make it Multi-Lingual
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-05-07T00:00:00+00:00"
+        itemprop="datePublished"
+      >May 7, 2021
+      </time>
+        &nbsp;&nbsp;Tags:
+        
+          <span class="tag">
+            <small> <a href="/blog/tags/foss"> #foss</a></small>
+          </span> 
+        &nbsp;&nbsp;Languages:&nbsp;<span class="language_tag">EN</span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called <a href="https://github.com/ample/jekyll-placeholders">jekyll-placeholders</a>.</p>
+
+<p>Our objectives here are:</p>
+<ol>
+  <li>To enble publishing posts in different lanaguages, all by Jekyll’s functionality, without javascript.</li>
+  <li>It should be an addition not a requirement, so it should be okay to publish posts in whatever and any number of languages.</li>
+  <li>It should be easy to navigate between languages.</li>
+</ol>
+
+<p>What we can take advantages of:</p>
+<ol>
+  <li>We can add whatever we want as <a href="https://jekyllrb.com/docs/front-matter/">Front Matter</a></li>
+  <li>With <a href="https://github.com/ample/jekyll-placeholders">jekyll-placeholders</a>, any Front Matter could be used in <a href="https://jekyllrb.com/docs/permalinks/">Permalink</a></li>
+  <li>Front Matters are accessible in Liquid tags, this allows us to know what languages are available for a post in Layouts/Includes.</li>
+</ol>
+
+<h2 id="generate-posts-of-languages">Generate Posts of Languages</h2>
+
+<p>The Front Matter of this post is shown below:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: "Jekyll: Make it Multi-Lingual"
+tags: foss
+published: true
+language: en
+---
+</code></pre></div></div>
+
+<p>As you can see, I specified the <strong>language</strong> entry, which contains “en”, this means, this post is written in “en” (It doesn’t matter what language it actually is, it’s just a variable).</p>
+
+<p>As for now, the post is only in English, if in the future I write another version in, for example “tw”, then it’d become:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: "Jekyll: Make it Multi-Lingual"
+tags: foss
+published: false
+language: en
+other_language_versions:
+- jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw
+---
+</code></pre></div></div>
+
+<p>A <code class="highlighter-rouge">other_language_versions</code> front matter is added, and it’s in “path_relative_to_post=lang” format. This entry will be used by Liquid to generate buttons to navigate between language versions, I’ll show how to achieve that in the next section.</p>
+
+<p>And this is my post permalink:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
+  posts:
+    output: true
+    permalink: posts/:title/:language
+</code></pre></div></div>
+
+<p>Thanks to <a href="https://github.com/ample/jekyll-placeholders">jekyll-placeholders</a>, I can reference the <strong>language</strong> Front Matter here, so when Jekyll compiles the site, this post would be <code class="highlighter-rouge">posts/2021-05-07-jekyll-make-it-multilingual/en.html</code>.</p>
+
+<p>By the way, The reason why I decide to place language at the tail is, It’d much easier to select langugage by url, though my site’d be very easy to switch language by buttons, It’s still a good thing to do.</p>
+
+<h2 id="show-the-lanaguage-options">Show The Lanaguage Options</h2>
+
+<p>In my home layout, this is how my post items are rendered:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      &lt;li&gt;// My site is based on [Moving](https://github.com/huangyz0918/moving) theme
+          &lt;span class="post-meta"&gt; // Show the date of the post
+            
+          &lt;/span&gt;
+          &lt;a class="black-link post-link-layout" href="/blog"&gt; // How it links to the acutal post page
+            
+          &lt;/a&gt;&lt;/li&gt;
+</code></pre></div></div>
+
+<p>Just after these steps, We can present posts in multiple languages.</p>
+
+
+  </div>
+
+  <a class="u-url" href="/blog/posts/jekyll-make-it-multilingual/en" hidden></a>
+  <div class="related-posts">
+    
+    
+    
+  </div>
+</article>
+
+        </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/blog/"></data>
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <ul class="contact-list">
+            <li class="p-name"><a class="black-link" href="/blog/about.html">
+                  BA 
+                </a></li><li>
+              <a class="u-email black-link" href="mailto:badevstudio@gmail.com">badevstudio@gmail.com</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </footer><div class="tags_sidebar"><a href="/blog/tags/diy">
+    <p>#diy</p></a><a href="/blog/tags/foss">
+    <p>#foss</p></a><a href="/blog/tags/unity">
+    <p>#unity</p></a></div></body>
+</html>
