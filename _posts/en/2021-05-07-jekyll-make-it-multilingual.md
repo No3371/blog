@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll: Make it Multi-Lingual"
 tags: foss
-published: false
+published: true
 language: en
 ---
 
