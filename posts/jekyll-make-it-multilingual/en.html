@@ -86,33 +86,33 @@
 <h2 id="generate-posts-of-languages">Generate Posts of Languages</h2>
 
 <p>The Front Matter of this post is shown below:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: post
-title: "Jekyll: Make it Multi-Lingual"
-tags: foss
-published: true
-language: en
----
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll:</span><span class="nv"> </span><span class="s">Make</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">Multi-Lingual"</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">foss</span>
+<span class="na">published</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">en</span>
+<span class="nn">---</span>
 </code></pre></div></div>
 
 <p>As you can see, I specified the <strong>language</strong> entry, which contains “en”, this means, this post is written in “en” (It doesn’t matter what language it actually is, it’s just a variable).</p>
 
 <p>As for now, the post is only in English, if in the future I write another version in, for example “tw”, then it’d become:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: post
-title: "Jekyll: Make it Multi-Lingual"
-tags: foss
-published: false
-language: en
-other_language_versions:
-- jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw
----
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Jekyll:</span><span class="nv"> </span><span class="s">Make</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">Multi-Lingual"</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">foss</span>
+<span class="na">published</span><span class="pi">:</span> <span class="no">false</span>
+<span class="na">language</span><span class="pi">:</span> <span class="s">en</span>
+<span class="na">other_language_versions</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw</span>
+<span class="nn">---</span>
 </code></pre></div></div>
 
 <p>A <code class="highlighter-rouge">other_language_versions</code> front matter is added, and it’s in “path_relative_to_post=lang” format. This entry will be used by Liquid to generate buttons to navigate between language versions, I’ll show how to achieve that in the next section.</p>
 
 <p>And this is my post permalink:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>collections:
   posts:
     output: true
     permalink: posts/:title/:language
@@ -125,13 +125,26 @@ other_language_versions:
 <h2 id="show-the-lanaguage-options">Show The Lanaguage Options</h2>
 
 <p>In my home layout, this is how my post items are rendered:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      &lt;li&gt;// My site is based on [Moving](https://github.com/huangyz0918/moving) theme
-          &lt;span class="post-meta"&gt; // Show the date of the post
-            
-          &lt;/span&gt;
-          &lt;a class="black-link post-link-layout" href="/blog"&gt; // How it links to the acutal post page
-            
-          &lt;/a&gt;&lt;/li&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+      <span class="nt">&lt;li&gt;</span>
+          {%- assign date_format = site.moving.date_format | default: "%b %-d, %Y" -%} // My site is based on [Moving](https://github.com/huangyz0918/moving) theme
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"post-meta"</span><span class="nt">&gt;</span> // Show the date of the post
+            {{ post.date | date: date_format }}
+          <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"black-link post-link-layout"</span> <span class="na">href=</span><span class="s">"{{ post.url | prepend: site.baseurl}}"</span><span class="nt">&gt;</span> // How it links to the acutal post page
+            {{ post.title | escape }}
+          <span class="nt">&lt;/a&gt;</span>
+          {%- if post.language -%} // If the post has **language** front matter
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"language_tag"</span><span class="nt">&gt;</span>{{ post.language | upcase }}<span class="nt">&lt;/span&gt;</span> // en -&gt; EN
+          {%- endif -%}
+          {%- if post.other_language_versions.size &gt; 0 -%} // If the post has **other_language_versions** front matter
+            {%- for L in post.other_language_versions -%} // Iterate through all options
+              {%- assign data =  L | split: "="  -%} // Split the entry, take jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw as example, data[0] will be jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md and data[1] will be tw.
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"language_option"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{% link _posts/{{ data[0] }} %}"</span><span class="nt">&gt;</span>{{ data[1] | upcase }}<span class="nt">&lt;/a&gt;&lt;/span&gt;</span> // We use **link** here, so Jekyll will do the job for us to get the actual link, data[1] is showing what language version the button leads to
+            {%- endfor -%}
+          {%- endif -%}
+      <span class="nt">&lt;/li&gt;</span>
+
 </code></pre></div></div>
 
 <p>Just after these steps, We can present posts in multiple languages.</p>
