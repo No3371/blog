@@ -21,7 +21,7 @@ What we can take advantages of:
 ## Generate Posts of Languages
 
 The Front Matter of this post is shown below:
-```
+```markdown
 ---
 layout: post
 title: "Jekyll: Make it Multi-Lingual"
@@ -34,7 +34,7 @@ language: en
 As you can see, I specified the **language** entry, which contains "en", this means, this post is written in "en" (It doesn't matter what language it actually is, it's just a variable).
 
 As for now, the post is only in English, if in the future I write another version in, for example "tw", then it'd become:
-```
+```markdown
 ---
 layout: post
 title: "Jekyll: Make it Multi-Lingual"
@@ -49,7 +49,7 @@ other_language_versions:
 A `other_language_versions` front matter is added, and it's in "path_relative_to_post=lang" format. This entry will be used by Liquid to generate buttons to navigate between language versions, I'll show how to achieve that in the next section.
 
 And this is my post permalink:
-```
+```markdown
 collections:
   posts:
     output: true
@@ -63,7 +63,8 @@ By the way, The reason why I decide to place language at the tail is, It'd much 
 ## Show The Lanaguage Options
 
 In my home layout, this is how my post items are rendered:
-```
+```html
+{% raw %}
       <li>
           {%- assign date_format = site.moving.date_format | default: "%b %-d, %Y" -%} // My site is based on [Moving](https://github.com/huangyz0918/moving) theme
           <span class="post-meta"> // Show the date of the post
@@ -82,6 +83,7 @@ In my home layout, this is how my post items are rendered:
             {%- endfor -%}
           {%- endif -%}
       </li>
+{% endraw %}
 ```
 
 Just after these steps, We can present posts in multiple languages.
