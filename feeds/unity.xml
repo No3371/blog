@@ -4,13 +4,27 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-08-17T07:36:42+00:00</updated>
+ <updated>2021-08-17T07:45:10+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
+   <entry>
+     <title>Unity Memory Leak With GooglePlay Plugins</title>
+     <link href="https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/en"/>
+     <updated>2021-08-17T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id>
+     <content type="html">&lt;p&gt;So it seems if you have Google Play Plugins in your Unity project and you have &lt;strong&gt;Auto Resolution On Build&lt;/strong&gt; toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize, Unity will try to GC.Collect from time to time and that makes Editor freeze, FeelsBadMan.&lt;/p&gt;
+
+&lt;p&gt;Unity 2018.4.35f1
+GooglePlayPlugins 1.5.0&lt;/p&gt;
+</content>
+   </entry>
+   
  
    
  
