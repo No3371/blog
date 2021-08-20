@@ -4,13 +4,35 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-08-17T09:00:31+00:00</updated>
+ <updated>2021-08-20T03:22:14+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
+   <entry>
+     <title>Free &amp; Private PushBullet with PatchBay</title>
+     <link href="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en"/>
+     <updated>2021-08-20T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id>
+     <content type="html">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive 321.&lt;/p&gt;
+
+&lt;p&gt;Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities.&lt;/p&gt;
+
+&lt;p&gt;I’ve made several personal tools based on PatchBay, for example, PushBullet:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1f16e99fc1b49cdd4be25adc9aaab025.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours.&lt;/p&gt;
+
+&lt;p&gt;As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all GETer PC runs this script will receive data POSTed to the pubsub channel, not just 1 GETer PC.&lt;/p&gt;
+</content>
+   </entry>
+   
  
    
  
