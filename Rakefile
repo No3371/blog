@@ -19,6 +19,7 @@ CNAME = CONFIG["CNAME"]
 namespace :site do
   desc "Generate the site and push changes to remote origin"
   task :deploy do
+    repo = Dir.pwd
 
     # Detect pull request
     if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
@@ -40,11 +41,13 @@ namespace :site do
     puts ">> #{Dir.pwd}"
     sh "ls"
     puts ">>----------"
+    # if _site does not exist, clone it
     unless Dir.exist? CONFIG["destination"]
       puts "Destination does not exist"
       sh "git clone https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
     end
 
+    # go in to _site and switch to gh_page, note: this is different repo
     Dir.chdir(CONFIG["destination"]) {
       sh "git checkout #{DESTINATION_BRANCH}"
       puts ">> #{Dir.pwd}"
@@ -70,6 +73,17 @@ namespace :site do
             git push --quiet origin #{DESTINATION_BRANCH};
          fi"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+    end
+    # Back to parent repo, we don't need to switch branch here
+    Dir.chdir(repo) do
+      # check if there is anything to add and commit, and pushes it
+      sh "if [ -n '$(git status --porcelain) _tags' ]; then
+            echo '#{CNAME}' > ./CNAME;
+            git add _tags.;
+            git commit -m 'Updating new tag pages to #{USERNAME}/#{REPO}@#{sha}.';
+            git push --quiet;
+         fi"
+      puts "Pushed updated tag pages to #{SOURCE_BRANCH}"
     end
   end
 end
