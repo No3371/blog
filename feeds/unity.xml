@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-08-23T09:28:59+00:00</updated>
+ <updated>2021-08-23T09:48:41+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -98,9 +98,13 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;del&gt;Keep 目前在 Asset Store ($4.99) 販售中！&lt;/del&gt;（審核）&lt;/p&gt;
+&lt;h3 id=&quot;unity-keep&quot;&gt;&lt;a href=&quot;https://github.com/BA-Studio/Unity-Keep&quot;&gt;Unity-Keep&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;其實我只是沒賣過東西想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制… Unity 不讓我便宜賣，我能有什麼辦法（攤手&lt;/p&gt;
+&lt;p&gt;沒賣過東西本來想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制…而且還要準備說明文件檔案…&lt;/p&gt;
+
+&lt;p&gt;我太懶了，而且這東西沒什麼料，~不讓我便宜賣，只好開源~&lt;/p&gt;
+
+&lt;p&gt;順手給個星星吧！&lt;/p&gt;
 
 </content>
    </entry>
