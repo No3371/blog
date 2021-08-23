@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>#</title>
+ <link href="/blog/atom.xml" rel="self"/>
+ <link href="https://no3371.github.io/blog/"/>
+ <updated>2021-08-20T04:25:21+00:00</updated>
+ <id>https://no3371.github.io</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+   <entry>
+     <title>Unity 插件：Keep</title>
+     <link href="https://no3371.github.io/blog/posts/project-untiy-keep/tw"/>
+     <updated>2021-05-10T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/project-untiy-keep/project-untiy-keep</id>
+     <content type="html">&lt;p&gt;Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。&lt;/p&gt;
+
+&lt;p&gt;自己邊使用邊開發了大概一個月，整體來說非常滿意，覺得好看又好用簡直回不去了，所以決定認真整理一下發布出來。&lt;/p&gt;
+
+&lt;h1 id=&quot;讓-keep-改變你的習慣&quot;&gt;讓 Keep 改變你的習慣&lt;/h1&gt;
+
+&lt;p&gt;我們可以將 Asset 以使用頻率/週期做一個分類：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;剛才用到的 -&amp;gt; 「我剛才開的那個在哪？」&lt;/li&gt;
+  &lt;li&gt;等一下/今天會用到的 -&amp;gt; 「要先做別的事，晚點再來改…」&lt;/li&gt;
+  &lt;li&gt;在同一個專案中，今後總會用到的 -&amp;gt; 「每次都在找這個 Asset 有點煩啊？」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keep 提供 4 個工具面板來幫助你快速存取物件，意圖成為你不可或缺的夥伴，Recents 紀錄你剛剛點選了什麼，Laters 讓你暫存之後會用到的東西，Forevers 讓你永久保存常用的 Asset，再附帶一個 InMind——撥號鍵盤型的 Forevers，更小的面板上保存更多快速存取選項。&lt;/p&gt;
+
+&lt;p&gt;Keep 會幫助你習慣將 Asset 依據重要程度、使用頻繁程度分級，漸漸地，在 Project 視窗裡東翻西找的時間將會大幅減少。&lt;/p&gt;
+
+&lt;h1 id=&quot;keeprecents&quot;&gt;Keep.Recents&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;ldDjBkMiBx.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recents 是你的點選歷史，最後點選的物件會排在最上面（FIFO）。&lt;/li&gt;
+  &lt;li&gt;Recents 會保存最近的 30 筆選項，但不提供捲動功能、不鼓勵你去回想「我剛剛點了什麼」，如果你真的有需要，你可以拉長介面。&lt;/li&gt;
+  &lt;li&gt;Recents 經過優化，沒有顯示的選項不會繪製。&lt;/li&gt;
+  &lt;li&gt;右鍵選項，可以將物件保存到 Laters；若 Laters 未開啟，會自動開啟 Laters；若 Laters 未開啟，但 Forevers 已開啟的情況，會保存到 Forevers。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keeplaters&quot;&gt;Keep.Laters&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;recents-to-laters.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Laters 代表「你之後會用到的東西」，和 Recents 一樣是 FIFO 清單，隨著你的工作進行，不再需要的東西自然而然會消失在清單底部。&lt;/li&gt;
+  &lt;li&gt;Laters 接收從 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
+  &lt;li&gt;Laters 比 Recents 優化更佳，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
+  &lt;li&gt;右鍵選項可以將物件保存到 Forevers。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keepforevers&quot;&gt;Keep.Forevers&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;forevers.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Forevers 用來保存那些只要你還在做同一個專案，就總是會存取的東西，比如說遊戲的啟動場景、主選單 Prefab。Forevers 的選項在你右鍵移除之前會永遠存在。&lt;/li&gt;
+  &lt;li&gt;Forevers 接受從 Laters 或 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
+  &lt;li&gt;Forevers 和 Laters 使用了相等的優化，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keepinmind&quot;&gt;Keep.InMind&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;3cVPjgb28U.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;InMind 跟 Forevers 具有相同的功能，但是以 Dialpad 形式呈現，節省你珍貴的螢幕空間（real-e$tate）。相對的，InMind 要求你對物件的熟悉度更高，不需要多想就記得各個按鈕分別是什麼物件。&lt;/li&gt;
+  &lt;li&gt;InMind 對每個新增的物件提供 UID 標記，直到你使用視窗選單中 FullReset 功能之前，每個按鈕都會有一個獨一無二的編號，幫助你記憶。&lt;/li&gt;
+  &lt;li&gt;即使一時記不住也沒關係，在滑鼠指向按鈕時，視窗下方會顯示物件名稱。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;推薦的面板排列&quot;&gt;推薦的面板排列&lt;/h1&gt;
+&lt;p&gt;透過將四個面板排成一條線，由低至高對於物件的重要性一目了然，右鍵時升級（escalate）的概念也更明確。
+&lt;img src=&quot;snipaste_20210511_002243.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;del&gt;Keep 目前在 Asset Store ($4.99) 販售中！&lt;/del&gt;（審核）&lt;/p&gt;
+
+&lt;p&gt;其實我只是沒賣過東西想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制… Unity 不讓我便宜賣，我能有什麼辦法（攤手&lt;/p&gt;
+
+</content>
+   </entry>
+   
+ 
+   
+ 
+   
+ 
+
+</feed>

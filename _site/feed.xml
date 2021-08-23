@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-08-20T04:25:21+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文
+</subtitle><author><name>BA</name></author><entry><title type="html">Free &amp;amp; Private PushBullet with PatchBay</title><link href="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en" rel="alternate" type="text/html" title="Free &amp;amp; Private PushBullet with PatchBay" /><published>2021-08-20T00:00:00+00:00</published><updated>2021-08-20T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id><content type="html" xml:base="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; together. For example, you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt; and POST “321” to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; side will receive “321”.&lt;/p&gt;
+
+&lt;p&gt;Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities.&lt;/p&gt;
+
+&lt;p&gt;I’ve made several personal tools based on PatchBay, for example, PushBullet:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1f16e99fc1b49cdd4be25adc9aaab025.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from/&lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; to, so as long as no one share the same channel name with you, we can say the channel is yours.&lt;/p&gt;
+
+&lt;p&gt;As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><category term="patchbay" /><category term="qol" /><summary type="html">PatchBay is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive “321”. Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities. I’ve made several personal tools based on PatchBay, for example, PushBullet: 400: Invalid request The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours. As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.</summary></entry><entry><title type="html">Git Client: Fork Goes Brrrrr</title><link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en" rel="alternate" type="text/html" title="Git Client: Fork Goes Brrrrr" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
+
+&lt;p&gt;But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… &lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;for at least 10 years&lt;/a&gt;. I work in a not-so-small company that we’d deal with huge projects, like tens of or over 100 mbs of &lt;strong&gt;scripts&lt;/strong&gt; in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.&lt;/p&gt;
+
+&lt;p&gt;It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even NotePad can do better than that, reading a file has nothing to do with git, right?&lt;/p&gt;
+
+&lt;p&gt;In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any.&lt;/p&gt;
+
+&lt;p&gt;Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official &lt;a href=&quot;https://git-scm.com/downloads/guis&quot;&gt;GUI Clients&lt;/a&gt; page and did some shopping, eventually settled in Fork. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined!&lt;/p&gt;
+
+&lt;p&gt;BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…&lt;/p&gt;</content><author><name>BA</name></author><category term="git" /><summary type="html">I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand. But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… for at least 10 years. I work in a not-so-small company that we’d deal with huge projects, like tens of or over 100 mbs of scripts in the projects. It’s really a PITA for a long time to work with GitKraken for these repos. It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even NotePad can do better than that, reading a file has nothing to do with git, right? In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any. Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official GUI Clients page and did some shopping, eventually settled in Fork. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined! BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…</summary></entry><entry><title type="html">Unity Memory Leak With GooglePlay Plugins</title><link href="https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/en" rel="alternate" type="text/html" title="Unity Memory Leak With GooglePlay Plugins" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id><content type="html" xml:base="https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/en">&lt;p&gt;So it seems if you have Google Play Plugins in your Unity project and you have &lt;strong&gt;Auto Resolution On Build&lt;/strong&gt; toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize.&lt;/p&gt;
+
+&lt;p&gt;Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan.&lt;/p&gt;
+
+&lt;p&gt;Unity 2018.4.35f1&lt;/p&gt;
+
+&lt;p&gt;GooglePlayPlugins 1.5.0&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="pitfall" /><summary type="html">So it seems if you have Google Play Plugins in your Unity project and you have Auto Resolution On Build toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize. Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan. Unity 2018.4.35f1 GooglePlayPlugins 1.5.0</summary></entry><entry><title type="html">Unity 插件：Keep</title><link href="https://no3371.github.io/blog/posts/project-untiy-keep/tw" rel="alternate" type="text/html" title="Unity 插件：Keep" /><published>2021-05-10T00:00:00+00:00</published><updated>2021-05-10T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/project-untiy-keep/project-untiy-keep</id><content type="html" xml:base="https://no3371.github.io/blog/posts/project-untiy-keep/tw">&lt;p&gt;Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。&lt;/p&gt;
+
+&lt;p&gt;自己邊使用邊開發了大概一個月，整體來說非常滿意，覺得好看又好用簡直回不去了，所以決定認真整理一下發布出來。&lt;/p&gt;
+
+&lt;h1 id=&quot;讓-keep-改變你的習慣&quot;&gt;讓 Keep 改變你的習慣&lt;/h1&gt;
+
+&lt;p&gt;我們可以將 Asset 以使用頻率/週期做一個分類：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;剛才用到的 -&amp;gt; 「我剛才開的那個在哪？」&lt;/li&gt;
+  &lt;li&gt;等一下/今天會用到的 -&amp;gt; 「要先做別的事，晚點再來改…」&lt;/li&gt;
+  &lt;li&gt;在同一個專案中，今後總會用到的 -&amp;gt; 「每次都在找這個 Asset 有點煩啊？」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Keep 提供 4 個工具面板來幫助你快速存取物件，意圖成為你不可或缺的夥伴，Recents 紀錄你剛剛點選了什麼，Laters 讓你暫存之後會用到的東西，Forevers 讓你永久保存常用的 Asset，再附帶一個 InMind——撥號鍵盤型的 Forevers，更小的面板上保存更多快速存取選項。&lt;/p&gt;
+
+&lt;p&gt;Keep 會幫助你習慣將 Asset 依據重要程度、使用頻繁程度分級，漸漸地，在 Project 視窗裡東翻西找的時間將會大幅減少。&lt;/p&gt;
+
+&lt;h1 id=&quot;keeprecents&quot;&gt;Keep.Recents&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;ldDjBkMiBx.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recents 是你的點選歷史，最後點選的物件會排在最上面（FIFO）。&lt;/li&gt;
+  &lt;li&gt;Recents 會保存最近的 30 筆選項，但不提供捲動功能、不鼓勵你去回想「我剛剛點了什麼」，如果你真的有需要，你可以拉長介面。&lt;/li&gt;
+  &lt;li&gt;Recents 經過優化，沒有顯示的選項不會繪製。&lt;/li&gt;
+  &lt;li&gt;右鍵選項，可以將物件保存到 Laters；若 Laters 未開啟，會自動開啟 Laters；若 Laters 未開啟，但 Forevers 已開啟的情況，會保存到 Forevers。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keeplaters&quot;&gt;Keep.Laters&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;recents-to-laters.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Laters 代表「你之後會用到的東西」，和 Recents 一樣是 FIFO 清單，隨著你的工作進行，不再需要的東西自然而然會消失在清單底部。&lt;/li&gt;
+  &lt;li&gt;Laters 接收從 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
+  &lt;li&gt;Laters 比 Recents 優化更佳，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
+  &lt;li&gt;右鍵選項可以將物件保存到 Forevers。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keepforevers&quot;&gt;Keep.Forevers&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;forevers.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Forevers 用來保存那些只要你還在做同一個專案，就總是會存取的東西，比如說遊戲的啟動場景、主選單 Prefab。Forevers 的選項在你右鍵移除之前會永遠存在。&lt;/li&gt;
+  &lt;li&gt;Forevers 接受從 Laters 或 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
+  &lt;li&gt;Forevers 和 Laters 使用了相等的優化，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;keepinmind&quot;&gt;Keep.InMind&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;3cVPjgb28U.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;InMind 跟 Forevers 具有相同的功能，但是以 Dialpad 形式呈現，節省你珍貴的螢幕空間（real-e$tate）。相對的，InMind 要求你對物件的熟悉度更高，不需要多想就記得各個按鈕分別是什麼物件。&lt;/li&gt;
+  &lt;li&gt;InMind 對每個新增的物件提供 UID 標記，直到你使用視窗選單中 FullReset 功能之前，每個按鈕都會有一個獨一無二的編號，幫助你記憶。&lt;/li&gt;
+  &lt;li&gt;即使一時記不住也沒關係，在滑鼠指向按鈕時，視窗下方會顯示物件名稱。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;推薦的面板排列&quot;&gt;推薦的面板排列&lt;/h1&gt;
+&lt;p&gt;透過將四個面板排成一條線，由低至高對於物件的重要性一目了然，右鍵時升級（escalate）的概念也更明確。
+&lt;img src=&quot;snipaste_20210511_002243.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;del&gt;Keep 目前在 Asset Store ($4.99) 販售中！&lt;/del&gt;（審核）&lt;/p&gt;
+
+&lt;p&gt;其實我只是沒賣過東西想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制… Unity 不讓我便宜賣，我能有什麼辦法（攤手&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="diy" /><summary type="html">Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。</summary></entry><entry><title type="html">寫一個自己愛不釋手的工具：Obsidian Regex Pipeline</title><link href="https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw" rel="alternate" type="text/html" title="寫一個自己愛不釋手的工具：Obsidian Regex Pipeline" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/I-built-something-i-love-to-use-obsidian-regex-pipeline</id><content type="html" xml:base="https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw">&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
+&lt;p&gt;自從開始使用 &lt;a href=&quot;https://obisidian.md&quot;&gt;Obsidian&lt;/a&gt; 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…&lt;/p&gt;
+
+&lt;p&gt;Obsidian 是一套網路化知識管理工具，是近年變得比較熱門的一種工具類型，其始祖是 Roam Research。這類工具的特色是基於知識具有關聯性的理念，使用者在編寫筆記的時候，標註筆記與筆記之間的關聯，而它們可以計算筆記之間的關聯，視覺化地呈現出一個網路圖表！隨著我們填入越多筆記，資料庫網路就會對我們越來越有價值，成為我們的虛擬大腦、外接記憶儲存空間，更棒的是在這個過程中，借助筆記之間的彼此連結，我們對於一個知識體系的學習效率也會大幅提高。&lt;/p&gt;
+
+&lt;p&gt;Obsidian 真的非常棒！但今天我要說的是我自己寫了一個插件的故事…（是的！Obisidian 支援第三方插件，太棒了）&lt;/p&gt;
+
+&lt;h2 id=&quot;監修筆記很花時間&quot;&gt;監修筆記很花時間&lt;/h2&gt;
+&lt;p&gt;這半年來持續投入時間的結果就是我有了一個超大又井井有條的日文筆記資料庫，再來就是我開始覺得手動調整格式很煩！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;Obsidian_kHYkCZgx4i.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;隨便舉個例子，這是我從 goo 辭書上使用 Firefox 的 MardDownload 插件抓下來的&lt;a href=&quot;https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B/&quot;&gt;計る&lt;/a&gt;條目的內容：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 計る／量る／測る／図る／謀る／諮る（はかる）の意味 - goo国語辞書
+
+はか・る【計る／量る／測る／図る／謀る／諮る】
+
+の解説
+
+
+------------------------------
+［動ラ五（四）］《「[はか](https://dictionary.goo.ne.jp/word/%E8%A8%88_%28%E3%81%AF%E3%81%8B%29/#jn-174670)」に活用語尾の付いたもの》
+
+1.  **１** （計る・測る・量る）
+    
+    1.  ㋐ある基準をもとにして物の度合いを調べる。特に、はかり・ゲージなどの計測機器で測定する。「體溫を─・る」「距離を─・る」
+        
+    2.  ㋑推しはかって見當をつける。おもんぱかる。忖度 (そんたく) する。「己をもって人を─・る」「真意を─・りかねる」
+        
+
+1.  **２** （図る・謀る）
+    
+    1.  ㋐物事を考え合わせて判斷する。見はからう。「時期を─・る」「敵情を─・る」
+        
+    2.  ㋑企てる。もくろむ。「自殺を─・る」
+        
+
+1.  **３** （謀る）
+    
+    1.  ㋐はかりごとをする。たくらむ。「悪事を─・る」
+        
+    2.  ㋑あざむく。たばかる。「さては─・られたか」
+        
+
+1.  **４** （図る）
+    
+    1.  ㋐くふうして努力する。「再起を─・る」「利益を─・る」
+        
+    2.  ㋑うまく處理する。とりはからう。「便宜を─・る」
+        
+
+1.  **５** （諮る）相談する。「會議に─・って決める」
+    
+
+\[補説\]**1**㋐について、「計る」は時間・數、「測る」は長さ・高さ・深さ・広さ・程度、「量る」は重さ・容積を調べる際に使うことが多い。
+
+\[可能\]**はかれる**
+
+類語
+
+-   [計る(はかる)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B//#jn-174852)
+-   [測る(はかる)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B//#jn-174852)
+
+関連語
+
+-   [計測(けいそく)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E6%B8%AC/#jn-66796)
+-   [目測(もくそく)](https://dictionary.goo.ne.jp/word/%E7%9B%AE%E6%B8%AC/#jn-218932)
+-   [目份量(めぶんりょう)](https://dictionary.goo.ne.jp/word/%E7%9B%AE%E5%88%86%E9%87%8F/#jn-217869)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;比對一下原始網頁，會發現有一些奇怪的地方，比如網站上的數字清單沒有辦法正確捕捉；另外，對於筆記的格式我們可能有一些要求，比如說去除空行、冗餘文字。&lt;/p&gt;
+
+&lt;p&gt;在 Obsidian 中渲染出來的結果是這樣：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;rendered.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;不可接受、絕對不可接受。&lt;/p&gt;
+
+&lt;p&gt;來看看要整理這則筆記我要做多少動作：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;manual.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;做一個養活自己的成熟工程師&quot;&gt;做一個養活自己的成熟工程師&lt;/h2&gt;
+
+&lt;p&gt;是時候展現我真正的實力了！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;using_pipeline.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;這就是我為了飛速監修而寫的插件 &lt;a href=&quot;https://github.com/No3371/obsidian-regex-pipeline&quot;&gt;Regex Pipleline&lt;/a&gt;，利用預先定義的 Regex 取代規則，快速調整筆記內容。&lt;/p&gt;
+
+&lt;h2 id=&quot;obsidian-的插件不難寫&quot;&gt;Obsidian 的插件不難寫&lt;/h2&gt;
+
+&lt;p&gt;Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算是滿生疏的一個領域，但仔細觀察了一下之後還是很容易上手了。個人心得是不像一般為了推出 API 而推出 API，實際使用上，感覺官方有認真在思考，根據開發者可能會有的需求去設計實用方便的 API。&lt;/p&gt;
+
+&lt;p&gt;比如，我本來預期，這類型的 API 會提供我「現在選取的文字開頭&amp;amp;結尾的 Index」，但它實際上直接提供了一個 &lt;code class=&quot;highlighter-rouge&quot;&gt;getSelection()&lt;/code&gt; 可以取得完整的已選取文字，還提供了 &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceSelection()&lt;/code&gt; 讓你直接替換掉以選取的文字，相關的還有 &lt;code class=&quot;highlighter-rouge&quot;&gt;somethingSelected()&lt;/code&gt;… 可以說是相當高階且人性化的 API 了，插件作者完全可以 Focus 在實現插件功能。&lt;/p&gt;
+
+&lt;p&gt;範例插件的架構也是簡單，且參數、變數、方法的命名可讀性高，我一看就大概就能對照 Obsidian 的介面看出代表什麼東西。&lt;/p&gt;
+
+&lt;p&gt;我算是對 TS/JS 這種以操作 DOM 來呈現畫面的機制很不熟的，但看了看範例的作法，大概就知道了要怎麼實作畫面元件。&lt;/p&gt;
+
+&lt;p&gt;作為一個 Electron App，它提供了 Chrome 的 Console，開發除錯也是輕輕鬆鬆。&lt;/p&gt;
+
+&lt;h2 id=&quot;插件審核&quot;&gt;插件審核&lt;/h2&gt;
+&lt;p&gt;想要發布插件，讓插件會在 Obsidian 內建的第三方插件搜尋清單中出現，必須向 &lt;em&gt;Obsidian-Releases&lt;/em&gt; 提交 PR，&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/pull/239#issuecomment-817929015&quot;&gt;例&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">Obsidian 自從開始使用 Obsidian 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…</summary></entry><entry><title type="html">Jekyll: Make it Multi-Lingual</title><link href="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en" rel="alternate" type="text/html" title="Jekyll: Make it Multi-Lingual" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/jekyll-make-it-multilingual</id><content type="html" xml:base="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en">&lt;p&gt;As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our objectives here are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;To enble publishing posts in different lanaguages, all by Jekyll’s functionality, without javascript.&lt;/li&gt;
+  &lt;li&gt;It should be an addition not a requirement, so it should be okay to publish posts in whatever and any number of languages.&lt;/li&gt;
+  &lt;li&gt;It should be easy to navigate between languages.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What we can take advantages of:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;We can add whatever we want as &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;With &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;, any Front Matter could be used in &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;Permalink&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Front Matters are accessible in Liquid tags, this allows us to know what languages are available for a post in Layouts/Includes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;generate-posts-of-languages&quot;&gt;Generate Posts of Languages&lt;/h2&gt;
+
+&lt;p&gt;The Front Matter of this post is shown below:&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Make&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Multi-Lingual&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;foss&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As you can see, I specified the &lt;strong&gt;language&lt;/strong&gt; entry, which contains “en”, this means, this post is written in “en” (It doesn’t matter what language it actually is, it’s just a variable).&lt;/p&gt;
+
+&lt;p&gt;As for now, the post is only in English, if in the future I write another version in, for example “tw”, then it’d become:&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Make&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Multi-Lingual&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;foss&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;other_language_versions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;other_language_versions&lt;/code&gt; front matter is added, and it’s in “path_relative_to_post=lang” format. This entry will be used by Liquid to generate buttons to navigate between language versions, I’ll show how to achieve that in the next section.&lt;/p&gt;
+
+&lt;p&gt;And this is my post permalink:&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
+  posts:
+    output: true
+    permalink: posts/:title/:language
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;, I can reference the &lt;strong&gt;language&lt;/strong&gt; Front Matter here, so when Jekyll compiles the site, this post would be &lt;code class=&quot;highlighter-rouge&quot;&gt;posts/2021-05-07-jekyll-make-it-multilingual/en.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;By the way, The reason why I decide to place language at the tail is, It’d much easier to select langugage by url, though my site’d be very easy to switch language by buttons, It’s still a good thing to do.&lt;/p&gt;
+
+&lt;h2 id=&quot;show-the-lanaguage-options&quot;&gt;Show The Lanaguage Options&lt;/h2&gt;
+
+&lt;p&gt;In my home layout, this is how my post items are rendered:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+          {%- assign date_format = site.moving.date_format | default: &quot;%b %-d, %Y&quot; -%} // My site is based on [Moving](https://github.com/huangyz0918/moving) theme
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-meta&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; // Show the date of the post
+            {{ post.date | date: date_format }}
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black-link post-link-layout&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ post.url | prepend: site.baseurl}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; // How it links to the acutal post page
+            {{ post.title | escape }}
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+          {%- if post.language -%} // If the post has **language** front matter
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language_tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.language | upcase }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; // en -&amp;gt; EN
+          {%- endif -%}
+          {%- if post.other_language_versions.size &amp;gt; 0 -%} // If the post has **other_language_versions** front matter
+            {%- for L in post.other_language_versions -%} // Iterate through all options
+              {%- assign data =  L | split: &quot;=&quot;  -%} // Split the entry, take jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw as example, data[0] will be jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md and data[1] will be tw.
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language_option&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{% link _posts/{{ data[0] }} %}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ data[1] | upcase }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt; // We use **link** here, so Jekyll will do the job for us to get the actual link, data[1] is showing what language version the button leads to
+            {%- endfor -%}
+          {%- endif -%}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Just after these steps, We can present posts in multiple languages.&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called jekyll-placeholders.</summary></entry></feed>
