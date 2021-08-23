@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-08-20T04:25:21+00:00</updated>
+ <updated>2021-08-23T08:56:24+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -29,7 +29,7 @@
 
 &lt;p&gt;The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from/&lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; to, so as long as no one share the same channel name with you, we can say the channel is yours.&lt;/p&gt;
 
-&lt;p&gt;As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.&lt;/p&gt;
+&lt;p&gt;As you may have noticed, the script actually use &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/pubsub/&lt;/code&gt;, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.&lt;/p&gt;
 </content>
    </entry>
    

@@ -38,26 +38,15 @@ namespace :site do
 
     sh "git checkout #{SOURCE_BRANCH}"
     
-    puts ">> #{Dir.pwd}"
-    sh "ls"
-    puts ">>----------"
     # if _site does not exist, clone it
     unless Dir.exist? CONFIG["destination"]
-      puts "Destination does not exist"
-      sh "git clone https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+      puts "Destination does not exist: #{Dir.pwd}/#{CONFIG["destination"]}"
+      sh "git clone --single-branch --branch #{DESTINATION_BRANCH} https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
     end
 
-    # go in to _site and switch to gh_page, note: this is different repo
-    Dir.chdir(CONFIG["destination"]) {
-      sh "git checkout #{DESTINATION_BRANCH}"
-      puts ">> #{Dir.pwd}"
-      sh "ls"
-      puts ">>----------"
-    }
-
-    puts ">> #{Dir.pwd}"
-    sh "ls"
-    puts ">>----------"
+    # # go in to _site and switch to gh_page, note: this is different repo
+    # Dir.chdir(CONFIG["destination"])
+    # puts "Now at #{Dir.pwd}"
 
     # Generate the site
     sh "bundle exec jekyll build"
@@ -66,24 +55,26 @@ namespace :site do
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
     Dir.chdir(CONFIG["destination"]) do
       # check if there is anything to add and commit, and pushes it
+      puts "Pushing output changes... from #{Dir.pwd}"
       sh "if [ -n '$(git status)' ]; then
             echo '#{CNAME}' > ./CNAME;
             git add --all .;
-            git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.';
+            git commit -m '(Travis) Updating to #{USERNAME}/#{REPO}@#{sha}.';
             git push --quiet origin #{DESTINATION_BRANCH};
          fi"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
     end
-    # Back to parent repo, we don't need to switch branch here
-    Dir.chdir(repo) do
-      # check if there is anything to add and commit, and pushes it
-      sh "if [ -n '$(git status --porcelain) _tags' ]; then
-            echo '#{CNAME}' > ./CNAME;
-            git add _tags.;
-            git commit -m 'Updating new tag pages to #{USERNAME}/#{REPO}@#{sha}.';
-            git push --quiet;
-         fi"
-      puts "Pushed updated tag pages to #{SOURCE_BRANCH}"
-    end
+    # check if there is anything to add and commit, and pushes it
+    puts "Pushing source changes... from #{Dir.pwd}"
+    sh "if [ -n '$(git status --porcelain _tags)' ]; then
+          git remote get-url --all origin
+          git branch -a
+          echo '#{CNAME}' > ./CNAME;
+          git add _tags;
+          git add _feeds;
+          git commit -m '(Travis) Updating new tag pages to #{USERNAME}/#{REPO}@#{sha}.';
+          git push --quiet origin #{SOURCE_BRANCH};
+        fi"
+    puts "Pushed updated tag pages to #{SOURCE_BRANCH}"
   end
 end
