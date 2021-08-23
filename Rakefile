@@ -50,6 +50,9 @@ namespace :site do
 
     # Generate the site
     sh "bundle exec jekyll build"
+    # Double build for new tags/feeds, as a workaround for now
+    # The actual build time is far less then Travis setup time, so it's acceptable
+    sh "bundle exec jekyll build"
 
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
@@ -64,17 +67,5 @@ namespace :site do
          fi"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
     end
-    # check if there is anything to add and commit, and pushes it
-    puts "Pushing source changes... from #{Dir.pwd}"
-    sh "if [ -n '$(git status --porcelain _tags)' ]; then
-          git remote get-url --all origin
-          git branch -a
-          echo '#{CNAME}' > ./CNAME;
-          git add _tags;
-          git add _feeds;
-          git commit -m '(Travis) Updating new tag pages to #{USERNAME}/#{REPO}@#{sha}.';
-          git push --quiet origin #{SOURCE_BRANCH};
-        fi"
-    puts "Pushed updated tag pages to #{SOURCE_BRANCH}"
   end
 end

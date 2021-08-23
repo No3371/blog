@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>#</title>
+ <link href="/blog/atom.xml" rel="self"/>
+ <link href="https://no3371.github.io/blog/"/>
+ <updated>2021-08-23T09:28:59+00:00</updated>
+ <id>https://no3371.github.io</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+   
+ 
+   
+ 
+   
+   <entry>
+     <title>Git Client: Fork Goes Brrrrr</title>
+     <link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en"/>
+     <updated>2021-08-17T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
+     <content type="html">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
+
+&lt;p&gt;But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… &lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;for at least 10 years&lt;/a&gt;. I work in a not-so-small company that we’d deal with huge projects, like tens of or over 100 mbs of &lt;strong&gt;scripts&lt;/strong&gt; in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.&lt;/p&gt;
+
+&lt;p&gt;It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even NotePad can do better than that, reading a file has nothing to do with git, right?&lt;/p&gt;
+
+&lt;p&gt;In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any.&lt;/p&gt;
+
+&lt;p&gt;Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official &lt;a href=&quot;https://git-scm.com/downloads/guis&quot;&gt;GUI Clients&lt;/a&gt; page and did some shopping, eventually settled in Fork. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined!&lt;/p&gt;
+
+&lt;p&gt;BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…&lt;/p&gt;
+</content>
+   </entry>
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+
+</feed>
