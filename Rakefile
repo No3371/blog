@@ -41,7 +41,7 @@ namespace :site do
     # if _site does not exist, clone it
     unless Dir.exist? CONFIG["destination"]
       puts "Destination does not exist: #{Dir.pwd}/#{CONFIG["destination"]}"
-      sh "git clone --depth 1 --single-branch --branch #{DESTINATION_BRANCH} https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+      sh "git clone --single-branch --branch #{DESTINATION_BRANCH} https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
     end
 
     # # go in to _site and switch to gh_page, note: this is different repo
