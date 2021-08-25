@@ -17,3 +17,5 @@ I've made several personal tools based on PatchBay, for example, PushBullet:
 The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you `GET` from/`POST` to, so as long as no one share the same channel name with you, we can say the channel is yours.
 
 As you may have noticed, the script actually use `https://patchbay.pub/pubsub/`, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.
+
+I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http `GET` and `POST` everywhere as long as you are connected.
