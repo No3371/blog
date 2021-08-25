@@ -110,7 +110,7 @@ Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算
 
 我算是對 TS/JS 這種以操作 DOM 來呈現畫面的機制很不熟的，但看了看範例的作法，大概就知道了要怎麼實作畫面元件。
 
-作為一個 Electron App，它提供了 Chrome 的 Console，開發除錯也是輕輕鬆鬆。
+作為一個 Electron App，用 Console 開發除錯也是輕輕鬆鬆。
 
 ## 插件審核
 想要發布插件，讓插件會在 Obsidian 內建的第三方插件搜尋清單中出現，必須向 *Obsidian-Releases* 提交 PR，[例](https://github.com/obsidianmd/obsidian-releases/pull/239#issuecomment-817929015)。
