@@ -19,3 +19,5 @@ The powershell script takes 1 parameter: the channel name. Channel Name is the o
 As you may have noticed, the script actually use `https://patchbay.pub/pubsub/`, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.
 
 I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http `GET` and `POST` everywhere as long as you are connected.
+
+The reason why I don't use the actual PushBullet but this is that, I don't want to login on my job PC, I'm the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it's not actually "secure", but its login-less nature is trully useful.
