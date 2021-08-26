@@ -4,13 +4,15 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-08-25T04:11:40+00:00</updated>
+ <updated>2021-08-26T04:30:09+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
  
    
    <entry>
@@ -32,6 +34,8 @@
 &lt;p&gt;As you may have noticed, the script actually use &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/pubsub/&lt;/code&gt;, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.&lt;/p&gt;
 
 &lt;p&gt;I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; everywhere as long as you are connected.&lt;/p&gt;
+
+&lt;p&gt;The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful.&lt;/p&gt;
 </content>
    </entry>
    
