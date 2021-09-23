@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-09-23T03:32:16+00:00</updated>
+ <updated>2021-09-23T03:50:50+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -18,7 +18,7 @@
      <link href="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
      <id>https://no3371.github.io/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id>
-     <content type="html">&lt;p&gt;Today my collegue figured that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
+     <content type="html">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
 
 &lt;p&gt;It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, &lt;strong&gt;if the texture is not square, Unity stretch it without warning you.&lt;/strong&gt; For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.&lt;/p&gt;
 
