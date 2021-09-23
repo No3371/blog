@@ -6,7 +6,7 @@ published: true
 language: en
 ---
 
-Today my collegue figured that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android & iOS.
+Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android & iOS.
 
 It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, **if the texture is not square, Unity stretch it without warning you.** For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.
 
