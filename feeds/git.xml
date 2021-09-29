@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-09-23T04:16:05+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="https://blog.bastudio.dev//"/>
+ <updated>2021-09-29T01:35:31+00:00</updated>
+ <id>https://blog.bastudio.dev</id>
  <author>
    <name></name>
    <email></email>
@@ -15,9 +15,9 @@
    
    <entry>
      <title>Git 客戶端換用 Fork 快到起飛</title>
-     <link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/tw"/>
+     <link href="https://blog.bastudio.dev//posts/fork-goes-brrrrrrr/tw"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
+     <id>https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。&lt;/p&gt;
 
 &lt;p&gt;但是！GitKraken 是有名地慢，尤其是開啟大 Repo 的時候其效能出奇地差，最早的討論甚至可以追溯到&lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;十年前&lt;/a&gt;。我在一間不算小的公司工作，會碰到一些肥大的專案，有時候光是程式碼就高達數十 mb，在這些專案使用 GitKraken 簡直是一種折磨。&lt;/p&gt;
@@ -44,9 +44,9 @@
    
    <entry>
      <title>Git Client: Fork Goes Brrrrr</title>
-     <link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en"/>
+     <link href="https://blog.bastudio.dev//posts/fork-goes-brrrrrrr/en"/>
      <updated>2021-08-17T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
+     <id>https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
 
 &lt;p&gt;But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… &lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;for at least 10 years&lt;/a&gt;. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of &lt;strong&gt;scripts&lt;/strong&gt; in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.&lt;/p&gt;
