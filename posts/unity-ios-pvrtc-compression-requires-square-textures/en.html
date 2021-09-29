@@ -19,10 +19,10 @@
 <script type="application/ld+json">
 {"author":{"@type":"Person","name":"BA"},"headline":"Unity: iOS PVRTC Compression Requires Square Textures","dateModified":"2021-09-23T00:00:00+00:00","datePublished":"2021-09-23T00:00:00+00:00","description":"Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp; iOS. It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, if the texture is not square, Unity stretch it without warning you. For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures. Source: iOS and tvOS For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended texture compression format for RGB and RGBA textures. This format allows you to choose between texture quality and size on a granular level: all the way from eight bits/pixel (4x4 block size) down to 0.89 bits/pixel (12x12 block size). If support for older devices is needed, or you want additional Crunch compression, then Apple devices support ETC/ETC2 formats starting with A7 chip (2013). For even older devices, PVRTC is the compression format to use. On iOS, Unity’s default texture compression format is PVRTC, for the broadest possible compatibility. ASTC is preferred, but is not supported on A7 devices (the very first Metal-enabled devices) and will be unpacked at runtime.","url":"https://blog.bastudio.dev/posts/unity-ios-pvrtc-compression-requires-square-textures/en","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.bastudio.dev/posts/unity-ios-pvrtc-compression-requires-square-textures/en"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="//assets/css/main.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
   <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?" />
-  <link rel="stylesheet" href="//assets/css/agate.css" />
-  <link rel="stylesheet" href="//assets/css/custom.css" />
+  <link rel="stylesheet" href="/assets/css/agate.css" />
+  <link rel="stylesheet" href="/assets/css/custom.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
@@ -43,7 +43,7 @@
   </head>
   <header class="post-header">
     <div class="post-back">
-      <a class="black-link" href="/">
+      <a class="black-link" href="">
         ← Home
       </a>
     </div>
@@ -61,11 +61,11 @@
         &nbsp;&nbsp;Tags:
         
           <span class="tag">
-            <small> <a href="//tags/pitfall"> #pitfall</a></small>
+            <small> <a href="/tags/pitfall"> #pitfall</a></small>
           </span> 
         
           <span class="tag">
-            <small> <a href="//tags/unity"> #unity</a></small>
+            <small> <a href="/tags/unity"> #unity</a></small>
           </span> 
         &nbsp;&nbsp;Languages:&nbsp;<span class="language_tag">EN</span></p>
   </header>
@@ -99,20 +99,20 @@ For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended 
       <div class="footer-col-wrapper">
         <div class="footer-col">
           <ul class="contact-list">
-            <li class="p-name"><a class="black-link" href="//about.html">
+            <li class="p-name"><a class="black-link" href="/about.html">
                   BA 
                 </a></li><li>
               <a class="u-email black-link" href="mailto:badevstudio@gmail.com">badevstudio@gmail.com</a></li></ul>
         </div>
       </div>
     </div>
-  </footer><div class="tags_sidebar"><a href="//tags/csharp">
-    <p>#csharp</p></a><a href="//tags/diy">
-    <p>#diy</p></a><a href="//tags/foss">
-    <p>#foss</p></a><a href="//tags/git">
-    <p>#git</p></a><a href="//tags/patchbay">
-    <p>#patchbay</p></a><a href="//tags/pitfall">
-    <p>#pitfall</p></a><a href="//tags/qol">
-    <p>#qol</p></a><a href="//tags/unity">
+  </footer><div class="tags_sidebar"><a href="/tags/csharp">
+    <p>#csharp</p></a><a href="/tags/diy">
+    <p>#diy</p></a><a href="/tags/foss">
+    <p>#foss</p></a><a href="/tags/git">
+    <p>#git</p></a><a href="/tags/patchbay">
+    <p>#patchbay</p></a><a href="/tags/pitfall">
+    <p>#pitfall</p></a><a href="/tags/qol">
+    <p>#qol</p></a><a href="/tags/unity">
     <p>#unity</p></a></div></body>
 </html>

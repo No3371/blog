@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="https://blog.bastudio.dev//"/>
- <updated>2021-09-29T01:37:50+00:00</updated>
+ <link href="https://blog.bastudio.dev/"/>
+ <updated>2021-09-29T03:47:54+00:00</updated>
  <id>https://blog.bastudio.dev</id>
  <author>
    <name></name>
@@ -17,7 +17,7 @@
    
    <entry>
      <title>Unity: iOS PVRTC Compression Requires Square Textures</title>
-     <link href="https://blog.bastudio.dev//posts/unity-ios-pvrtc-compression-requires-square-textures/en"/>
+     <link href="https://blog.bastudio.dev/posts/unity-ios-pvrtc-compression-requires-square-textures/en"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id>
      <content type="html">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
@@ -41,7 +41,7 @@ For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended 
    
    <entry>
      <title>Unity Memory Leak With GooglePlay Plugins</title>
-     <link href="https://blog.bastudio.dev//posts/unity-memory-leak-with-google-play-plugins/en"/>
+     <link href="https://blog.bastudio.dev/posts/unity-memory-leak-with-google-play-plugins/en"/>
      <updated>2021-08-17T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id>
      <content type="html">&lt;p&gt;So it seems if you have Google Play Plugins in your Unity project and you have &lt;strong&gt;Auto Resolution On Build&lt;/strong&gt; toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize.&lt;/p&gt;

@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="https://blog.bastudio.dev//"/>
- <updated>2021-09-29T01:37:50+00:00</updated>
+ <link href="https://blog.bastudio.dev/"/>
+ <updated>2021-09-29T03:47:54+00:00</updated>
  <id>https://blog.bastudio.dev</id>
  <author>
    <name></name>
@@ -15,7 +15,7 @@
    
    <entry>
      <title>Git 客戶端換用 Fork 快到起飛</title>
-     <link href="https://blog.bastudio.dev//posts/fork-goes-brrrrrrr/tw"/>
+     <link href="https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/tw"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。&lt;/p&gt;
@@ -44,7 +44,7 @@
    
    <entry>
      <title>Git Client: Fork Goes Brrrrr</title>
-     <link href="https://blog.bastudio.dev//posts/fork-goes-brrrrrrr/en"/>
+     <link href="https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/en"/>
      <updated>2021-08-17T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;

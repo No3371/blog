@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="https://blog.bastudio.dev//"/>
- <updated>2021-09-29T01:37:50+00:00</updated>
+ <link href="https://blog.bastudio.dev/"/>
+ <updated>2021-09-29T03:47:54+00:00</updated>
  <id>https://blog.bastudio.dev</id>
  <author>
    <name></name>
@@ -21,7 +21,7 @@
    
    <entry>
      <title>Free &amp; Private PushBullet with PatchBay</title>
-     <link href="https://blog.bastudio.dev//posts/free-private-pushbullet-with-patchbay/en"/>
+     <link href="https://blog.bastudio.dev/posts/free-private-pushbullet-with-patchbay/en"/>
      <updated>2021-08-20T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id>
      <content type="html">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; together. For example, you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt; and POST “321” to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; side will receive “321”.&lt;/p&gt;
@@ -58,7 +58,7 @@ It seems patchbay.pub is down :sad:&lt;/p&gt;
    
    <entry>
      <title>Jekyll: Make it Multi-Lingual</title>
-     <link href="https://blog.bastudio.dev//posts/jekyll-make-it-multilingual/en"/>
+     <link href="https://blog.bastudio.dev/posts/jekyll-make-it-multilingual/en"/>
      <updated>2021-05-07T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/jekyll-make-it-multilingual/jekyll-make-it-multilingual</id>
      <content type="html">&lt;p&gt;As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;.&lt;/p&gt;
@@ -150,7 +150,7 @@ It seems patchbay.pub is down :sad:&lt;/p&gt;
    
    <entry>
      <title>寫一個自己愛不釋手的工具：Obsidian Regex Pipeline</title>
-     <link href="https://blog.bastudio.dev//posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw"/>
+     <link href="https://blog.bastudio.dev/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw"/>
      <updated>2021-05-07T00:00:00+00:00</updated>
      <id>https://blog.bastudio.dev/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/I-built-something-i-love-to-use-obsidian-regex-pipeline</id>
      <content type="html">&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
