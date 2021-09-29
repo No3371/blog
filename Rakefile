@@ -1,10 +1,3 @@
-#############################################################################
-#
-# Modified version of jekyllrb Rakefile
-# https://github.com/jekyll/jekyll/blob/master/Rakefile
-#
-#############################################################################
-
 require 'rake'
 require 'date'
 require 'yaml'
@@ -12,6 +5,7 @@ require 'yaml'
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"]
 REPO = CONFIG["repo"]
+DEST_REPO = CONFIG["dest_repo"]
 SOURCE_BRANCH = CONFIG["branch"]
 DESTINATION_BRANCH = "gh-pages"
 CNAME = CONFIG["CNAME"]
@@ -41,7 +35,7 @@ namespace :site do
     # if _site does not exist, clone it
     unless Dir.exist? CONFIG["destination"]
       puts "Destination does not exist: #{Dir.pwd}/#{CONFIG["destination"]}"
-      sh "git clone --single-branch --branch #{DESTINATION_BRANCH} https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+      sh "git clone --single-branch --branch #{DESTINATION_BRANCH} https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{DEST_REPO}.git #{CONFIG["destination"]}"
     end
 
     # # go in to _site and switch to gh_page, note: this is different repo
@@ -62,7 +56,7 @@ namespace :site do
       sh "if [ -n '$(git status)' ]; then
             echo '#{CNAME}' > ./CNAME;
             git add --all .;
-            git commit -m '(Travis) Updating to #{USERNAME}/#{REPO}@#{sha}.';
+            git commit -m '(Travis) Updating to #{USERNAME}/#{DEST_REPO}@#{sha}.';
             git push --quiet origin #{DESTINATION_BRANCH};
          fi"
       puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
