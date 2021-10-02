@@ -4,13 +4,15 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-09-29T08:30:58+00:00</updated>
+ <updated>2021-10-02T15:14:56+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
  
    
  
@@ -43,8 +45,15 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;EDIT 21/09/22
+&lt;p&gt;EDIT 2021/09/22
 It seems patchbay.pub is down :sad:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;EDIT 2021/10/02
+So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/a&gt; and starting to host my own service for myself.&lt;/p&gt;
+
+&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Maybe I’ll blog about it in the future.&lt;/p&gt;
 </content>
    </entry>
    
@@ -244,6 +253,99 @@ It seems patchbay.pub is down :sad:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;using_pipeline.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;這就是我為了飛速監修而寫的插件 &lt;a href=&quot;https://github.com/No3371/obsidian-regex-pipeline&quot;&gt;Regex Pipleline&lt;/a&gt;，利用預先定義的 Regex 取代規則，快速調整筆記內容。&lt;/p&gt;
+
+&lt;p&gt;Regex 是一種強大的魔法咒語，看得懂之前只覺得機哩咕嚕眼花撩亂，會用之後就覺得自己簡直是文字魔法師…&lt;/p&gt;
+
+&lt;p&gt;goo 辭書的格式化 rule set 大概是這樣的，把這東西寫出來之後，這麼多 regex replacement 就會自動執行了，簡直是巫術：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02539\.gif\)&quot;-&amp;gt;&quot;![[@1.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02540\.gif\)&quot;-&amp;gt;&quot;![[@2.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02541\.gif\)&quot;-&amp;gt;&quot;![[@3.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02542\.gif\)&quot;-&amp;gt;&quot;![[@4.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02543\.gif\)&quot;-&amp;gt;&quot;![[@5.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02544\.gif\)&quot;-&amp;gt;&quot;![[@6.gif]]&quot;
+
+::This fix example sentence right after a topic
+&quot;［(.+?)］(.+)\n\n1\.  1\.  「&quot;-&amp;gt;&quot;［$1］$2
+&amp;gt;「&quot;
+
+::This fix example sentence right after a topic
+&quot;［(.+?)］(.+)\n\n-   「&quot;-&amp;gt;&quot;［$1］$2
+&amp;gt;「&quot;
+
+
+::This extract entry name from the title
+&quot;^#\s.+goo国語辞書\n+(.+)\n+の解説\n+\-+&quot;-&amp;gt;&quot;# $1&quot;
+
+::This extract titles for sub entries2
+&quot;(.+?)\n\nの解説\n+?\-+&quot;-&amp;gt;&quot;---
+# $1&quot;
+
+:: This convert these lines to headers
+&quot;^類語&quot;-&amp;gt;&quot;#### 類語&quot;
+&quot;^関連語&quot;-&amp;gt;&quot;#### 関連語&quot;
+&quot;^下接句&quot;-&amp;gt;&quot;#### 下接句&quot;
+
+:: Convert all second level single example sentence
+&quot;    [\n\s]?    1\.\s+「(?!.+\n\s+?2\.)&quot;-&amp;gt;&quot;    &amp;gt;「&quot;
+
+:: These 2 fix arrow reference
+&quot;    &amp;gt;→\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
+&quot;    1\.  →\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
+
+:: This fix \n\n    → to \n    →
+&quot;[\n\s]+?(?=    →\[.+?\]\(.+\)［.+?］)&quot;-&amp;gt;&quot;
+&quot;
+
+
+&quot;^        「&quot;-&amp;gt;&quot;        &amp;gt;「&quot;
+
+:: This fix wrong bullets captured by [MardDownload](github.com/deathau/markdownload)
+&quot;^1\.  \*\*１\*\*&quot;-&amp;gt;&quot;1. &quot;
+&quot;^1\.  \*\*２\*\*&quot;-&amp;gt;&quot;2. &quot;
+&quot;^1\.  \*\*３\*\*&quot;-&amp;gt;&quot;3. &quot;
+&quot;^1\.  \*\*４\*\*&quot;-&amp;gt;&quot;4. &quot;
+&quot;^1\.  \*\*５\*\*&quot;-&amp;gt;&quot;5. &quot;
+&quot;^1\.  \*\*６\*\*&quot;-&amp;gt;&quot;6. &quot;
+&quot;^1\.  \*\*７\*\*&quot;-&amp;gt;&quot;7. &quot;
+&quot;^1\.  \*\*８\*\*&quot;-&amp;gt;&quot;8. &quot;
+&quot;^1\.  \*\*９\*\*&quot;-&amp;gt;&quot;9. &quot;
+&quot;^1\.  \*\*１０\*\*&quot;-&amp;gt;&quot;10. &quot;
+&quot;^1\.  \*\*１１\*\*&quot;-&amp;gt;&quot;11. &quot;
+&quot;^1\.  \*\*１２\*\*&quot;-&amp;gt;&quot;12. &quot;
+&quot;^1\.  \*\*１３\*\*&quot;-&amp;gt;&quot;13. &quot;
+&quot;^1\.  \*\*１４\*\*&quot;-&amp;gt;&quot;14. &quot;
+&quot;^1\.  \*\*１５\*\*&quot;-&amp;gt;&quot;15. &quot;
+&quot;^1\.  \*\*１６\*\*&quot;-&amp;gt;&quot;16. &quot;
+&quot;^1\.  \*\*１７\*\*&quot;-&amp;gt;&quot;17. &quot;
+&quot;^1\.  \*\*１８\*\*&quot;-&amp;gt;&quot;18. &quot;
+&quot;^1\.  \*\*１９\*\*&quot;-&amp;gt;&quot;19. &quot;
+&quot;^1\.  \*\*２０\*\*&quot;-&amp;gt;&quot;20. &quot;
+&quot;^1\.  \*\*２１\*\*&quot;-&amp;gt;&quot;21. &quot;
+&quot;^1\.  \*\*２２\*\*&quot;-&amp;gt;&quot;22. &quot;
+&quot;^1\.  \*\*２３\*\*&quot;-&amp;gt;&quot;23. &quot;
+&quot;^1\.  \*\*２４\*\*&quot;-&amp;gt;&quot;24. &quot;
+&quot;^1\.  \*\*２５\*\*&quot;-&amp;gt;&quot;25. &quot;
+&quot;^1\.  \*\*２６\*\*&quot;-&amp;gt;&quot;26. &quot;
+&quot;^1\.  \*\*２７\*\*&quot;-&amp;gt;&quot;27. &quot;
+&quot;^1\.  \*\*２８\*\*&quot;-&amp;gt;&quot;28. &quot;
+&quot;^1\.  \*\*２９\*\*&quot;-&amp;gt;&quot;29. &quot;
+&quot;^1\.  \*\*３０\*\*&quot;-&amp;gt;&quot;30. &quot;
+&quot;^(\d+?)\.  &quot;-&amp;gt;&quot;$1. &quot;
+
+:: This fix 2 space after bullets
+&quot;    (\d+?)\.  &quot;-&amp;gt;&quot;    $1. &quot;
+::This clears empty lines.
+&quot;\n\s+?\n    (\d+?)\. &quot;-&amp;gt;&quot;
+    $1. &quot;
+::This clears empty lines.
+&quot;\n\s+?\n        &amp;gt;「&quot;-&amp;gt;&quot;
+    &amp;gt;「&quot;
+
+::This clears empty lines.
+&quot;^\s+\n(\d+)\.&quot;-&amp;gt;&quot;$1.&quot;
+
+&quot;    (\d+?)\. 「&quot;-&amp;gt;&quot;    $1. &amp;gt;「&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;obsidian-的插件不難寫&quot;&gt;Obsidian 的插件不難寫&lt;/h2&gt;
 

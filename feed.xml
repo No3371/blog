@@ -1,5 +1,226 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-09-29T08:30:58+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
-</subtitle><author><name>BA</name></author><entry><title type="html">Unity: iOS PVRTC Compression Requires Square Textures</title><link href="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en" rel="alternate" type="text/html" title="Unity: iOS PVRTC Compression Requires Square Textures" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id><content type="html" xml:base="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-02T15:14:56+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
+</subtitle><author><name>BA</name></author><entry><title type="html">Hosting A Web Service on Vultr</title><link href="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en" rel="alternate" type="text/html" title="Hosting A Web Service on Vultr" /><published>2021-10-02T00:00:00+00:00</published><updated>2021-10-02T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;
+
+&lt;p&gt;Though It has been 1~2 years since I started messing with stuff like tcp, http, server development, nginx…  I’ve never really touch some of the key parts: how domain name works, how to configure dns, how to properly setup a web server machine.&lt;/p&gt;
+
+&lt;p&gt;It’s quite a learning experience that worth a blog post, so here we go.&lt;/p&gt;
+
+&lt;h2 id=&quot;vps-provider-vultr&quot;&gt;VPS Provider: Vultr&lt;/h2&gt;
+
+&lt;p&gt;I’ve been dealing with GCP in last 2 years, actually GCP is the only cloud provider I’ve ever tried, and the experience is not so good:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The console is very powerful, very complicated, and very fragmented. It’s packed with all sort of cloud stuff Google provides, and a lot of the products are left untouched most of the time, while still being there, costing your attention.&lt;/li&gt;
+  &lt;li&gt;IMO, the UI is confusing, mainly becuase all the infomation is dumped on you, and most of the text elements are of same size.&lt;/li&gt;
+  &lt;li&gt;Also, the UI is kinda slow in my experience, and we usually have to move between tabs a lot, which makes the slowness prominent.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The pricing is very complicated and dynamic.&lt;/strong&gt; It’s a really good concept to devide all things up and charge separately according to usages, but it’s not quite friendly to users. I recently found that I have several disks of deleted vm that had been charging me for several months. Had I not noticed the money I &lt;strong&gt;paid&lt;/strong&gt; was surpirsing, I may never notice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vultr is mainly about VPS, not much more, the UI is clean and easy to navigate.&lt;/p&gt;
+
+&lt;p&gt;As fo pricing, it’s cool. Vultr asks you deposit first, and it adopts fixed pricing model. I feel at ease knowing that my deposited $10 will run my machine for about 2 months.&lt;/p&gt;
+
+&lt;p&gt;The machine deployment is straightforward, complete the form and push the deploy button, it’ll start doing it job. In minutes, the machine’d be ready for you to ssh into it from your machine or the web console.&lt;/p&gt;
+
+&lt;h2 id=&quot;domain-registrar-namecheap&quot;&gt;Domain Registrar: Namecheap&lt;/h2&gt;
+
+&lt;p&gt;From time to time, I’d feel an urge to buy a domain for my idea, but had never really done once.&lt;/p&gt;
+
+&lt;p&gt;I decided to buy my domains on &lt;a href=&quot;https://namecheap.com&quot;&gt;Namecheap&lt;/a&gt;, the buying part is easy, just filling forms and paying the money.&lt;/p&gt;
+
+&lt;p&gt;The hard part for me is configuring the DNS records. I have a mediocre understanding of how DNS works, but I knows n0thing about how to set it up… What is DNS record? And What are A, AAAA, CNAME, MX, SRV?&lt;/p&gt;
+
+&lt;p&gt;Googled them. Tried and errors. Hours gone. &lt;strong&gt;The key missing piece is that I don’t know that domain names point to IP, not IP:port, this one cost me quite some time to figure out.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s actually not complicated at all, at least for my purpose. The only 1 &lt;em&gt;DNS Record&lt;/em&gt; needed is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A RECORD: It decides what IP the domain points to. The &lt;code class=&quot;highlighter-rouge&quot;&gt;Name&lt;/code&gt; of a &lt;em&gt;A Record&lt;/em&gt; means subdomain, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Data&lt;/code&gt; is the IP address it points to.
+For example, if we setup a record whose Name is &lt;code class=&quot;highlighter-rouge&quot;&gt;blog&lt;/code&gt;, Data is &lt;code class=&quot;highlighter-rouge&quot;&gt;1.2.3.4&lt;/code&gt;. Assuming the registered domain is &lt;code class=&quot;highlighter-rouge&quot;&gt;cool.xyz&lt;/code&gt;, when we try to connect to &lt;code class=&quot;highlighter-rouge&quot;&gt;blog.cool.xyz&lt;/code&gt;, the DNS tells our computer to go to &lt;code class=&quot;highlighter-rouge&quot;&gt;1.2.3.4&lt;/code&gt;.
+If it’s an IPV6 address, use &lt;em&gt;AAAA Record&lt;/em&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Namecheap experience is smooth, interfaces are easy to use and stuff are easy to understance. I’ve never tried other registrars, so nothing to complain.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-the-machine&quot;&gt;Setting Up The Machine&lt;/h2&gt;
+
+&lt;p&gt;The most familiar Linux OS for me is CentOS, so that’s what loaded on the mechine deployed on Vultr.&lt;/p&gt;
+
+&lt;p&gt;Some notes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/authorized_keys&lt;/code&gt; is a file not a directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;setting-up-nginx&quot;&gt;Setting up Nginx&lt;/h3&gt;
+
+&lt;p&gt;To route http packets to the web service listening to another port, a web server listening to 80 or 443 is required. &lt;a href=&quot;https://nginx.org&quot;&gt;Nginx&lt;/a&gt; is my most familiar tool so it’s a no-brainer for me.&lt;/p&gt;
+
+&lt;p&gt;The installation steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;yum install nginx&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable nginx&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Wrote a .conf file to proxy http packets to my web service in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/conf.d&lt;/code&gt; so it gets included to http block in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/nginx.conf&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Things I learned:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;By default, Nginx has a timeout of 60 seconds when proxying packets.&lt;/li&gt;
+  &lt;li&gt;The location block name is not only used to match url, but also what gets stripped to upstream url.&lt;br /&gt;
+For easier understanding, take a look at the pseudo conf, notice the difference in location name:
+    &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
+      &lt;span class=&quot;n&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;123&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;;
+      &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; /&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; {
+          &lt;span class=&quot;n&quot;&gt;proxy_pass&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;456&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;/;
+      }
+
+      &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; /&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;/ {
+          &lt;span class=&quot;n&quot;&gt;proxy_pass&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;456&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;/;
+      }
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;When a request to &lt;code class=&quot;highlighter-rouge&quot;&gt;123.com/a/b&lt;/code&gt; arrived, the fist location block would proxy it to &lt;code class=&quot;highlighter-rouge&quot;&gt;456.com/a/b&lt;/code&gt;, while the second one would proxy it to &lt;code class=&quot;highlighter-rouge&quot;&gt;456.com/b&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;make-it-a-systemd-service&quot;&gt;Make It a Systemd Service&lt;/h3&gt;
+
+&lt;p&gt;The web service I’m hosting is a single-file excutable, I just drop it into &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; which I learned is a goto place for binaries not installed with package managers, it’ll also make things easier on SELinux enabled machine, we’ll &lt;a href=&quot;#dealing-with-selinux&quot;&gt;cover this later&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I need the web service to auto start on boot and auto restart if any failure happens, it seems the simplest way is create a new systemd service config for it.&lt;/p&gt;
+
+&lt;p&gt;Just write a file like this into &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system&lt;/code&gt;, the naming convention is &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME.service&lt;/code&gt;,&lt;/p&gt;
+
+&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;DUCT&lt;/span&gt;
+
+&lt;span class=&quot;py&quot;&gt;Wants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;network.target&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;After&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;syslog.target network-online.target&lt;/span&gt;
+
+&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/bin/bash -c &quot;/usr/local/bin/duct serve&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;RestartSec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;6s&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Restart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;KillMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;process&lt;/span&gt;
+
+&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;The pitfall here is make sure the ExecStart is formatted as &lt;code class=&quot;highlighter-rouge&quot;&gt;/bin/bash -c &quot;command&quot;&lt;/code&gt; event if it’s already an executable, otherwise It’ll keep dying without telling you why.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After the file is in place, enabling the service with &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable NAME.service&lt;/code&gt;, this makes it start on boot, but does not start it immediately.&lt;/p&gt;
+
+&lt;p&gt;To start it immediately, do &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl start NAME.service&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The above &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME.service&lt;/code&gt; used in the commands can be abbrevated to &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;good-to-go&quot;&gt;Good to Go?&lt;/h3&gt;
+
+&lt;p&gt;With DNS, Nginx and my web service set-up, I thought I was ready to go… But no, I can’t connect to my web service.&lt;/p&gt;
+
+&lt;h3 id=&quot;dealing-with-selinux&quot;&gt;Dealing with SELinux&lt;/h3&gt;
+
+&lt;p&gt;Though &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;The most familiar Linux OS for me is CentOS&quot;&lt;/code&gt; I’ve never confronting SELinux before! It’s… annoying. But I appreciate the strictness so I decided to stick to it, not disabling it.&lt;/p&gt;
+
+&lt;p&gt;What was happening is even if I was doing curl from the machine itself, it’s not proxied to the web service, instead, Nginx would throw &lt;code class=&quot;highlighter-rouge&quot;&gt;502 Bad Gateway&lt;/code&gt; at me.&lt;/p&gt;
+
+&lt;p&gt;This is very weird. I wen to take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/nginx/error.log&lt;/code&gt;, it was something like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[crit] 3684#0: *56 connect() to [::1]:1234 failed (13: Permission denied) while connecting to upstream, client: 123.123.123.123, server: sub.1234.com, request: “GET /duct/1 HTTP/1.1”, upstream: “http://[::1]:1234/1”, host: “sub.1234.com”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Okay, &lt;code class=&quot;highlighter-rouge&quot;&gt;(13: Permission denied)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There’s such a file &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/audit/audit.log&lt;/code&gt; that contains logs of what the audit system done. I took a look, found something looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type=AVC msg=audit(1633183449.281:813): avc:  denied  { name_connect } for  pid=3684 comm=&quot;nginx&quot; dest=9002 scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:http_port_t:s0 tclass=tcp_socket permissive=0
+type=SYSCALL msg=audit(1633183449.281:813): arch=c000003e syscall=42 success=no exit=-13 a0=12 a1=560edfc92af0 a2=10 a3=7fff7e08e13c items=0 ppid=3683 pid=3684 auid=4294967295 uid=989 gid=985 euid=989 suid=989 fsuid=989 egid=985 sgid=985 fsgid=985 tty=(none) ses=4294967295 comm=&quot;nginx&quot; exe=&quot;/usr/sbin/nginx&quot; subj=system_u:system_r:httpd_t:s0 key=(null)ARCH=x86_64 SYSCALL=connect AUID=&quot;unset&quot; UID=&quot;nginx&quot; GID=&quot;nginx&quot; EUID=&quot;nginx&quot; SUID=&quot;nginx&quot; FSUID=&quot;nginx&quot; EGID=&quot;nginx&quot; SGID=&quot;nginx&quot; FSGID=&quot;nginx&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What a gibberish. With &lt;code class=&quot;highlighter-rouge&quot;&gt;ausearch -m avc -i&lt;/code&gt; we can get a more readable version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-log&quot;&gt;type=PROCTITLE msg=audit(10/02/2021 22:04:09.281:814) : proctitle=nginx: worker process
+type=SYSCALL msg=audit(10/02/2021 22:04:09.281:814) : arch=x86_64 syscall=connect success=no exit=EACCES(Permission denied) a0=0x12 a1=0x560edfc92b18 a2=0x1c a3=0x7fff7e08e13c items=0 ppid=3683 pid=3684 auid=unset uid=nginx gid=nginx euid=nginx suid=nginx fsuid=nginx egid=nginx sgid=nginx fsgid=nginx tty=(none) ses=unset comm=nginx exe=/usr/sbin/nginx subj=system_u:system_r:httpd_t:s0 key=(null)
+type=AVC msg=audit(10/02/2021 22:04:09.281:814) : avc:  denied  { name_connect } for  pid=3684 comm=nginx dest=1234 scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:port_t:s0 tclass=tcp_socket permissive=0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nginx was doing a &lt;code class=&quot;highlighter-rouge&quot;&gt;connect&lt;/code&gt; syscall, but has no permission to do it.
+    &lt;blockquote&gt;
+      &lt;p&gt;syscall=connect success=no exit=EACCES(Permission denied)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The actual denied action was &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt;.
+    &lt;blockquote&gt;
+      &lt;p&gt;avc:  denied  { name_connect }&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nginx is a httpd.
+    &lt;blockquote&gt;
+      &lt;p&gt;exe=/usr/sbin/nginx subj=system_u:system_r:httpd_t:s0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The target is a normal tcp port, which is what my web service listens to.
+    &lt;blockquote&gt;
+      &lt;p&gt;tcontext=system_u:object_r:port_t:s0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; by http_d to a tcp port is not allowed.
+    &lt;blockquote&gt;
+      &lt;p&gt;permissive=0&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Great, but how do we know what does it allow?&lt;/p&gt;
+
+&lt;p&gt;We can do &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch --allow -s httpd_t | grep name_connect&lt;/code&gt; to further investigate, the &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch&lt;/code&gt; plugin would output all rules which apply to action comes from a httpd and is an allow rule, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;grep&lt;/code&gt; filters lines contains &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; for us.&lt;/p&gt;
+
+&lt;p&gt;The output should looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+allow httpd_t http_port_t:tcp_socket name_connect; [ httpd_can_network_relay ]:True
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The line is saying that if &lt;code class=&quot;highlighter-rouge&quot;&gt;httpd_can_network_relay&lt;/code&gt; is true, &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; from a httpd to any port of &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt; is allowed. There was no line starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;allow httpd_t port_t:tcp_socket&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So it’s much clear about what happened. So, to solve this, we need to enable the option &lt;code class=&quot;highlighter-rouge&quot;&gt;httpd_can_network_relay&lt;/code&gt; first with &lt;code class=&quot;highlighter-rouge&quot;&gt;setsebool -P  httpd_can_network_relay on&lt;/code&gt; (-P means it does not revert after reboot)&lt;/p&gt;
+
+&lt;p&gt;Then we have 2 options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Allow httpd do &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; to all tcp port.&lt;/li&gt;
+  &lt;li&gt;Add the port we want to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Comparing the two, it’s very easy to comes to a conclusion that, the second one, which allows 1 more tcp port to be connected, is much safer than the first one, which allows all tcp ports to be connected.&lt;/p&gt;
+
+&lt;p&gt;If we do &lt;code class=&quot;highlighter-rouge&quot;&gt;semanage port -l | grep http_port_t&lt;/code&gt;, we can see all the ports belonging to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To add a port to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;, do &lt;code class=&quot;highlighter-rouge&quot;&gt;semanage port -a -t http_port_t -p tcp [PORT NUMBER]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The permission issue was fixed.&lt;/p&gt;
+
+&lt;h3 id=&quot;firewalld&quot;&gt;Firewalld&lt;/h3&gt;
+
+&lt;p&gt;After all these done, it still did not work. What could still be wrong… after all these obstacles I overcame?&lt;/p&gt;
+
+&lt;p&gt;The good old firewall.&lt;/p&gt;
+
+&lt;p&gt;What was happening is that  &lt;em&gt;curl&lt;/em&gt; says &lt;code class=&quot;highlighter-rouge&quot;&gt;No route to host&lt;/code&gt;  when I told it to connect to my domain. The message sounds very much like a DNS issue, or like the machine is not exposed to internet… Hey, that means there’s no route to get to my domain, is it?&lt;/p&gt;
+
+&lt;p&gt;Firewalld can be adjusted with &lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd&lt;/code&gt;, I did these to open the door:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --list-all&lt;/code&gt;, from the output it seems that 80 (http) is not allowed&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --permanent --add-service=http&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --reload&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --permanent --list-services&lt;/code&gt;, now the output shows that http is enabled&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Bingo! My web service is online.&lt;/strong&gt;&lt;/p&gt;</content><author><name>BA</name></author><category term="web" /><category term="linux" /><summary type="html">I just started hosting a private web service on Vultr, a VPS provider, for my own convenience.</summary></entry><entry><title type="html">Unity: iOS PVRTC Compression Requires Square Textures</title><link href="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en" rel="alternate" type="text/html" title="Unity: iOS PVRTC Compression Requires Square Textures" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id><content type="html" xml:base="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
 
 &lt;p&gt;It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, &lt;strong&gt;if the texture is not square, Unity stretch it without warning you.&lt;/strong&gt; For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.&lt;/p&gt;
 
@@ -82,8 +303,15 @@ For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended 
 
 &lt;hr /&gt;
 
-&lt;p&gt;EDIT 21/09/22
-It seems patchbay.pub is down :sad:&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><category term="patchbay" /><category term="qol" /><summary type="html">PatchBay is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive “321”. Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities. I’ve made several personal tools based on PatchBay, for example, PushBullet: 400: Invalid request The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours. As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC. I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http GET and POST everywhere as long as you are connected. The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful. EDIT 21/09/22 It seems patchbay.pub is down :sad:</summary></entry><entry><title type="html">Git Client: Fork Goes Brrrrr</title><link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en" rel="alternate" type="text/html" title="Git Client: Fork Goes Brrrrr" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
+&lt;p&gt;EDIT 2021/09/22
+It seems patchbay.pub is down :sad:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;EDIT 2021/10/02
+So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/a&gt; and starting to host my own service for myself.&lt;/p&gt;
+
+&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Maybe I’ll blog about it in the future.&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><category term="patchbay" /><category term="qol" /><summary type="html">PatchBay is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive “321”. Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities. I’ve made several personal tools based on PatchBay, for example, PushBullet: 400: Invalid request The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours. As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC. I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http GET and POST everywhere as long as you are connected. The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful. EDIT 2021/09/22 It seems patchbay.pub is down :sad: EDIT 2021/10/02 So I grabbed duct and starting to host my own service for myself. I chose Vultr and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Maybe I’ll blog about it in the future.</summary></entry><entry><title type="html">Git Client: Fork Goes Brrrrr</title><link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en" rel="alternate" type="text/html" title="Git Client: Fork Goes Brrrrr" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
 
 &lt;p&gt;But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… &lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;for at least 10 years&lt;/a&gt;. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of &lt;strong&gt;scripts&lt;/strong&gt; in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.&lt;/p&gt;
 
@@ -255,6 +483,99 @@ It seems patchbay.pub is down :sad:&lt;/p&gt;</content><author><name>BA</name></
 &lt;p&gt;&lt;img src=&quot;using_pipeline.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;這就是我為了飛速監修而寫的插件 &lt;a href=&quot;https://github.com/No3371/obsidian-regex-pipeline&quot;&gt;Regex Pipleline&lt;/a&gt;，利用預先定義的 Regex 取代規則，快速調整筆記內容。&lt;/p&gt;
+
+&lt;p&gt;Regex 是一種強大的魔法咒語，看得懂之前只覺得機哩咕嚕眼花撩亂，會用之後就覺得自己簡直是文字魔法師…&lt;/p&gt;
+
+&lt;p&gt;goo 辭書的格式化 rule set 大概是這樣的，把這東西寫出來之後，這麼多 regex replacement 就會自動執行了，簡直是巫術：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02539\.gif\)&quot;-&amp;gt;&quot;![[@1.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02540\.gif\)&quot;-&amp;gt;&quot;![[@2.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02541\.gif\)&quot;-&amp;gt;&quot;![[@3.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02542\.gif\)&quot;-&amp;gt;&quot;![[@4.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02543\.gif\)&quot;-&amp;gt;&quot;![[@5.gif]]&quot;
+&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02544\.gif\)&quot;-&amp;gt;&quot;![[@6.gif]]&quot;
+
+::This fix example sentence right after a topic
+&quot;［(.+?)］(.+)\n\n1\.  1\.  「&quot;-&amp;gt;&quot;［$1］$2
+&amp;gt;「&quot;
+
+::This fix example sentence right after a topic
+&quot;［(.+?)］(.+)\n\n-   「&quot;-&amp;gt;&quot;［$1］$2
+&amp;gt;「&quot;
+
+
+::This extract entry name from the title
+&quot;^#\s.+goo国語辞書\n+(.+)\n+の解説\n+\-+&quot;-&amp;gt;&quot;# $1&quot;
+
+::This extract titles for sub entries2
+&quot;(.+?)\n\nの解説\n+?\-+&quot;-&amp;gt;&quot;---
+# $1&quot;
+
+:: This convert these lines to headers
+&quot;^類語&quot;-&amp;gt;&quot;#### 類語&quot;
+&quot;^関連語&quot;-&amp;gt;&quot;#### 関連語&quot;
+&quot;^下接句&quot;-&amp;gt;&quot;#### 下接句&quot;
+
+:: Convert all second level single example sentence
+&quot;    [\n\s]?    1\.\s+「(?!.+\n\s+?2\.)&quot;-&amp;gt;&quot;    &amp;gt;「&quot;
+
+:: These 2 fix arrow reference
+&quot;    &amp;gt;→\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
+&quot;    1\.  →\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
+
+:: This fix \n\n    → to \n    →
+&quot;[\n\s]+?(?=    →\[.+?\]\(.+\)［.+?］)&quot;-&amp;gt;&quot;
+&quot;
+
+
+&quot;^        「&quot;-&amp;gt;&quot;        &amp;gt;「&quot;
+
+:: This fix wrong bullets captured by [MardDownload](github.com/deathau/markdownload)
+&quot;^1\.  \*\*１\*\*&quot;-&amp;gt;&quot;1. &quot;
+&quot;^1\.  \*\*２\*\*&quot;-&amp;gt;&quot;2. &quot;
+&quot;^1\.  \*\*３\*\*&quot;-&amp;gt;&quot;3. &quot;
+&quot;^1\.  \*\*４\*\*&quot;-&amp;gt;&quot;4. &quot;
+&quot;^1\.  \*\*５\*\*&quot;-&amp;gt;&quot;5. &quot;
+&quot;^1\.  \*\*６\*\*&quot;-&amp;gt;&quot;6. &quot;
+&quot;^1\.  \*\*７\*\*&quot;-&amp;gt;&quot;7. &quot;
+&quot;^1\.  \*\*８\*\*&quot;-&amp;gt;&quot;8. &quot;
+&quot;^1\.  \*\*９\*\*&quot;-&amp;gt;&quot;9. &quot;
+&quot;^1\.  \*\*１０\*\*&quot;-&amp;gt;&quot;10. &quot;
+&quot;^1\.  \*\*１１\*\*&quot;-&amp;gt;&quot;11. &quot;
+&quot;^1\.  \*\*１２\*\*&quot;-&amp;gt;&quot;12. &quot;
+&quot;^1\.  \*\*１３\*\*&quot;-&amp;gt;&quot;13. &quot;
+&quot;^1\.  \*\*１４\*\*&quot;-&amp;gt;&quot;14. &quot;
+&quot;^1\.  \*\*１５\*\*&quot;-&amp;gt;&quot;15. &quot;
+&quot;^1\.  \*\*１６\*\*&quot;-&amp;gt;&quot;16. &quot;
+&quot;^1\.  \*\*１７\*\*&quot;-&amp;gt;&quot;17. &quot;
+&quot;^1\.  \*\*１８\*\*&quot;-&amp;gt;&quot;18. &quot;
+&quot;^1\.  \*\*１９\*\*&quot;-&amp;gt;&quot;19. &quot;
+&quot;^1\.  \*\*２０\*\*&quot;-&amp;gt;&quot;20. &quot;
+&quot;^1\.  \*\*２１\*\*&quot;-&amp;gt;&quot;21. &quot;
+&quot;^1\.  \*\*２２\*\*&quot;-&amp;gt;&quot;22. &quot;
+&quot;^1\.  \*\*２３\*\*&quot;-&amp;gt;&quot;23. &quot;
+&quot;^1\.  \*\*２４\*\*&quot;-&amp;gt;&quot;24. &quot;
+&quot;^1\.  \*\*２５\*\*&quot;-&amp;gt;&quot;25. &quot;
+&quot;^1\.  \*\*２６\*\*&quot;-&amp;gt;&quot;26. &quot;
+&quot;^1\.  \*\*２７\*\*&quot;-&amp;gt;&quot;27. &quot;
+&quot;^1\.  \*\*２８\*\*&quot;-&amp;gt;&quot;28. &quot;
+&quot;^1\.  \*\*２９\*\*&quot;-&amp;gt;&quot;29. &quot;
+&quot;^1\.  \*\*３０\*\*&quot;-&amp;gt;&quot;30. &quot;
+&quot;^(\d+?)\.  &quot;-&amp;gt;&quot;$1. &quot;
+
+:: This fix 2 space after bullets
+&quot;    (\d+?)\.  &quot;-&amp;gt;&quot;    $1. &quot;
+::This clears empty lines.
+&quot;\n\s+?\n    (\d+?)\. &quot;-&amp;gt;&quot;
+    $1. &quot;
+::This clears empty lines.
+&quot;\n\s+?\n        &amp;gt;「&quot;-&amp;gt;&quot;
+    &amp;gt;「&quot;
+
+::This clears empty lines.
+&quot;^\s+\n(\d+)\.&quot;-&amp;gt;&quot;$1.&quot;
+
+&quot;    (\d+?)\. 「&quot;-&amp;gt;&quot;    $1. &amp;gt;「&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;obsidian-的插件不難寫&quot;&gt;Obsidian 的插件不難寫&lt;/h2&gt;
 

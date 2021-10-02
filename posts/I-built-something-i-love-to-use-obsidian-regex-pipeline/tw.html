@@ -159,6 +159,99 @@
 
 <p>這就是我為了飛速監修而寫的插件 <a href="https://github.com/No3371/obsidian-regex-pipeline">Regex Pipleline</a>，利用預先定義的 Regex 取代規則，快速調整筆記內容。</p>
 
+<p>Regex 是一種強大的魔法咒語，看得懂之前只覺得機哩咕嚕眼花撩亂，會用之後就覺得自己簡直是文字魔法師…</p>
+
+<p>goo 辭書的格式化 rule set 大概是這樣的，把這東西寫出來之後，這麼多 regex replacement 就會自動執行了，簡直是巫術：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02539\.gif\)"-&gt;"![[@1.gif]]"
+"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02540\.gif\)"-&gt;"![[@2.gif]]"
+"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02541\.gif\)"-&gt;"![[@3.gif]]"
+"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02542\.gif\)"-&gt;"![[@4.gif]]"
+"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02543\.gif\)"-&gt;"![[@5.gif]]"
+"\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02544\.gif\)"-&gt;"![[@6.gif]]"
+
+::This fix example sentence right after a topic
+"［(.+?)］(.+)\n\n1\.  1\.  「"-&gt;"［$1］$2
+&gt;「"
+
+::This fix example sentence right after a topic
+"［(.+?)］(.+)\n\n-   「"-&gt;"［$1］$2
+&gt;「"
+
+
+::This extract entry name from the title
+"^#\s.+goo国語辞書\n+(.+)\n+の解説\n+\-+"-&gt;"# $1"
+
+::This extract titles for sub entries2
+"(.+?)\n\nの解説\n+?\-+"-&gt;"---
+# $1"
+
+:: This convert these lines to headers
+"^類語"-&gt;"#### 類語"
+"^関連語"-&gt;"#### 関連語"
+"^下接句"-&gt;"#### 下接句"
+
+:: Convert all second level single example sentence
+"    [\n\s]?    1\.\s+「(?!.+\n\s+?2\.)"-&gt;"    &gt;「"
+
+:: These 2 fix arrow reference
+"    &gt;→\[(.+?)\]\((.+)\)［(.+?)］"-&gt;"    →[$1]($2)［$3］"
+"    1\.  →\[(.+?)\]\((.+)\)［(.+?)］"-&gt;"    →[$1]($2)［$3］"
+
+:: This fix \n\n    → to \n    →
+"[\n\s]+?(?=    →\[.+?\]\(.+\)［.+?］)"-&gt;"
+"
+
+
+"^        「"-&gt;"        &gt;「"
+
+:: This fix wrong bullets captured by [MardDownload](github.com/deathau/markdownload)
+"^1\.  \*\*１\*\*"-&gt;"1. "
+"^1\.  \*\*２\*\*"-&gt;"2. "
+"^1\.  \*\*３\*\*"-&gt;"3. "
+"^1\.  \*\*４\*\*"-&gt;"4. "
+"^1\.  \*\*５\*\*"-&gt;"5. "
+"^1\.  \*\*６\*\*"-&gt;"6. "
+"^1\.  \*\*７\*\*"-&gt;"7. "
+"^1\.  \*\*８\*\*"-&gt;"8. "
+"^1\.  \*\*９\*\*"-&gt;"9. "
+"^1\.  \*\*１０\*\*"-&gt;"10. "
+"^1\.  \*\*１１\*\*"-&gt;"11. "
+"^1\.  \*\*１２\*\*"-&gt;"12. "
+"^1\.  \*\*１３\*\*"-&gt;"13. "
+"^1\.  \*\*１４\*\*"-&gt;"14. "
+"^1\.  \*\*１５\*\*"-&gt;"15. "
+"^1\.  \*\*１６\*\*"-&gt;"16. "
+"^1\.  \*\*１７\*\*"-&gt;"17. "
+"^1\.  \*\*１８\*\*"-&gt;"18. "
+"^1\.  \*\*１９\*\*"-&gt;"19. "
+"^1\.  \*\*２０\*\*"-&gt;"20. "
+"^1\.  \*\*２１\*\*"-&gt;"21. "
+"^1\.  \*\*２２\*\*"-&gt;"22. "
+"^1\.  \*\*２３\*\*"-&gt;"23. "
+"^1\.  \*\*２４\*\*"-&gt;"24. "
+"^1\.  \*\*２５\*\*"-&gt;"25. "
+"^1\.  \*\*２６\*\*"-&gt;"26. "
+"^1\.  \*\*２７\*\*"-&gt;"27. "
+"^1\.  \*\*２８\*\*"-&gt;"28. "
+"^1\.  \*\*２９\*\*"-&gt;"29. "
+"^1\.  \*\*３０\*\*"-&gt;"30. "
+"^(\d+?)\.  "-&gt;"$1. "
+
+:: This fix 2 space after bullets
+"    (\d+?)\.  "-&gt;"    $1. "
+::This clears empty lines.
+"\n\s+?\n    (\d+?)\. "-&gt;"
+    $1. "
+::This clears empty lines.
+"\n\s+?\n        &gt;「"-&gt;"
+    &gt;「"
+
+::This clears empty lines.
+"^\s+\n(\d+)\."-&gt;"$1."
+
+"    (\d+?)\. 「"-&gt;"    $1. &gt;「"
+</code></pre></div></div>
+
 <h2 id="obsidian-的插件不難寫">Obsidian 的插件不難寫</h2>
 
 <p>Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算是滿生疏的一個領域，但仔細觀察了一下之後還是很容易上手了。個人心得是不像一般為了推出 API 而推出 API，實際使用上，感覺官方有認真在思考，根據開發者可能會有的需求去設計實用方便的 API。</p>
@@ -204,9 +297,11 @@
     <p>#csharp</p></a><a href="/blog/tags/diy">
     <p>#diy</p></a><a href="/blog/tags/foss">
     <p>#foss</p></a><a href="/blog/tags/git">
-    <p>#git</p></a><a href="/blog/tags/patchbay">
+    <p>#git</p></a><a href="/blog/tags/linux">
+    <p>#linux</p></a><a href="/blog/tags/patchbay">
     <p>#patchbay</p></a><a href="/blog/tags/pitfall">
     <p>#pitfall</p></a><a href="/blog/tags/qol">
     <p>#qol</p></a><a href="/blog/tags/unity">
-    <p>#unity</p></a></div></body>
+    <p>#unity</p></a><a href="/blog/tags/web">
+    <p>#web</p></a></div></body>
 </html>

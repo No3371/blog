@@ -4,13 +4,15 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-09-29T08:30:58+00:00</updated>
+ <updated>2021-10-02T15:14:56+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
  
    
  
@@ -43,8 +45,15 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;EDIT 21/09/22
+&lt;p&gt;EDIT 2021/09/22
 It seems patchbay.pub is down :sad:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;EDIT 2021/10/02
+So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/a&gt; and starting to host my own service for myself.&lt;/p&gt;
+
+&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Maybe I’ll blog about it in the future.&lt;/p&gt;
 </content>
    </entry>
    
