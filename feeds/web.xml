@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-02T15:14:56+00:00</updated>
+ <updated>2021-10-02T16:06:11+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -65,7 +65,7 @@ If it’s an IPV6 address, use &lt;em&gt;AAAA Record&lt;/em&gt; instead.&lt;/li&
 
 &lt;p&gt;The most familiar Linux OS for me is CentOS, so that’s what loaded on the mechine deployed on Vultr.&lt;/p&gt;
 
-&lt;p&gt;Some notes:&lt;/p&gt;
+&lt;p&gt;Some random notes:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/authorized_keys&lt;/code&gt; is a file not a directory.&lt;/li&gt;
 &lt;/ul&gt;
@@ -84,7 +84,7 @@ If it’s an IPV6 address, use &lt;em&gt;AAAA Record&lt;/em&gt; instead.&lt;/li&
 
 &lt;p&gt;Things I learned:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;By default, Nginx has a timeout of 60 seconds when proxying packets.&lt;/li&gt;
+  &lt;li&gt;By default, Nginx has a timeout of 60 seconds when proxying packets. configs like &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_send_timeout 1h&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_read_timeout 1h&lt;/code&gt; are useful.&lt;/li&gt;
   &lt;li&gt;The location block name is not only used to match url, but also what gets stripped to upstream url.&lt;br /&gt;
 For easier understanding, take a look at the pseudo conf, notice the difference in location name:
     &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
@@ -138,10 +138,25 @@ For easier understanding, take a look at the pseudo conf, notice the difference 
 
 &lt;p&gt;With DNS, Nginx and my web service set-up, I thought I was ready to go… But no, I can’t connect to my web service.&lt;/p&gt;
 
-&lt;h3 id=&quot;dealing-with-selinux&quot;&gt;Dealing with SELinux&lt;/h3&gt;
+&lt;h2 id=&quot;dealing-with-selinux&quot;&gt;Dealing with SELinux&lt;/h2&gt;
 
 &lt;p&gt;Though &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;The most familiar Linux OS for me is CentOS&quot;&lt;/code&gt; I’ve never confronting SELinux before! It’s… annoying. But I appreciate the strictness so I decided to stick to it, not disabling it.&lt;/p&gt;
 
+&lt;h3 id=&quot;where-is-it&quot;&gt;Where Is It&lt;/h3&gt;
+
+&lt;p&gt;In one of the previous sections, I mentioned that placing executables in &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; is helpful.&lt;/p&gt;
+
+&lt;p&gt;SELinux maintains context of files. For example, if I place my &lt;code class=&quot;highlighter-rouge&quot;&gt;duct&lt;/code&gt; in like &lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt;, it won’t work, the execution would be denied by SELinux, because according to the configured contexts, execution happening in &lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt; is not allowed.&lt;/p&gt;
+
+&lt;p&gt;A lot of the default paths are pre-configured, and I like the idea to stick to vanilla settings, so I chose to place my executable to &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;. (Actually, this is the first time I really google about where should stuff go, and found a good post)&lt;/p&gt;
+
+&lt;p&gt;If you are interested with how to mess with file contexts, here is a &lt;a href=&quot;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-selinux_contexts_labeling_files-persistent_changes_semanage_fcontext&quot;&gt;link to the documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But one more thing had to be done, when we move something into &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;, SELinux won’t know that thing is now in a valid place to be executed.&lt;/p&gt;
+
+&lt;p&gt;I ran &lt;code class=&quot;highlighter-rouge&quot;&gt;restorecon -rv /usr/local/bin/duct&lt;/code&gt; to update it, so it’s now allowed to be execute there.&lt;/p&gt;
+
+&lt;h3 id=&quot;connection-denied&quot;&gt;Connection Denied&lt;/h3&gt;
 &lt;p&gt;What was happening is even if I was doing curl from the machine itself, it’s not proxied to the web service, instead, Nginx would throw &lt;code class=&quot;highlighter-rouge&quot;&gt;502 Bad Gateway&lt;/code&gt; at me.&lt;/p&gt;
 
 &lt;p&gt;This is very weird. I wen to take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/nginx/error.log&lt;/code&gt;, it was something like this:&lt;/p&gt;

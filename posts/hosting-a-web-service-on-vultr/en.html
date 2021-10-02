@@ -118,7 +118,7 @@ If it’s an IPV6 address, use <em>AAAA Record</em> instead.</li>
 
 <p>The most familiar Linux OS for me is CentOS, so that’s what loaded on the mechine deployed on Vultr.</p>
 
-<p>Some notes:</p>
+<p>Some random notes:</p>
 <ul>
   <li><code class="highlighter-rouge">~/.ssh/authorized_keys</code> is a file not a directory.</li>
 </ul>
@@ -137,7 +137,7 @@ If it’s an IPV6 address, use <em>AAAA Record</em> instead.</li>
 
 <p>Things I learned:</p>
 <ul>
-  <li>By default, Nginx has a timeout of 60 seconds when proxying packets.</li>
+  <li>By default, Nginx has a timeout of 60 seconds when proxying packets. configs like <code class="highlighter-rouge">proxy_send_timeout 1h</code>, <code class="highlighter-rouge">proxy_read_timeout 1h</code> are useful.</li>
   <li>The location block name is not only used to match url, but also what gets stripped to upstream url.<br />
 For easier understanding, take a look at the pseudo conf, notice the difference in location name:
     <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">server</span> {
@@ -191,10 +191,25 @@ For easier understanding, take a look at the pseudo conf, notice the difference 
 
 <p>With DNS, Nginx and my web service set-up, I thought I was ready to go… But no, I can’t connect to my web service.</p>
 
-<h3 id="dealing-with-selinux">Dealing with SELinux</h3>
+<h2 id="dealing-with-selinux">Dealing with SELinux</h2>
 
 <p>Though <code class="highlighter-rouge">"The most familiar Linux OS for me is CentOS"</code> I’ve never confronting SELinux before! It’s… annoying. But I appreciate the strictness so I decided to stick to it, not disabling it.</p>
 
+<h3 id="where-is-it">Where Is It</h3>
+
+<p>In one of the previous sections, I mentioned that placing executables in <code class="highlighter-rouge">/usr/local/bin</code> is helpful.</p>
+
+<p>SELinux maintains context of files. For example, if I place my <code class="highlighter-rouge">duct</code> in like <code class="highlighter-rouge">/home</code>, it won’t work, the execution would be denied by SELinux, because according to the configured contexts, execution happening in <code class="highlighter-rouge">/home</code> is not allowed.</p>
+
+<p>A lot of the default paths are pre-configured, and I like the idea to stick to vanilla settings, so I chose to place my executable to <code class="highlighter-rouge">/usr/local/bin</code>. (Actually, this is the first time I really google about where should stuff go, and found a good post)</p>
+
+<p>If you are interested with how to mess with file contexts, here is a <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-selinux_contexts_labeling_files-persistent_changes_semanage_fcontext">link to the documentation</a>.</p>
+
+<p>But one more thing had to be done, when we move something into <code class="highlighter-rouge">/usr/local/bin</code>, SELinux won’t know that thing is now in a valid place to be executed.</p>
+
+<p>I ran <code class="highlighter-rouge">restorecon -rv /usr/local/bin/duct</code> to update it, so it’s now allowed to be execute there.</p>
+
+<h3 id="connection-denied">Connection Denied</h3>
 <p>What was happening is even if I was doing curl from the machine itself, it’s not proxied to the web service, instead, Nginx would throw <code class="highlighter-rouge">502 Bad Gateway</code> at me.</p>
 
 <p>This is very weird. I wen to take a look at <code class="highlighter-rouge">/var/log/nginx/error.log</code>, it was something like this:</p>
