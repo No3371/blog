@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-04T02:35:49+00:00</updated>
+ <updated>2021-10-04T03:10:44+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -86,8 +86,7 @@ If it’s an IPV6 address, use &lt;em&gt;AAAA Record&lt;/em&gt; instead.&lt;/li&
 &lt;ul&gt;
   &lt;li&gt;By default, Nginx has a timeout of 60 seconds when proxying packets. configs like &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_send_timeout 1h&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_read_timeout 1h&lt;/code&gt; are useful.&lt;/li&gt;
   &lt;li&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_pass&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;127.0.0.1&lt;/code&gt; is different.&lt;/li&gt;
-  &lt;li&gt;The location block name is not only used to match url, but also what gets stripped to upstream url.&lt;br /&gt;
-For easier understanding, take a look at the pseudo conf, notice the difference in location name:
+  &lt;li&gt;Slashs matter. For easier understanding, take a look at the pseudo conf, notice the difference in location name:
     &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
       &lt;span class=&quot;n&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;123&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;;
       &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; /&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;/ {
