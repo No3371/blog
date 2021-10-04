@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>#</title>
+ <link href="/blog/atom.xml" rel="self"/>
+ <link href="https://no3371.github.io/blog/"/>
+ <updated>2021-10-04T09:43:53+00:00</updated>
+ <id>https://no3371.github.io</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+   
+   <entry>
+     <title>Who Took My Hotkey?</title>
+     <link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en"/>
+     <updated>2021-10-04T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/who-took-my-hotkey/who-took-my-hotkey</id>
+     <content type="html">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;
+
+&lt;h1 id=&quot;find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;Find out what process registered a global hotkey? (Windows API)&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the tool (for me, it’s at &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;In the menu bar, select &lt;em&gt;Spy&lt;/em&gt; -&amp;gt; &lt;em&gt;Log messages…&lt;/em&gt; (or hit Ctrl + M)&lt;/li&gt;
+  &lt;li&gt;Check &lt;em&gt;All Windows in System&lt;/em&gt; in the &lt;em&gt;Additional Windows&lt;/em&gt; frame&lt;/li&gt;
+  &lt;li&gt;Switch to the &lt;em&gt;Messages&lt;/em&gt; tab&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Clear All&lt;/em&gt; button&lt;/li&gt;
+  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; in the listbox, or check &lt;em&gt;Keyboard&lt;/em&gt; in &lt;em&gt;Message Groups&lt;/em&gt; (if you’re OK with more potential noise)&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;OK&lt;/em&gt; button&lt;/li&gt;
+  &lt;li&gt;Press the hotkey in question (Win + R, for example)&lt;/li&gt;
+  &lt;li&gt;Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; line in the &lt;em&gt;Messages (All Windows)&lt;/em&gt; window, right click, and select &lt;em&gt;Properties…&lt;/em&gt; in the context menu&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Message Properties&lt;/em&gt; dialog, click the &lt;em&gt;Window Handle&lt;/em&gt; link (this will be the handle for the window that received the message)&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Synchronize&lt;/em&gt; button on the &lt;em&gt;Window Properties&lt;/em&gt; dialog. This will show the window in the main Spy++ window treeview.&lt;/li&gt;
+  &lt;li&gt;On the &lt;em&gt;Window Properties&lt;/em&gt; dialog, select the &lt;em&gt;Process&lt;/em&gt; tab&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Process ID&lt;/em&gt; link. This will show you the process (In my Win + R case: &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPLORER&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+   </entry>
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+
+</feed>

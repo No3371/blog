@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Who Took My Hotkey?" />
+<meta name="author" content="BA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe) In the menu bar, select Spy -&gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)" />
+<meta property="og:description" content="The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe) In the menu bar, select Spy -&gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)" />
+<link rel="canonical" href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" />
+<meta property="og:url" content="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" />
+<meta property="og:site_name" content="#" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Who Took My Hotkey?" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"BA"},"headline":"Who Took My Hotkey?","dateModified":"2021-10-04T00:00:00+00:00","datePublished":"2021-10-04T00:00:00+00:00","description":"The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\Tools\\spyxx_amd64.exe) In the menu bar, select Spy -&gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)","url":"https://no3371.github.io/blog/posts/who-took-my-hotkey/en","mainEntityOfPage":{"@type":"WebPage","@id":"https://no3371.github.io/blog/posts/who-took-my-hotkey/en"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/./favicon.ico?" />
+  <link rel="stylesheet" href="/blog/assets/css/agate.css" />
+  <link rel="stylesheet" href="/blog/assets/css/custom.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script><link type="application/atom+xml" rel="alternate" href="https://no3371.github.io/blog/feed.xml" title="#" /></head><body>
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <head>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Who Took My Hotkey?</title>
+  </head>
+  <header class="post-header">
+    <div class="post-back">
+      <a class="black-link" href="/blog">
+        ← Home
+      </a>
+    </div>
+
+    <h1 class="post-title p-name" itemprop="name headline">
+      Who Took My Hotkey?
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="2021-10-04T00:00:00+00:00"
+        itemprop="datePublished"
+      >Oct 4, 2021
+      </time>
+        &nbsp;&nbsp;Tags:
+        
+          <span class="tag">
+            <small> <a href="/blog/tags/windows"> #windows</a></small>
+          </span> 
+        &nbsp;&nbsp;Languages:&nbsp;<span class="language_tag">EN</span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The original <a href="https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api">post</a> was by <a href="https://stackoverflow.com/users/995048/user995048">user995048</a>.</p>
+
+<p>Copy-pasted for my own convenience:</p>
+
+<h1 id="find-out-what-process-registered-a-global-hotkey-windows-api">Find out what process registered a global hotkey? (Windows API)</h1>
+
+<ul>
+  <li>Run the tool (for me, it’s at <code class="highlighter-rouge">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe</code>)</li>
+  <li>In the menu bar, select <em>Spy</em> -&gt; <em>Log messages…</em> (or hit Ctrl + M)</li>
+  <li>Check <em>All Windows in System</em> in the <em>Additional Windows</em> frame</li>
+  <li>Switch to the <em>Messages</em> tab</li>
+  <li>Click the <em>Clear All</em> button</li>
+  <li>Select <code class="highlighter-rouge">WM_HOTKEY</code> in the listbox, or check <em>Keyboard</em> in <em>Message Groups</em> (if you’re OK with more potential noise)</li>
+  <li>Click the <em>OK</em> button</li>
+  <li>Press the hotkey in question (Win + R, for example)</li>
+  <li>Select the <code class="highlighter-rouge">WM_HOTKEY</code> line in the <em>Messages (All Windows)</em> window, right click, and select <em>Properties…</em> in the context menu</li>
+  <li>In the <em>Message Properties</em> dialog, click the <em>Window Handle</em> link (this will be the handle for the window that received the message)</li>
+  <li>Click the <em>Synchronize</em> button on the <em>Window Properties</em> dialog. This will show the window in the main Spy++ window treeview.</li>
+  <li>On the <em>Window Properties</em> dialog, select the <em>Process</em> tab</li>
+  <li>Click the <em>Process ID</em> link. This will show you the process (In my Win + R case: <code class="highlighter-rouge">EXPLORER</code>)</li>
+</ul>
+
+  </div>
+
+  <a class="u-url" href="/blog/posts/who-took-my-hotkey/en" hidden></a>
+  <div class="related-posts">
+    
+    
+    
+  </div>
+</article>
+
+        </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/blog/"></data>
+    <div class="wrapper">
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <ul class="contact-list">
+            <li class="p-name"><a class="black-link" href="/blog/about.html">
+                  BA 
+                </a></li><li>
+              <a class="u-email black-link" href="mailto:badevstudio@gmail.com">badevstudio@gmail.com</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </footer><div class="tags_sidebar"><a href="/blog/tags/csharp">
+    <p>#csharp</p></a><a href="/blog/tags/diy">
+    <p>#diy</p></a><a href="/blog/tags/foss">
+    <p>#foss</p></a><a href="/blog/tags/git">
+    <p>#git</p></a><a href="/blog/tags/linux">
+    <p>#linux</p></a><a href="/blog/tags/patchbay">
+    <p>#patchbay</p></a><a href="/blog/tags/pitfall">
+    <p>#pitfall</p></a><a href="/blog/tags/qol">
+    <p>#qol</p></a><a href="/blog/tags/unity">
+    <p>#unity</p></a><a href="/blog/tags/web">
+    <p>#web</p></a><a href="/blog/tags/windows">
+    <p>#windows</p></a></div></body>
+</html>

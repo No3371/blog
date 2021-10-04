@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-04T07:31:36+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
-</subtitle><author><name>BA</name></author><entry><title type="html">Hosting A Web Service on Vultr</title><link href="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en" rel="alternate" type="text/html" title="Hosting A Web Service on Vultr" /><published>2021-10-02T00:00:00+00:00</published><updated>2021-10-02T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-04T09:43:53+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
+</subtitle><author><name>BA</name></author><entry><title type="html">Who Took My Hotkey?</title><link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" rel="alternate" type="text/html" title="Who Took My Hotkey?" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/who-took-my-hotkey/who-took-my-hotkey</id><content type="html" xml:base="https://no3371.github.io/blog/posts/who-took-my-hotkey/en">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;
+
+&lt;h1 id=&quot;find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;Find out what process registered a global hotkey? (Windows API)&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the tool (for me, it’s at &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;In the menu bar, select &lt;em&gt;Spy&lt;/em&gt; -&amp;gt; &lt;em&gt;Log messages…&lt;/em&gt; (or hit Ctrl + M)&lt;/li&gt;
+  &lt;li&gt;Check &lt;em&gt;All Windows in System&lt;/em&gt; in the &lt;em&gt;Additional Windows&lt;/em&gt; frame&lt;/li&gt;
+  &lt;li&gt;Switch to the &lt;em&gt;Messages&lt;/em&gt; tab&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Clear All&lt;/em&gt; button&lt;/li&gt;
+  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; in the listbox, or check &lt;em&gt;Keyboard&lt;/em&gt; in &lt;em&gt;Message Groups&lt;/em&gt; (if you’re OK with more potential noise)&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;OK&lt;/em&gt; button&lt;/li&gt;
+  &lt;li&gt;Press the hotkey in question (Win + R, for example)&lt;/li&gt;
+  &lt;li&gt;Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; line in the &lt;em&gt;Messages (All Windows)&lt;/em&gt; window, right click, and select &lt;em&gt;Properties…&lt;/em&gt; in the context menu&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Message Properties&lt;/em&gt; dialog, click the &lt;em&gt;Window Handle&lt;/em&gt; link (this will be the handle for the window that received the message)&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Synchronize&lt;/em&gt; button on the &lt;em&gt;Window Properties&lt;/em&gt; dialog. This will show the window in the main Spy++ window treeview.&lt;/li&gt;
+  &lt;li&gt;On the &lt;em&gt;Window Properties&lt;/em&gt; dialog, select the &lt;em&gt;Process&lt;/em&gt; tab&lt;/li&gt;
+  &lt;li&gt;Click the &lt;em&gt;Process ID&lt;/em&gt; link. This will show you the process (In my Win + R case: &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPLORER&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>BA</name></author><category term="windows" /><summary type="html">The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe) In the menu bar, select Spy -&amp;gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)</summary></entry><entry><title type="html">Hosting A Web Service on Vultr</title><link href="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en" rel="alternate" type="text/html" title="Hosting A Web Service on Vultr" /><published>2021-10-02T00:00:00+00:00</published><updated>2021-10-02T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;
 
 &lt;p&gt;Though It has been 1~2 years since I started messing with stuff like tcp, http, server development, nginx…  I’ve never really touch some of the key parts: how domain name works, how to configure dns, how to properly setup a web server machine.&lt;/p&gt;
 
@@ -607,84 +627,4 @@ So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/
 &lt;h2 id=&quot;插件審核&quot;&gt;插件審核&lt;/h2&gt;
 &lt;p&gt;想要發布插件，讓插件會在 Obsidian 內建的第三方插件搜尋清單中出現，必須向 &lt;em&gt;Obsidian-Releases&lt;/em&gt; 提交 PR，&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/pull/239#issuecomment-817929015&quot;&gt;例&lt;/a&gt;。&lt;/p&gt;
 
-&lt;p&gt;官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">Obsidian 自從開始使用 Obsidian 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…</summary></entry><entry><title type="html">Jekyll: Make it Multi-Lingual</title><link href="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en" rel="alternate" type="text/html" title="Jekyll: Make it Multi-Lingual" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/jekyll-make-it-multilingual</id><content type="html" xml:base="https://no3371.github.io/blog/posts/jekyll-make-it-multilingual/en">&lt;p&gt;As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Our objectives here are:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;To enble publishing posts in different lanaguages, all by Jekyll’s functionality, without javascript.&lt;/li&gt;
-  &lt;li&gt;It should be an addition not a requirement, so it should be okay to publish posts in whatever and any number of languages.&lt;/li&gt;
-  &lt;li&gt;It should be easy to navigate between languages.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;What we can take advantages of:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;We can add whatever we want as &lt;a href=&quot;https://jekyllrb.com/docs/front-matter/&quot;&gt;Front Matter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;With &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;, any Front Matter could be used in &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;Permalink&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Front Matters are accessible in Liquid tags, this allows us to know what languages are available for a post in Layouts/Includes.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;generate-posts-of-languages&quot;&gt;Generate Posts of Languages&lt;/h2&gt;
-
-&lt;p&gt;The Front Matter of this post is shown below:&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Make&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Multi-Lingual&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;foss&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As you can see, I specified the &lt;strong&gt;language&lt;/strong&gt; entry, which contains “en”, this means, this post is written in “en” (It doesn’t matter what language it actually is, it’s just a variable).&lt;/p&gt;
-
-&lt;p&gt;As for now, the post is only in English, if in the future I write another version in, for example “tw”, then it’d become:&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Make&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Multi-Lingual&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;foss&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;other_language_versions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;other_language_versions&lt;/code&gt; front matter is added, and it’s in “path_relative_to_post=lang” format. This entry will be used by Liquid to generate buttons to navigate between language versions, I’ll show how to achieve that in the next section.&lt;/p&gt;
-
-&lt;p&gt;And this is my post permalink:&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
-  posts:
-    output: true
-    permalink: posts/:title/:language
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/ample/jekyll-placeholders&quot;&gt;jekyll-placeholders&lt;/a&gt;, I can reference the &lt;strong&gt;language&lt;/strong&gt; Front Matter here, so when Jekyll compiles the site, this post would be &lt;code class=&quot;highlighter-rouge&quot;&gt;posts/2021-05-07-jekyll-make-it-multilingual/en.html&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;By the way, The reason why I decide to place language at the tail is, It’d much easier to select langugage by url, though my site’d be very easy to switch language by buttons, It’s still a good thing to do.&lt;/p&gt;
-
-&lt;h2 id=&quot;show-the-lanaguage-options&quot;&gt;Show The Lanaguage Options&lt;/h2&gt;
-
-&lt;p&gt;In my home layout, this is how my post items are rendered:&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-          {%- assign date_format = site.moving.date_format | default: &quot;%b %-d, %Y&quot; -%} // My site is based on [Moving](https://github.com/huangyz0918/moving) theme
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-meta&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; // Show the date of the post
-            {{ post.date | date: date_format }}
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black-link post-link-layout&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ post.url | prepend: site.baseurl}}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; // How it links to the acutal post page
-            {{ post.title | escape }}
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-          {%- if post.language -%} // If the post has **language** front matter
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language_tag&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ post.language | upcase }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; // en -&amp;gt; EN
-          {%- endif -%}
-          {%- if post.other_language_versions.size &amp;gt; 0 -%} // If the post has **other_language_versions** front matter
-            {%- for L in post.other_language_versions -%} // Iterate through all options
-              {%- assign data =  L | split: &quot;=&quot;  -%} // Split the entry, take jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md=tw as example, data[0] will be jekyll-make-it-multilingual/2021-05-31-jekyll-make-it-multilingual.md and data[1] will be tw.
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;language_option&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{% link _posts/{{ data[0] }} %}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ data[1] | upcase }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt; // We use **link** here, so Jekyll will do the job for us to get the actual link, data[1] is showing what language version the button leads to
-            {%- endfor -%}
-          {%- endif -%}
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Just after these steps, We can present posts in multiple languages.&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">As you may have noticed, this blog has basic level of support of multilingualism. There’re several plugins out there to help us creating multi-lingual jekyll sites, but I eventually decided to make it simple. This blog’s multilingualism is achieved with liquid tags, front matters, also a amazing plugin called jekyll-placeholders.</summary></entry></feed>
+&lt;p&gt;官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">Obsidian 自從開始使用 Obsidian 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…</summary></entry></feed>
