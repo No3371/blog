@@ -4,7 +4,7 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-04T06:02:32+00:00</updated>
+ <updated>2021-10-04T07:31:36+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
@@ -210,7 +210,7 @@ type=AVC msg=audit(10/02/2021 22:04:09.281:814) : avc:  denied  { name_connect }
 
 &lt;p&gt;Great, but how do we know what does it allow?&lt;/p&gt;
 
-&lt;p&gt;We can do &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch --allow -s httpd_t | grep name_connect&lt;/code&gt; to further investigate, the &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch&lt;/code&gt; plugin would output all rules which apply to action comes from a httpd and is an allow rule, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;grep&lt;/code&gt; filters lines contains &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; for us.&lt;/p&gt;
+&lt;p&gt;We can do &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch --allow -s httpd_t | grep name_connect&lt;/code&gt; to further investigate, the &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch&lt;/code&gt; statement would output all rules which apply to action comes from a httpd and is an allow rule, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;grep&lt;/code&gt; statement filters lines contains &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The output should looks like:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...

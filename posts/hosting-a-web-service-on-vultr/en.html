@@ -263,7 +263,7 @@ type=AVC msg=audit(10/02/2021 22:04:09.281:814) : avc:  denied  { name_connect }
 
 <p>Great, but how do we know what does it allow?</p>
 
-<p>We can do <code class="highlighter-rouge">sesearch --allow -s httpd_t | grep name_connect</code> to further investigate, the <code class="highlighter-rouge">sesearch</code> plugin would output all rules which apply to action comes from a httpd and is an allow rule, then the <code class="highlighter-rouge">grep</code> filters lines contains <code class="highlighter-rouge">name_connect</code> for us.</p>
+<p>We can do <code class="highlighter-rouge">sesearch --allow -s httpd_t | grep name_connect</code> to further investigate, the <code class="highlighter-rouge">sesearch</code> statement would output all rules which apply to action comes from a httpd and is an allow rule, then the <code class="highlighter-rouge">grep</code> statement filters lines contains <code class="highlighter-rouge">name_connect</code>.</p>
 
 <p>The output should looks like:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
