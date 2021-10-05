@@ -1,5 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-04T09:43:53+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
-</subtitle><author><name>BA</name></author><entry><title type="html">Who Took My Hotkey?</title><link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" rel="alternate" type="text/html" title="Who Took My Hotkey?" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/who-took-my-hotkey/who-took-my-hotkey</id><content type="html" xml:base="https://no3371.github.io/blog/posts/who-took-my-hotkey/en">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-05T07:33:47+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
+</subtitle><author><name>BA</name></author><entry><title type="html">像個現代人一樣使用 Windows 搜尋</title><link href="https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/tw" rel="alternate" type="text/html" title="像個現代人一樣使用 Windows 搜尋" /><published>2021-10-05T00:00:00+00:00</published><updated>2021-10-05T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/search-in-windows-like-it's-2021</id><content type="html" xml:base="https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/tw">&lt;p&gt;大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。&lt;/p&gt;
+
+&lt;h2 id=&quot;windows-desktop-search-2x&quot;&gt;Windows Desktop Search 2.x&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NOT (*.png OR *.jpg OR *.psd)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;windows-search-canonical-advanced-query-syntax&quot;&gt;Windows Search: Canonical Advanced Query Syntax&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-advancedquerysyntax#canonical-advanced-query-syntax-in-windows-7&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kind:folder&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;種類:資料夾&lt;/code&gt;搜得到。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size:&amp;lt;1024&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;大小:&amp;lt;1024&lt;/code&gt;搜得到。&lt;/p&gt;
+
+&lt;p&gt;拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？&lt;/p&gt;
+
+&lt;p&gt;於是他們又為此推出了「典型語法」：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.Size:&amp;lt;1kb&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileExtension:=&quot;.txt&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileName:~&amp;lt;&quot;C++ Primer&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>BA</name></author><category term="git" /><summary type="html">大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。 Windows Desktop Search 2.x Reference 搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案 NOT (*.png OR *.jpg OR *.psd) Windows Search: Canonical Advanced Query Syntax Reference Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。 kind:folder搜不到；種類:資料夾搜得到。 size:&amp;lt;1024搜不到；大小:&amp;lt;1024搜得到。 拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？ 於是他們又為此推出了「典型語法」： System.Size:&amp;lt;1kb System.FileExtension:=&quot;.txt&quot; System.FileName:~&amp;lt;&quot;C++ Primer&quot;</summary></entry><entry><title type="html">Who Took My Hotkey?</title><link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" rel="alternate" type="text/html" title="Who Took My Hotkey?" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/who-took-my-hotkey/who-took-my-hotkey</id><content type="html" xml:base="https://no3371.github.io/blog/posts/who-took-my-hotkey/en">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;
 
@@ -427,204 +456,4 @@ So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/
 
 &lt;p&gt;我太懶了，而且這東西沒什麼料，&lt;del&gt;不讓我便宜賣，只好開源&lt;/del&gt;&lt;/p&gt;
 
-&lt;p&gt;順手給個星星吧！&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="diy" /><summary type="html">Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。</summary></entry><entry><title type="html">寫一個自己愛不釋手的工具：Obsidian Regex Pipeline</title><link href="https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw" rel="alternate" type="text/html" title="寫一個自己愛不釋手的工具：Obsidian Regex Pipeline" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/I-built-something-i-love-to-use-obsidian-regex-pipeline</id><content type="html" xml:base="https://no3371.github.io/blog/posts/I-built-something-i-love-to-use-obsidian-regex-pipeline/tw">&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
-&lt;p&gt;自從開始使用 &lt;a href=&quot;https://obisidian.md&quot;&gt;Obsidian&lt;/a&gt; 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…&lt;/p&gt;
-
-&lt;p&gt;Obsidian 是一套網路化知識管理工具，是近年變得比較熱門的一種工具類型，其始祖是 Roam Research。這類工具的特色是基於知識具有關聯性的理念，使用者在編寫筆記的時候，標註筆記與筆記之間的關聯，而它們可以計算筆記之間的關聯，視覺化地呈現出一個網路圖表！隨著我們填入越多筆記，資料庫網路就會對我們越來越有價值，成為我們的虛擬大腦、外接記憶儲存空間，更棒的是在這個過程中，借助筆記之間的彼此連結，我們對於一個知識體系的學習效率也會大幅提高。&lt;/p&gt;
-
-&lt;p&gt;Obsidian 真的非常棒！但今天我要說的是我自己寫了一個插件的故事…（是的！Obisidian 支援第三方插件，太棒了）&lt;/p&gt;
-
-&lt;h2 id=&quot;監修筆記很花時間&quot;&gt;監修筆記很花時間&lt;/h2&gt;
-&lt;p&gt;這半年來持續投入時間的結果就是我有了一個超大又井井有條的日文筆記資料庫，再來就是我開始覺得手動調整格式很煩！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;Obsidian_kHYkCZgx4i.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;隨便舉個例子，這是我從 goo 辭書上使用 Firefox 的 MardDownload 插件抓下來的&lt;a href=&quot;https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B/&quot;&gt;計る&lt;/a&gt;條目的內容：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 計る／量る／測る／図る／謀る／諮る（はかる）の意味 - goo国語辞書
-
-はか・る【計る／量る／測る／図る／謀る／諮る】
-
-の解説
-
-
-------------------------------
-［動ラ五（四）］《「[はか](https://dictionary.goo.ne.jp/word/%E8%A8%88_%28%E3%81%AF%E3%81%8B%29/#jn-174670)」に活用語尾の付いたもの》
-
-1.  **１** （計る・測る・量る）
-    
-    1.  ㋐ある基準をもとにして物の度合いを調べる。特に、はかり・ゲージなどの計測機器で測定する。「體溫を─・る」「距離を─・る」
-        
-    2.  ㋑推しはかって見當をつける。おもんぱかる。忖度 (そんたく) する。「己をもって人を─・る」「真意を─・りかねる」
-        
-
-1.  **２** （図る・謀る）
-    
-    1.  ㋐物事を考え合わせて判斷する。見はからう。「時期を─・る」「敵情を─・る」
-        
-    2.  ㋑企てる。もくろむ。「自殺を─・る」
-        
-
-1.  **３** （謀る）
-    
-    1.  ㋐はかりごとをする。たくらむ。「悪事を─・る」
-        
-    2.  ㋑あざむく。たばかる。「さては─・られたか」
-        
-
-1.  **４** （図る）
-    
-    1.  ㋐くふうして努力する。「再起を─・る」「利益を─・る」
-        
-    2.  ㋑うまく處理する。とりはからう。「便宜を─・る」
-        
-
-1.  **５** （諮る）相談する。「會議に─・って決める」
-    
-
-\[補説\]**1**㋐について、「計る」は時間・數、「測る」は長さ・高さ・深さ・広さ・程度、「量る」は重さ・容積を調べる際に使うことが多い。
-
-\[可能\]**はかれる**
-
-類語
-
--   [計る(はかる)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B//#jn-174852)
--   [測る(はかる)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E3%82%8B//#jn-174852)
-
-関連語
-
--   [計測(けいそく)](https://dictionary.goo.ne.jp/word/%E8%A8%88%E6%B8%AC/#jn-66796)
--   [目測(もくそく)](https://dictionary.goo.ne.jp/word/%E7%9B%AE%E6%B8%AC/#jn-218932)
--   [目份量(めぶんりょう)](https://dictionary.goo.ne.jp/word/%E7%9B%AE%E5%88%86%E9%87%8F/#jn-217869)
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;比對一下原始網頁，會發現有一些奇怪的地方，比如網站上的數字清單沒有辦法正確捕捉；另外，對於筆記的格式我們可能有一些要求，比如說去除空行、冗餘文字。&lt;/p&gt;
-
-&lt;p&gt;在 Obsidian 中渲染出來的結果是這樣：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;rendered.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;不可接受、絕對不可接受。&lt;/p&gt;
-
-&lt;p&gt;來看看要整理這則筆記我要做多少動作：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;manual.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;做一個養活自己的成熟工程師&quot;&gt;做一個養活自己的成熟工程師&lt;/h2&gt;
-
-&lt;p&gt;是時候展現我真正的實力了！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;using_pipeline.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;這就是我為了飛速監修而寫的插件 &lt;a href=&quot;https://github.com/No3371/obsidian-regex-pipeline&quot;&gt;Regex Pipleline&lt;/a&gt;，利用預先定義的 Regex 取代規則，快速調整筆記內容。&lt;/p&gt;
-
-&lt;p&gt;Regex 是一種強大的魔法咒語，看得懂之前只覺得機哩咕嚕眼花撩亂，會用之後就覺得自己簡直是文字魔法師…&lt;/p&gt;
-
-&lt;p&gt;goo 辭書的格式化 rule set 大概是這樣的，把這東西寫出來之後，這麼多 regex replacement 就會自動執行了，簡直是巫術：&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02539\.gif\)&quot;-&amp;gt;&quot;![[@1.gif]]&quot;
-&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02540\.gif\)&quot;-&amp;gt;&quot;![[@2.gif]]&quot;
-&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02541\.gif\)&quot;-&amp;gt;&quot;![[@3.gif]]&quot;
-&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02542\.gif\)&quot;-&amp;gt;&quot;![[@4.gif]]&quot;
-&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02543\.gif\)&quot;-&amp;gt;&quot;![[@5.gif]]&quot;
-&quot;\!\[\]\(https://dictionary\.goo\.ne\.jp/img/daijisen/gaiji/02544\.gif\)&quot;-&amp;gt;&quot;![[@6.gif]]&quot;
-
-::This fix example sentence right after a topic
-&quot;［(.+?)］(.+)\n\n1\.  1\.  「&quot;-&amp;gt;&quot;［$1］$2
-&amp;gt;「&quot;
-
-::This fix example sentence right after a topic
-&quot;［(.+?)］(.+)\n\n-   「&quot;-&amp;gt;&quot;［$1］$2
-&amp;gt;「&quot;
-
-
-::This extract entry name from the title
-&quot;^#\s.+goo国語辞書\n+(.+)\n+の解説\n+\-+&quot;-&amp;gt;&quot;# $1&quot;
-
-::This extract titles for sub entries2
-&quot;(.+?)\n\nの解説\n+?\-+&quot;-&amp;gt;&quot;---
-# $1&quot;
-
-:: This convert these lines to headers
-&quot;^類語&quot;-&amp;gt;&quot;#### 類語&quot;
-&quot;^関連語&quot;-&amp;gt;&quot;#### 関連語&quot;
-&quot;^下接句&quot;-&amp;gt;&quot;#### 下接句&quot;
-
-:: Convert all second level single example sentence
-&quot;    [\n\s]?    1\.\s+「(?!.+\n\s+?2\.)&quot;-&amp;gt;&quot;    &amp;gt;「&quot;
-
-:: These 2 fix arrow reference
-&quot;    &amp;gt;→\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
-&quot;    1\.  →\[(.+?)\]\((.+)\)［(.+?)］&quot;-&amp;gt;&quot;    →[$1]($2)［$3］&quot;
-
-:: This fix \n\n    → to \n    →
-&quot;[\n\s]+?(?=    →\[.+?\]\(.+\)［.+?］)&quot;-&amp;gt;&quot;
-&quot;
-
-
-&quot;^        「&quot;-&amp;gt;&quot;        &amp;gt;「&quot;
-
-:: This fix wrong bullets captured by [MardDownload](github.com/deathau/markdownload)
-&quot;^1\.  \*\*１\*\*&quot;-&amp;gt;&quot;1. &quot;
-&quot;^1\.  \*\*２\*\*&quot;-&amp;gt;&quot;2. &quot;
-&quot;^1\.  \*\*３\*\*&quot;-&amp;gt;&quot;3. &quot;
-&quot;^1\.  \*\*４\*\*&quot;-&amp;gt;&quot;4. &quot;
-&quot;^1\.  \*\*５\*\*&quot;-&amp;gt;&quot;5. &quot;
-&quot;^1\.  \*\*６\*\*&quot;-&amp;gt;&quot;6. &quot;
-&quot;^1\.  \*\*７\*\*&quot;-&amp;gt;&quot;7. &quot;
-&quot;^1\.  \*\*８\*\*&quot;-&amp;gt;&quot;8. &quot;
-&quot;^1\.  \*\*９\*\*&quot;-&amp;gt;&quot;9. &quot;
-&quot;^1\.  \*\*１０\*\*&quot;-&amp;gt;&quot;10. &quot;
-&quot;^1\.  \*\*１１\*\*&quot;-&amp;gt;&quot;11. &quot;
-&quot;^1\.  \*\*１２\*\*&quot;-&amp;gt;&quot;12. &quot;
-&quot;^1\.  \*\*１３\*\*&quot;-&amp;gt;&quot;13. &quot;
-&quot;^1\.  \*\*１４\*\*&quot;-&amp;gt;&quot;14. &quot;
-&quot;^1\.  \*\*１５\*\*&quot;-&amp;gt;&quot;15. &quot;
-&quot;^1\.  \*\*１６\*\*&quot;-&amp;gt;&quot;16. &quot;
-&quot;^1\.  \*\*１７\*\*&quot;-&amp;gt;&quot;17. &quot;
-&quot;^1\.  \*\*１８\*\*&quot;-&amp;gt;&quot;18. &quot;
-&quot;^1\.  \*\*１９\*\*&quot;-&amp;gt;&quot;19. &quot;
-&quot;^1\.  \*\*２０\*\*&quot;-&amp;gt;&quot;20. &quot;
-&quot;^1\.  \*\*２１\*\*&quot;-&amp;gt;&quot;21. &quot;
-&quot;^1\.  \*\*２２\*\*&quot;-&amp;gt;&quot;22. &quot;
-&quot;^1\.  \*\*２３\*\*&quot;-&amp;gt;&quot;23. &quot;
-&quot;^1\.  \*\*２４\*\*&quot;-&amp;gt;&quot;24. &quot;
-&quot;^1\.  \*\*２５\*\*&quot;-&amp;gt;&quot;25. &quot;
-&quot;^1\.  \*\*２６\*\*&quot;-&amp;gt;&quot;26. &quot;
-&quot;^1\.  \*\*２７\*\*&quot;-&amp;gt;&quot;27. &quot;
-&quot;^1\.  \*\*２８\*\*&quot;-&amp;gt;&quot;28. &quot;
-&quot;^1\.  \*\*２９\*\*&quot;-&amp;gt;&quot;29. &quot;
-&quot;^1\.  \*\*３０\*\*&quot;-&amp;gt;&quot;30. &quot;
-&quot;^(\d+?)\.  &quot;-&amp;gt;&quot;$1. &quot;
-
-:: This fix 2 space after bullets
-&quot;    (\d+?)\.  &quot;-&amp;gt;&quot;    $1. &quot;
-::This clears empty lines.
-&quot;\n\s+?\n    (\d+?)\. &quot;-&amp;gt;&quot;
-    $1. &quot;
-::This clears empty lines.
-&quot;\n\s+?\n        &amp;gt;「&quot;-&amp;gt;&quot;
-    &amp;gt;「&quot;
-
-::This clears empty lines.
-&quot;^\s+\n(\d+)\.&quot;-&amp;gt;&quot;$1.&quot;
-
-&quot;    (\d+?)\. 「&quot;-&amp;gt;&quot;    $1. &amp;gt;「&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;obsidian-的插件不難寫&quot;&gt;Obsidian 的插件不難寫&lt;/h2&gt;
-
-&lt;p&gt;Obsidian 的插件 API 很不錯！其實我不常做這種事情，JS/TS 也算是滿生疏的一個領域，但仔細觀察了一下之後還是很容易上手了。個人心得是不像一般為了推出 API 而推出 API，實際使用上，感覺官方有認真在思考，根據開發者可能會有的需求去設計實用方便的 API。&lt;/p&gt;
-
-&lt;p&gt;比如，我本來預期，這類型的 API 會提供我「現在選取的文字開頭&amp;amp;結尾的 Index」，但它實際上直接提供了一個 &lt;code class=&quot;highlighter-rouge&quot;&gt;getSelection()&lt;/code&gt; 可以取得完整的已選取文字，還提供了 &lt;code class=&quot;highlighter-rouge&quot;&gt;replaceSelection()&lt;/code&gt; 讓你直接替換掉以選取的文字，相關的還有 &lt;code class=&quot;highlighter-rouge&quot;&gt;somethingSelected()&lt;/code&gt;… 可以說是相當高階且人性化的 API 了，插件作者完全可以 Focus 在實現插件功能。&lt;/p&gt;
-
-&lt;p&gt;範例插件的架構也是簡單，且參數、變數、方法的命名可讀性高，我一看就大概就能對照 Obsidian 的介面看出代表什麼東西。&lt;/p&gt;
-
-&lt;p&gt;我算是對 TS/JS 這種以操作 DOM 來呈現畫面的機制很不熟的，但看了看範例的作法，大概就知道了要怎麼實作畫面元件。&lt;/p&gt;
-
-&lt;p&gt;作為一個 Electron App，用 Console 開發除錯也是輕輕鬆鬆。&lt;/p&gt;
-
-&lt;h2 id=&quot;插件審核&quot;&gt;插件審核&lt;/h2&gt;
-&lt;p&gt;想要發布插件，讓插件會在 Obsidian 內建的第三方插件搜尋清單中出現，必須向 &lt;em&gt;Obsidian-Releases&lt;/em&gt; 提交 PR，&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/pull/239#issuecomment-817929015&quot;&gt;例&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;官方的開發者會認真的看過你的程式碼之後才 Merge，整體來說是不錯的經驗。&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><summary type="html">Obsidian 自從開始使用 Obsidian 以來，也超過半年了。一開始是抱著嘗試新東西的心態，剛好要學日文就拿來收納整理日文筆記，很快就愛上了這東西，一邊學習新知識一邊建立筆記，充實自己的資料庫的感覺，讓我這個數位倉鼠症患者實在是快樂得停不下來，有些下班後的夜晚坐下來編修筆記，轉眼就到了睡覺時間…</summary></entry></feed>
+&lt;p&gt;順手給個星星吧！&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="diy" /><summary type="html">Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。</summary></entry></feed>

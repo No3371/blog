@@ -4,13 +4,54 @@
  <title>#</title>
  <link href="/blog/atom.xml" rel="self"/>
  <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-04T09:43:53+00:00</updated>
+ <updated>2021-10-05T07:33:47+00:00</updated>
  <id>https://no3371.github.io</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+   
+   <entry>
+     <title>像個現代人一樣使用 Windows 搜尋</title>
+     <link href="https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/tw"/>
+     <updated>2021-10-05T00:00:00+00:00</updated>
+     <id>https://no3371.github.io/posts/search-in-windows-like-it's-2021/search-in-windows-like-it's-2021</id>
+     <content type="html">&lt;p&gt;大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。&lt;/p&gt;
+
+&lt;h2 id=&quot;windows-desktop-search-2x&quot;&gt;Windows Desktop Search 2.x&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NOT (*.png OR *.jpg OR *.psd)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;windows-search-canonical-advanced-query-syntax&quot;&gt;Windows Search: Canonical Advanced Query Syntax&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-advancedquerysyntax#canonical-advanced-query-syntax-in-windows-7&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kind:folder&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;種類:資料夾&lt;/code&gt;搜得到。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size:&amp;lt;1024&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;大小:&amp;lt;1024&lt;/code&gt;搜得到。&lt;/p&gt;
+
+&lt;p&gt;拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？&lt;/p&gt;
+
+&lt;p&gt;於是他們又為此推出了「典型語法」：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.Size:&amp;lt;1kb&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileExtension:=&quot;.txt&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileName:~&amp;lt;&quot;C++ Primer&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+   </entry>
+   
  
    
  
