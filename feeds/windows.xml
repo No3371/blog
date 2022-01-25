@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-05T07:33:47+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://blog.3371.online//"/>
+ <updated>2022-01-25T16:47:24+00:00</updated>
+ <id>http://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -17,9 +17,9 @@
    
    <entry>
      <title>Who Took My Hotkey?</title>
-     <link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en"/>
+     <link href="http://blog.3371.online//posts/who-took-my-hotkey/en"/>
      <updated>2021-10-04T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/who-took-my-hotkey/who-took-my-hotkey</id>
+     <id>http://blog.3371.online/posts/who-took-my-hotkey/who-took-my-hotkey</id>
      <content type="html">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;

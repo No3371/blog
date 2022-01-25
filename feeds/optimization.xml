@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-05T07:33:47+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://blog.3371.online//"/>
+ <updated>2022-01-25T16:47:24+00:00</updated>
+ <id>http://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>

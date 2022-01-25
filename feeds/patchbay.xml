@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-05T07:33:47+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://blog.3371.online//"/>
+ <updated>2022-01-25T16:47:24+00:00</updated>
+ <id>http://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -27,9 +27,9 @@
    
    <entry>
      <title>Free &amp; Private PushBullet with PatchBay</title>
-     <link href="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en"/>
+     <link href="http://blog.3371.online//posts/free-private-pushbullet-with-patchbay/en"/>
      <updated>2021-08-20T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id>
+     <id>http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id>
      <content type="html">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; together. For example, you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt; and POST “321” to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; side will receive “321”.&lt;/p&gt;
 
 &lt;p&gt;Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities.&lt;/p&gt;
@@ -57,7 +57,7 @@ It seems patchbay.pub is down :sad:&lt;/p&gt;
 &lt;p&gt;EDIT 2021/10/02
 So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/a&gt; and starting to host my own service for myself.&lt;/p&gt;
 
-&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. &lt;a href=&quot;/blog/posts/hosting-a-web-service-on-vultr/en&quot;&gt;Here is a blog post about it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. &lt;a href=&quot;/posts/hosting-a-web-service-on-vultr/en&quot;&gt;Here is a blog post about it&lt;/a&gt;.&lt;/p&gt;
 </content>
    </entry>
    

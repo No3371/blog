@@ -1,459 +1,459 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://no3371.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://no3371.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-10-05T07:33:47+00:00</updated><id>https://no3371.github.io/blog/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
-</subtitle><author><name>BA</name></author><entry><title type="html">像個現代人一樣使用 Windows 搜尋</title><link href="https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/tw" rel="alternate" type="text/html" title="像個現代人一樣使用 Windows 搜尋" /><published>2021-10-05T00:00:00+00:00</published><updated>2021-10-05T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/search-in-windows-like-it's-2021</id><content type="html" xml:base="https://no3371.github.io/blog/posts/search-in-windows-like-it's-2021/tw">&lt;p&gt;大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://blog.3371.online/feed.xml" rel="self" type="application/atom+xml" /><link href="http://blog.3371.online/" rel="alternate" type="text/html" /><updated>2022-01-25T16:47:24+00:00</updated><id>http://blog.3371.online/feed.xml</id><title type="html">#</title><subtitle>排放廢文 / Ranting
+</subtitle><author><name>BA</name></author><entry><title type="html">像個現代人一樣使用 Windows 搜尋</title><link href="http://blog.3371.online/posts/search-in-windows-like-it's-2021/tw" rel="alternate" type="text/html" title="像個現代人一樣使用 Windows 搜尋" /><published>2021-10-05T00:00:00+00:00</published><updated>2021-10-05T00:00:00+00:00</updated><id>http://blog.3371.online/posts/search-in-windows-like-it's-2021/search-in-windows-like-it's-2021</id><content type="html" xml:base="http://blog.3371.online/posts/search-in-windows-like-it's-2021/tw"><![CDATA[<p>大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。</p>
 
-&lt;h2 id=&quot;windows-desktop-search-2x&quot;&gt;Windows Desktop Search 2.x&lt;/h2&gt;
+<h2 id="windows-desktop-search-2x">Windows Desktop Search 2.x</h2>
 
-&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service">Reference</a></p>
 
-&lt;p&gt;搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案&lt;/p&gt;
+<p>搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;NOT (*.png OR *.jpg OR *.psd)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NOT (*.png OR *.jpg OR *.psd)
+</code></pre></div></div>
 
-&lt;h2 id=&quot;windows-search-canonical-advanced-query-syntax&quot;&gt;Windows Search: Canonical Advanced Query Syntax&lt;/h2&gt;
+<h2 id="windows-search-canonical-advanced-query-syntax">Windows Search: Canonical Advanced Query Syntax</h2>
 
-&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-advancedquerysyntax#canonical-advanced-query-syntax-in-windows-7&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-advancedquerysyntax#canonical-advanced-query-syntax-in-windows-7">Reference</a></p>
 
-&lt;p&gt;Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。&lt;/p&gt;
+<p>Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。</p>
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kind:folder&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;種類:資料夾&lt;/code&gt;搜得到。&lt;/p&gt;
+<p><code class="highlighter-rouge">kind:folder</code>搜不到；<code class="highlighter-rouge">種類:資料夾</code>搜得到。</p>
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;size:&amp;lt;1024&lt;/code&gt;搜不到；&lt;code class=&quot;highlighter-rouge&quot;&gt;大小:&amp;lt;1024&lt;/code&gt;搜得到。&lt;/p&gt;
+<p><code class="highlighter-rouge">size:&lt;1024</code>搜不到；<code class="highlighter-rouge">大小:&lt;1024</code>搜得到。</p>
 
-&lt;p&gt;拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？&lt;/p&gt;
+<p>拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？</p>
 
-&lt;p&gt;於是他們又為此推出了「典型語法」：&lt;/p&gt;
+<p>於是他們又為此推出了「典型語法」：</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.Size:&amp;lt;1kb&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileExtension:=&quot;.txt&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;System.FileName:~&amp;lt;&quot;C++ Primer&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>BA</name></author><category term="git" /><summary type="html">大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。 Windows Desktop Search 2.x Reference 搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案 NOT (*.png OR *.jpg OR *.psd) Windows Search: Canonical Advanced Query Syntax Reference Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。 kind:folder搜不到；種類:資料夾搜得到。 size:&amp;lt;1024搜不到；大小:&amp;lt;1024搜得到。 拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？ 於是他們又為此推出了「典型語法」： System.Size:&amp;lt;1kb System.FileExtension:=&quot;.txt&quot; System.FileName:~&amp;lt;&quot;C++ Primer&quot;</summary></entry><entry><title type="html">Who Took My Hotkey?</title><link href="https://no3371.github.io/blog/posts/who-took-my-hotkey/en" rel="alternate" type="text/html" title="Who Took My Hotkey?" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/who-took-my-hotkey/who-took-my-hotkey</id><content type="html" xml:base="https://no3371.github.io/blog/posts/who-took-my-hotkey/en">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
+<ul>
+  <li><code class="highlighter-rouge">System.Size:&lt;1kb</code></li>
+  <li><code class="highlighter-rouge">System.FileExtension:=".txt"</code></li>
+  <li><code class="highlighter-rouge">System.FileName:~&lt;"C++ Primer"</code></li>
+</ul>]]></content><author><name>BA</name></author><category term="git" /><summary type="html"><![CDATA[大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。 Windows Desktop Search 2.x Reference 搜尋所有不是 png 也不是 jpg 也不是 psd 的檔案 NOT (*.png OR *.jpg OR *.psd) Windows Search: Canonical Advanced Query Syntax Reference Windows 搜尋有個超級白癡的設計，就是進階搜尋語法限定用本地化的關鍵字。 kind:folder搜不到；種類:資料夾搜得到。 size:&lt;1024搜不到；大小:&lt;1024搜得到。 拜託，誰知道你們的翻譯怎麼翻的？這到底是什麼腦子？功能性的輸入語法居然每個語言各有一個版本？ 於是他們又為此推出了「典型語法」： System.Size:&lt;1kb System.FileExtension:=".txt" System.FileName:~&lt;"C++ Primer"]]></summary></entry><entry><title type="html">Who Took My Hotkey?</title><link href="http://blog.3371.online/posts/who-took-my-hotkey/en" rel="alternate" type="text/html" title="Who Took My Hotkey?" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>http://blog.3371.online/posts/who-took-my-hotkey/who-took-my-hotkey</id><content type="html" xml:base="http://blog.3371.online/posts/who-took-my-hotkey/en"><![CDATA[<p>The original <a href="https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api">post</a> was by <a href="https://stackoverflow.com/users/995048/user995048">user995048</a>.</p>
 
-&lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;
+<p>Copy-pasted for my own convenience:</p>
 
-&lt;h1 id=&quot;find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;Find out what process registered a global hotkey? (Windows API)&lt;/h1&gt;
+<h1 id="find-out-what-process-registered-a-global-hotkey-windows-api">Find out what process registered a global hotkey? (Windows API)</h1>
 
-&lt;ul&gt;
-  &lt;li&gt;Run the tool (for me, it’s at &lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;In the menu bar, select &lt;em&gt;Spy&lt;/em&gt; -&amp;gt; &lt;em&gt;Log messages…&lt;/em&gt; (or hit Ctrl + M)&lt;/li&gt;
-  &lt;li&gt;Check &lt;em&gt;All Windows in System&lt;/em&gt; in the &lt;em&gt;Additional Windows&lt;/em&gt; frame&lt;/li&gt;
-  &lt;li&gt;Switch to the &lt;em&gt;Messages&lt;/em&gt; tab&lt;/li&gt;
-  &lt;li&gt;Click the &lt;em&gt;Clear All&lt;/em&gt; button&lt;/li&gt;
-  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; in the listbox, or check &lt;em&gt;Keyboard&lt;/em&gt; in &lt;em&gt;Message Groups&lt;/em&gt; (if you’re OK with more potential noise)&lt;/li&gt;
-  &lt;li&gt;Click the &lt;em&gt;OK&lt;/em&gt; button&lt;/li&gt;
-  &lt;li&gt;Press the hotkey in question (Win + R, for example)&lt;/li&gt;
-  &lt;li&gt;Select the &lt;code class=&quot;highlighter-rouge&quot;&gt;WM_HOTKEY&lt;/code&gt; line in the &lt;em&gt;Messages (All Windows)&lt;/em&gt; window, right click, and select &lt;em&gt;Properties…&lt;/em&gt; in the context menu&lt;/li&gt;
-  &lt;li&gt;In the &lt;em&gt;Message Properties&lt;/em&gt; dialog, click the &lt;em&gt;Window Handle&lt;/em&gt; link (this will be the handle for the window that received the message)&lt;/li&gt;
-  &lt;li&gt;Click the &lt;em&gt;Synchronize&lt;/em&gt; button on the &lt;em&gt;Window Properties&lt;/em&gt; dialog. This will show the window in the main Spy++ window treeview.&lt;/li&gt;
-  &lt;li&gt;On the &lt;em&gt;Window Properties&lt;/em&gt; dialog, select the &lt;em&gt;Process&lt;/em&gt; tab&lt;/li&gt;
-  &lt;li&gt;Click the &lt;em&gt;Process ID&lt;/em&gt; link. This will show you the process (In my Win + R case: &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPLORER&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>BA</name></author><category term="windows" /><summary type="html">The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe) In the menu bar, select Spy -&amp;gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)</summary></entry><entry><title type="html">Hosting A Web Service on Vultr</title><link href="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en" rel="alternate" type="text/html" title="Hosting A Web Service on Vultr" /><published>2021-10-02T00:00:00+00:00</published><updated>2021-10-02T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;
+<ul>
+  <li>Run the tool (for me, it’s at <code class="highlighter-rouge">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe</code>)</li>
+  <li>In the menu bar, select <em>Spy</em> -&gt; <em>Log messages…</em> (or hit Ctrl + M)</li>
+  <li>Check <em>All Windows in System</em> in the <em>Additional Windows</em> frame</li>
+  <li>Switch to the <em>Messages</em> tab</li>
+  <li>Click the <em>Clear All</em> button</li>
+  <li>Select <code class="highlighter-rouge">WM_HOTKEY</code> in the listbox, or check <em>Keyboard</em> in <em>Message Groups</em> (if you’re OK with more potential noise)</li>
+  <li>Click the <em>OK</em> button</li>
+  <li>Press the hotkey in question (Win + R, for example)</li>
+  <li>Select the <code class="highlighter-rouge">WM_HOTKEY</code> line in the <em>Messages (All Windows)</em> window, right click, and select <em>Properties…</em> in the context menu</li>
+  <li>In the <em>Message Properties</em> dialog, click the <em>Window Handle</em> link (this will be the handle for the window that received the message)</li>
+  <li>Click the <em>Synchronize</em> button on the <em>Window Properties</em> dialog. This will show the window in the main Spy++ window treeview.</li>
+  <li>On the <em>Window Properties</em> dialog, select the <em>Process</em> tab</li>
+  <li>Click the <em>Process ID</em> link. This will show you the process (In my Win + R case: <code class="highlighter-rouge">EXPLORER</code>)</li>
+</ul>]]></content><author><name>BA</name></author><category term="windows" /><summary type="html"><![CDATA[The original post was by user995048. Copy-pasted for my own convenience: Find out what process registered a global hotkey? (Windows API) Run the tool (for me, it’s at C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\spyxx_amd64.exe) In the menu bar, select Spy -&gt; Log messages… (or hit Ctrl + M) Check All Windows in System in the Additional Windows frame Switch to the Messages tab Click the Clear All button Select WM_HOTKEY in the listbox, or check Keyboard in Message Groups (if you’re OK with more potential noise) Click the OK button Press the hotkey in question (Win + R, for example) Select the WM_HOTKEY line in the Messages (All Windows) window, right click, and select Properties… in the context menu In the Message Properties dialog, click the Window Handle link (this will be the handle for the window that received the message) Click the Synchronize button on the Window Properties dialog. This will show the window in the main Spy++ window treeview. On the Window Properties dialog, select the Process tab Click the Process ID link. This will show you the process (In my Win + R case: EXPLORER)]]></summary></entry><entry><title type="html">Hosting A Web Service on Vultr</title><link href="http://blog.3371.online/posts/hosting-a-web-service-on-vultr/en" rel="alternate" type="text/html" title="Hosting A Web Service on Vultr" /><published>2021-10-02T00:00:00+00:00</published><updated>2021-10-02T00:00:00+00:00</updated><id>http://blog.3371.online/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id><content type="html" xml:base="http://blog.3371.online/posts/hosting-a-web-service-on-vultr/en"><![CDATA[<p>I just started hosting a private web service on <a href="https://vultr.com">Vultr</a>, a VPS provider, for my own convenience.</p>
 
-&lt;p&gt;Though It has been 1~2 years since I started messing with stuff like tcp, http, server development, nginx…  I’ve never really touch some of the key parts: how domain name works, how to configure dns, how to properly setup a web server machine.&lt;/p&gt;
+<p>Though It has been 1~2 years since I started messing with stuff like tcp, http, server development, nginx…  I’ve never really touch some of the key parts: how domain name works, how to configure dns, how to properly setup a web server machine.</p>
 
-&lt;p&gt;It’s quite a learning experience that worth a blog post, so here we go.&lt;/p&gt;
+<p>It’s quite a learning experience that worth a blog post, so here we go.</p>
 
-&lt;h2 id=&quot;vps-provider-vultr&quot;&gt;VPS Provider: Vultr&lt;/h2&gt;
+<h2 id="vps-provider-vultr">VPS Provider: Vultr</h2>
 
-&lt;p&gt;I’ve been dealing with GCP in last 2 years, actually GCP is the only cloud provider I’ve ever tried, and the experience is not so good:&lt;/p&gt;
+<p>I’ve been dealing with GCP in last 2 years, actually GCP is the only cloud provider I’ve ever tried, and the experience is not so good:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;The console is very powerful, very complicated, and very fragmented. It’s packed with all sort of cloud stuff Google provides, and a lot of the products are left untouched most of the time, while still being there, costing your attention.&lt;/li&gt;
-  &lt;li&gt;IMO, the UI is confusing, mainly becuase all the infomation is dumped on you, and most of the text elements are of same size.&lt;/li&gt;
-  &lt;li&gt;Also, the UI is kinda slow in my experience, and we usually have to move between tabs a lot, which makes the slowness prominent.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;The pricing is very complicated and dynamic.&lt;/strong&gt; It’s a really good concept to devide all things up and charge separately according to usages, but it’s not quite friendly to users. I recently found that I have several disks of deleted vm that had been charging me for several months. Had I not noticed the money I &lt;strong&gt;paid&lt;/strong&gt; was surpirsing, I may never notice.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>The console is very powerful, very complicated, and very fragmented. It’s packed with all sort of cloud stuff Google provides, and a lot of the products are left untouched most of the time, while still being there, costing your attention.</li>
+  <li>IMO, the UI is confusing, mainly becuase all the infomation is dumped on you, and most of the text elements are of same size.</li>
+  <li>Also, the UI is kinda slow in my experience, and we usually have to move between tabs a lot, which makes the slowness prominent.</li>
+  <li><strong>The pricing is very complicated and dynamic.</strong> It’s a really good concept to devide all things up and charge separately according to usages, but it’s not quite friendly to users. I recently found that I have several disks of deleted vm that had been charging me for several months. Had I not noticed the money I <strong>paid</strong> was surpirsing, I may never notice.</li>
+</ul>
 
-&lt;p&gt;Vultr is mainly about VPS, not much more, the UI is clean and easy to navigate.&lt;/p&gt;
+<p>Vultr is mainly about VPS, not much more, the UI is clean and easy to navigate.</p>
 
-&lt;p&gt;As fo pricing, it’s cool. Vultr asks you deposit first, and it adopts fixed pricing model. I feel at ease knowing that my deposited $10 will run my machine for about 2 months.&lt;/p&gt;
+<p>As fo pricing, it’s cool. Vultr asks you deposit first, and it adopts fixed pricing model. I feel at ease knowing that my deposited $10 will run my machine for about 2 months.</p>
 
-&lt;p&gt;The machine deployment is straightforward, complete the form and push the deploy button, it’ll start doing it job. In minutes, the machine’d be ready for you to ssh into it from your machine or the web console.&lt;/p&gt;
+<p>The machine deployment is straightforward, complete the form and push the deploy button, it’ll start doing it job. In minutes, the machine’d be ready for you to ssh into it from your machine or the web console.</p>
 
-&lt;h2 id=&quot;domain-registrar-namecheap&quot;&gt;Domain Registrar: Namecheap&lt;/h2&gt;
+<h2 id="domain-registrar-namecheap">Domain Registrar: Namecheap</h2>
 
-&lt;p&gt;From time to time, I’d feel an urge to buy a domain for my idea, but had never really done once.&lt;/p&gt;
+<p>From time to time, I’d feel an urge to buy a domain for my idea, but had never really done once.</p>
 
-&lt;p&gt;I decided to buy my domains on &lt;a href=&quot;https://namecheap.com&quot;&gt;Namecheap&lt;/a&gt;, the buying part is easy, just filling forms and paying the money.&lt;/p&gt;
+<p>I decided to buy my domains on <a href="https://namecheap.com">Namecheap</a>, the buying part is easy, just filling forms and paying the money.</p>
 
-&lt;p&gt;The hard part for me is configuring the DNS records. I have a mediocre understanding of how DNS works, but I knows n0thing about how to set it up… What is DNS record? And What are A, AAAA, CNAME, MX, SRV?&lt;/p&gt;
+<p>The hard part for me is configuring the DNS records. I have a mediocre understanding of how DNS works, but I knows n0thing about how to set it up… What is DNS record? And What are A, AAAA, CNAME, MX, SRV?</p>
 
-&lt;p&gt;Googled them. Tried and errors. Hours gone. &lt;strong&gt;The key missing piece is that I don’t know that domain names point to IP, not IP:port, this one cost me quite some time to figure out.&lt;/strong&gt;&lt;/p&gt;
+<p>Googled them. Tried and errors. Hours gone. <strong>The key missing piece is that I don’t know that domain names point to IP, not IP:port, this one cost me quite some time to figure out.</strong></p>
 
-&lt;p&gt;It’s actually not complicated at all, at least for my purpose. The only 1 &lt;em&gt;DNS Record&lt;/em&gt; needed is:&lt;/p&gt;
+<p>It’s actually not complicated at all, at least for my purpose. The only 1 <em>DNS Record</em> needed is:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;A RECORD: It decides what IP the domain points to. The &lt;code class=&quot;highlighter-rouge&quot;&gt;Name&lt;/code&gt; of a &lt;em&gt;A Record&lt;/em&gt; means subdomain, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Data&lt;/code&gt; is the IP address it points to.
-For example, if we setup a record whose Name is &lt;code class=&quot;highlighter-rouge&quot;&gt;blog&lt;/code&gt;, Data is &lt;code class=&quot;highlighter-rouge&quot;&gt;1.2.3.4&lt;/code&gt;. Assuming the registered domain is &lt;code class=&quot;highlighter-rouge&quot;&gt;cool.xyz&lt;/code&gt;, when we try to connect to &lt;code class=&quot;highlighter-rouge&quot;&gt;blog.cool.xyz&lt;/code&gt;, the DNS tells our computer to go to &lt;code class=&quot;highlighter-rouge&quot;&gt;1.2.3.4&lt;/code&gt;.
-If it’s an IPV6 address, use &lt;em&gt;AAAA Record&lt;/em&gt; instead.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>A RECORD: It decides what IP the domain points to. The <code class="highlighter-rouge">Name</code> of a <em>A Record</em> means subdomain, the <code class="highlighter-rouge">Data</code> is the IP address it points to.
+For example, if we setup a record whose Name is <code class="highlighter-rouge">blog</code>, Data is <code class="highlighter-rouge">1.2.3.4</code>. Assuming the registered domain is <code class="highlighter-rouge">cool.xyz</code>, when we try to connect to <code class="highlighter-rouge">blog.cool.xyz</code>, the DNS tells our computer to go to <code class="highlighter-rouge">1.2.3.4</code>.
+If it’s an IPV6 address, use <em>AAAA Record</em> instead.</li>
+</ul>
 
-&lt;p&gt;The Namecheap experience is smooth, interfaces are easy to use and stuff are easy to understance. I’ve never tried other registrars, so nothing to complain.&lt;/p&gt;
+<p>The Namecheap experience is smooth, interfaces are easy to use and stuff are easy to understance. I’ve never tried other registrars, so nothing to complain.</p>
 
-&lt;h2 id=&quot;setting-up-the-machine&quot;&gt;Setting Up The Machine&lt;/h2&gt;
+<h2 id="setting-up-the-machine">Setting Up The Machine</h2>
 
-&lt;p&gt;The most familiar Linux OS for me is CentOS, so that’s what loaded on the mechine deployed on Vultr.&lt;/p&gt;
+<p>The most familiar Linux OS for me is CentOS, so that’s what loaded on the mechine deployed on Vultr.</p>
 
-&lt;p&gt;Some random notes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/authorized_keys&lt;/code&gt; is a file not a directory.&lt;/li&gt;
-&lt;/ul&gt;
+<p>Some random notes:</p>
+<ul>
+  <li><code class="highlighter-rouge">~/.ssh/authorized_keys</code> is a file not a directory.</li>
+</ul>
 
-&lt;h3 id=&quot;setting-up-nginx&quot;&gt;Setting up Nginx&lt;/h3&gt;
+<h3 id="setting-up-nginx">Setting up Nginx</h3>
 
-&lt;p&gt;To route http packets to the web service listening to another port, a web server listening to 80 or 443 is required. &lt;a href=&quot;https://nginx.org&quot;&gt;Nginx&lt;/a&gt; is my most familiar tool so it’s a no-brainer for me.&lt;/p&gt;
+<p>To route http packets to the web service listening to another port, a web server listening to 80 or 443 is required. <a href="https://nginx.org">Nginx</a> is my most familiar tool so it’s a no-brainer for me.</p>
 
-&lt;p&gt;The installation steps:&lt;/p&gt;
+<p>The installation steps:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;yum install nginx&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable nginx&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Wrote a .conf file to proxy http packets to my web service in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/conf.d&lt;/code&gt; so it gets included to http block in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/nginx.conf&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><code class="highlighter-rouge">yum install nginx</code></li>
+  <li><code class="highlighter-rouge">systemctl enable nginx</code></li>
+  <li>Wrote a .conf file to proxy http packets to my web service in <code class="highlighter-rouge">/etc/nginx/conf.d</code> so it gets included to http block in <code class="highlighter-rouge">/etc/nginx/nginx.conf</code>.</li>
+</ul>
 
-&lt;p&gt;Things I learned:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;By default, Nginx has a timeout of 60 seconds when proxying packets. configs like &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_send_timeout 1h&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_read_timeout 1h&lt;/code&gt; are useful.&lt;/li&gt;
-  &lt;li&gt;For &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_pass&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;127.0.0.1&lt;/code&gt; seems different. The port is stripped if I use localhost.&lt;/li&gt;
-  &lt;li&gt;Slashs matter. For easier understanding, take a look at the pseudo conf, notice the difference in location name:
-    &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
-      &lt;span class=&quot;n&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;123&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;;
-      &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; /&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;/ {
-          &lt;span class=&quot;n&quot;&gt;proxy_pass&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;127&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;;
+<p>Things I learned:</p>
+<ul>
+  <li>By default, Nginx has a timeout of 60 seconds when proxying packets. configs like <code class="highlighter-rouge">proxy_send_timeout 1h</code>, <code class="highlighter-rouge">proxy_read_timeout 1h</code> are useful.</li>
+  <li>For <code class="highlighter-rouge">proxy_pass</code>, <code class="highlighter-rouge">localhost</code> and <code class="highlighter-rouge">127.0.0.1</code> seems different. The port is stripped if I use localhost.</li>
+  <li>Slashs matter. For easier understanding, take a look at the pseudo conf, notice the difference in location name:
+    <div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">server</span> {
+      <span class="n">server_name</span> <span class="m">123</span>.<span class="n">com</span>;
+      <span class="n">location</span> /<span class="n">a</span>/ {
+          <span class="n">proxy_pass</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">1234</span>;
       }
 
-      &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; /&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;/ {
-          &lt;span class=&quot;n&quot;&gt;proxy_pass&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;127&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;:&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;/;
+      <span class="n">location</span> /<span class="n">a</span>/ {
+          <span class="n">proxy_pass</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">1234</span>/;
       }
   }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;When a request to &lt;code class=&quot;highlighter-rouge&quot;&gt;123.com/a/b&lt;/code&gt; arrived, the fist location block would proxy it to &lt;code class=&quot;highlighter-rouge&quot;&gt;127.0.0.1:1234/a/b&lt;/code&gt;, while the second one would proxy it to &lt;code class=&quot;highlighter-rouge&quot;&gt;127.0.0.1:1234/b&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+</code></pre></div>    </div>
+    <p>When a request to <code class="highlighter-rouge">123.com/a/b</code> arrived, the fist location block would proxy it to <code class="highlighter-rouge">127.0.0.1:1234/a/b</code>, while the second one would proxy it to <code class="highlighter-rouge">127.0.0.1:1234/b</code>.</p>
+  </li>
+</ul>
 
-&lt;h3 id=&quot;make-it-a-systemd-service&quot;&gt;Make It a Systemd Service&lt;/h3&gt;
+<h3 id="make-it-a-systemd-service">Make It a Systemd Service</h3>
 
-&lt;p&gt;The web service I’m hosting is a single-file excutable, I just drop it into &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; which I learned is a goto place for binaries not installed with package managers, it’ll also make things easier on SELinux enabled machine, we’ll &lt;a href=&quot;#dealing-with-selinux&quot;&gt;cover this later&lt;/a&gt;.&lt;/p&gt;
+<p>The web service I’m hosting is a single-file excutable, I just drop it into <code class="highlighter-rouge">/usr/local/bin</code> which I learned is a goto place for binaries not installed with package managers, it’ll also make things easier on SELinux enabled machine, we’ll <a href="#dealing-with-selinux">cover this later</a>.</p>
 
-&lt;p&gt;I need the web service to auto start on boot and auto restart if any failure happens, it seems the simplest way is create a new systemd service config for it.&lt;/p&gt;
+<p>I need the web service to auto start on boot and auto restart if any failure happens, it seems the simplest way is create a new systemd service config for it.</p>
 
-&lt;p&gt;Just write a file like this into &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system&lt;/code&gt;, the naming convention is &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME.service&lt;/code&gt;,&lt;/p&gt;
+<p>Just write a file like this into <code class="highlighter-rouge">/etc/systemd/system</code>, the naming convention is <code class="highlighter-rouge">NAME.service</code>,</p>
 
-&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;DUCT&lt;/span&gt;
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">Description</span><span class="p">=</span><span class="s">DUCT</span>
 
-&lt;span class=&quot;py&quot;&gt;Wants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;network.target&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;After&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;syslog.target network-online.target&lt;/span&gt;
+<span class="py">Wants</span><span class="p">=</span><span class="s">network.target</span>
+<span class="py">After</span><span class="p">=</span><span class="s">syslog.target network-online.target</span>
 
-&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/bin/bash -c &quot;/usr/local/bin/duct serve&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;RestartSec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;6s&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Restart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;KillMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;process&lt;/span&gt;
+<span class="nn">[Service]</span>
+<span class="py">User</span><span class="p">=</span><span class="s">root</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/bin/bash -c "/usr/local/bin/duct serve"</span>
+<span class="py">RestartSec</span><span class="p">=</span><span class="s">6s</span>
+<span class="py">Restart</span><span class="p">=</span><span class="s">on-failure</span>
+<span class="py">KillMode</span><span class="p">=</span><span class="s">process</span>
 
-&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="nn">[Install]</span>
+<span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
+</code></pre></div></div>
 
-&lt;p&gt;&lt;strong&gt;The pitfall here is make sure the ExecStart is formatted as &lt;code class=&quot;highlighter-rouge&quot;&gt;/bin/bash -c &quot;command&quot;&lt;/code&gt; event if it’s already an executable, otherwise It’ll keep dying without telling you why.&lt;/strong&gt;&lt;/p&gt;
+<p><strong>The pitfall here is make sure the ExecStart is formatted as <code class="highlighter-rouge">/bin/bash -c "command"</code> event if it’s already an executable, otherwise It’ll keep dying without telling you why.</strong></p>
 
-&lt;p&gt;After the file is in place, enabling the service with &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl enable NAME.service&lt;/code&gt;, this makes it start on boot, but does not start it immediately.&lt;/p&gt;
+<p>After the file is in place, enabling the service with <code class="highlighter-rouge">systemctl enable NAME.service</code>, this makes it start on boot, but does not start it immediately.</p>
 
-&lt;p&gt;To start it immediately, do &lt;code class=&quot;highlighter-rouge&quot;&gt;systemctl start NAME.service&lt;/code&gt;.&lt;/p&gt;
+<p>To start it immediately, do <code class="highlighter-rouge">systemctl start NAME.service</code>.</p>
 
-&lt;p&gt;The above &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME.service&lt;/code&gt; used in the commands can be abbrevated to &lt;code class=&quot;highlighter-rouge&quot;&gt;NAME&lt;/code&gt;.&lt;/p&gt;
+<p>The above <code class="highlighter-rouge">NAME.service</code> used in the commands can be abbrevated to <code class="highlighter-rouge">NAME</code>.</p>
 
-&lt;h3 id=&quot;good-to-go&quot;&gt;Good to Go?&lt;/h3&gt;
+<h3 id="good-to-go">Good to Go?</h3>
 
-&lt;p&gt;With DNS, Nginx and my web service set-up, I thought I was ready to go… But no, I can’t connect to my web service.&lt;/p&gt;
+<p>With DNS, Nginx and my web service set-up, I thought I was ready to go… But no, I can’t connect to my web service.</p>
 
-&lt;h2 id=&quot;dealing-with-selinux&quot;&gt;Dealing with SELinux&lt;/h2&gt;
+<h2 id="dealing-with-selinux">Dealing with SELinux</h2>
 
-&lt;p&gt;Though &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;The most familiar Linux OS for me is CentOS&quot;&lt;/code&gt; I’ve never confronting SELinux before! It’s… annoying. But I appreciate the strictness so I decided to stick to it, not disabling it.&lt;/p&gt;
+<p>Though <code class="highlighter-rouge">"The most familiar Linux OS for me is CentOS"</code> I’ve never confronting SELinux before! It’s… annoying. But I appreciate the strictness so I decided to stick to it, not disabling it.</p>
 
-&lt;h3 id=&quot;where-is-it&quot;&gt;Where Is It&lt;/h3&gt;
+<h3 id="where-is-it">Where Is It</h3>
 
-&lt;p&gt;In one of the previous sections, I mentioned that placing executables in &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt; is helpful.&lt;/p&gt;
+<p>In one of the previous sections, I mentioned that placing executables in <code class="highlighter-rouge">/usr/local/bin</code> is helpful.</p>
 
-&lt;p&gt;SELinux maintains context of files. For example, if I place my &lt;code class=&quot;highlighter-rouge&quot;&gt;duct&lt;/code&gt; in like &lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt;, it won’t work, the execution would be denied by SELinux, because according to the configured contexts, execution happening in &lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt; is not allowed.&lt;/p&gt;
+<p>SELinux maintains context of files. For example, if I place my <code class="highlighter-rouge">duct</code> in like <code class="highlighter-rouge">/home</code>, it won’t work, the execution would be denied by SELinux, because according to the configured contexts, execution happening in <code class="highlighter-rouge">/home</code> is not allowed.</p>
 
-&lt;p&gt;A lot of the default paths are pre-configured, and I like the idea to stick to vanilla settings, so I chose to place my executable to &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;. (Actually, this is the first time I really google about where should stuff go, and found a good post)&lt;/p&gt;
+<p>A lot of the default paths are pre-configured, and I like the idea to stick to vanilla settings, so I chose to place my executable to <code class="highlighter-rouge">/usr/local/bin</code>. (Actually, this is the first time I really google about where should stuff go, and found a good post)</p>
 
-&lt;p&gt;If you are interested with how to mess with file contexts, here is a &lt;a href=&quot;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-selinux_contexts_labeling_files-persistent_changes_semanage_fcontext&quot;&gt;link to the documentation&lt;/a&gt;.&lt;/p&gt;
+<p>If you are interested with how to mess with file contexts, here is a <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-selinux_contexts_labeling_files-persistent_changes_semanage_fcontext">link to the documentation</a>.</p>
 
-&lt;p&gt;But one more thing had to be done, when we move something into &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/bin&lt;/code&gt;, SELinux won’t know that thing is now in a valid place to be executed.&lt;/p&gt;
+<p>But one more thing had to be done, when we move something into <code class="highlighter-rouge">/usr/local/bin</code>, SELinux won’t know that thing is now in a valid place to be executed.</p>
 
-&lt;p&gt;I ran &lt;code class=&quot;highlighter-rouge&quot;&gt;restorecon -rv /usr/local/bin/duct&lt;/code&gt; to update it, so it’s now allowed to be execute there.&lt;/p&gt;
+<p>I ran <code class="highlighter-rouge">restorecon -rv /usr/local/bin/duct</code> to update it, so it’s now allowed to be execute there.</p>
 
-&lt;h3 id=&quot;connection-denied&quot;&gt;Connection Denied&lt;/h3&gt;
-&lt;p&gt;What was happening is even if I was doing curl from the machine itself, it’s not proxied to the web service, instead, Nginx would throw &lt;code class=&quot;highlighter-rouge&quot;&gt;502 Bad Gateway&lt;/code&gt; at me.&lt;/p&gt;
+<h3 id="connection-denied">Connection Denied</h3>
+<p>What was happening is even if I was doing curl from the machine itself, it’s not proxied to the web service, instead, Nginx would throw <code class="highlighter-rouge">502 Bad Gateway</code> at me.</p>
 
-&lt;p&gt;This is very weird. I wen to take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/nginx/error.log&lt;/code&gt;, it was something like this:&lt;/p&gt;
+<p>This is very weird. I wen to take a look at <code class="highlighter-rouge">/var/log/nginx/error.log</code>, it was something like this:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;[crit] 3684#0: *56 connect() to [::1]:1234 failed (13: Permission denied) while connecting to upstream, client: 123.123.123.123, server: sub.1234.com, request: “GET /duct/1 HTTP/1.1”, upstream: “http://[::1]:1234/1”, host: “sub.1234.com”&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>[crit] 3684#0: *56 connect() to [::1]:1234 failed (13: Permission denied) while connecting to upstream, client: 123.123.123.123, server: sub.1234.com, request: “GET /duct/1 HTTP/1.1”, upstream: “http://[::1]:1234/1”, host: “sub.1234.com”</p>
+</blockquote>
 
-&lt;p&gt;Okay, &lt;code class=&quot;highlighter-rouge&quot;&gt;(13: Permission denied)&lt;/code&gt;.&lt;/p&gt;
+<p>Okay, <code class="highlighter-rouge">(13: Permission denied)</code>.</p>
 
-&lt;p&gt;There’s such a file &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/log/audit/audit.log&lt;/code&gt; that contains logs of what the audit system done. I took a look, found something looks like this:&lt;/p&gt;
+<p>There’s such a file <code class="highlighter-rouge">/var/log/audit/audit.log</code> that contains logs of what the audit system done. I took a look, found something looks like this:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;type=AVC msg=audit(1633183449.281:813): avc:  denied  { name_connect } for  pid=3684 comm=&quot;nginx&quot; dest=9002 scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:http_port_t:s0 tclass=tcp_socket permissive=0
-type=SYSCALL msg=audit(1633183449.281:813): arch=c000003e syscall=42 success=no exit=-13 a0=12 a1=560edfc92af0 a2=10 a3=7fff7e08e13c items=0 ppid=3683 pid=3684 auid=4294967295 uid=989 gid=985 euid=989 suid=989 fsuid=989 egid=985 sgid=985 fsgid=985 tty=(none) ses=4294967295 comm=&quot;nginx&quot; exe=&quot;/usr/sbin/nginx&quot; subj=system_u:system_r:httpd_t:s0 key=(null)ARCH=x86_64 SYSCALL=connect AUID=&quot;unset&quot; UID=&quot;nginx&quot; GID=&quot;nginx&quot; EUID=&quot;nginx&quot; SUID=&quot;nginx&quot; FSUID=&quot;nginx&quot; EGID=&quot;nginx&quot; SGID=&quot;nginx&quot; FSGID=&quot;nginx&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type=AVC msg=audit(1633183449.281:813): avc:  denied  { name_connect } for  pid=3684 comm="nginx" dest=9002 scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:http_port_t:s0 tclass=tcp_socket permissive=0
+type=SYSCALL msg=audit(1633183449.281:813): arch=c000003e syscall=42 success=no exit=-13 a0=12 a1=560edfc92af0 a2=10 a3=7fff7e08e13c items=0 ppid=3683 pid=3684 auid=4294967295 uid=989 gid=985 euid=989 suid=989 fsuid=989 egid=985 sgid=985 fsgid=985 tty=(none) ses=4294967295 comm="nginx" exe="/usr/sbin/nginx" subj=system_u:system_r:httpd_t:s0 key=(null)ARCH=x86_64 SYSCALL=connect AUID="unset" UID="nginx" GID="nginx" EUID="nginx" SUID="nginx" FSUID="nginx" EGID="nginx" SGID="nginx" FSGID="nginx"
+</code></pre></div></div>
 
-&lt;p&gt;What a gibberish. With &lt;code class=&quot;highlighter-rouge&quot;&gt;ausearch -m avc -i&lt;/code&gt; we can get a more readable version:&lt;/p&gt;
+<p>What a gibberish. With <code class="highlighter-rouge">ausearch -m avc -i</code> we can get a more readable version:</p>
 
-&lt;pre&gt;&lt;code class=&quot;language-log&quot;&gt;type=PROCTITLE msg=audit(10/02/2021 22:04:09.281:814) : proctitle=nginx: worker process
+<pre><code class="language-log">type=PROCTITLE msg=audit(10/02/2021 22:04:09.281:814) : proctitle=nginx: worker process
 type=SYSCALL msg=audit(10/02/2021 22:04:09.281:814) : arch=x86_64 syscall=connect success=no exit=EACCES(Permission denied) a0=0x12 a1=0x560edfc92b18 a2=0x1c a3=0x7fff7e08e13c items=0 ppid=3683 pid=3684 auid=unset uid=nginx gid=nginx euid=nginx suid=nginx fsuid=nginx egid=nginx sgid=nginx fsgid=nginx tty=(none) ses=unset comm=nginx exe=/usr/sbin/nginx subj=system_u:system_r:httpd_t:s0 key=(null)
 type=AVC msg=audit(10/02/2021 22:04:09.281:814) : avc:  denied  { name_connect } for  pid=3684 comm=nginx dest=1234 scontext=system_u:system_r:httpd_t:s0 tcontext=system_u:object_r:port_t:s0 tclass=tcp_socket permissive=0
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
-&lt;ul&gt;
-  &lt;li&gt;Nginx was doing a &lt;code class=&quot;highlighter-rouge&quot;&gt;connect&lt;/code&gt; syscall, but has no permission to do it.
-    &lt;blockquote&gt;
-      &lt;p&gt;syscall=connect success=no exit=EACCES(Permission denied)&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The actual denied action was &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt;.
-    &lt;blockquote&gt;
-      &lt;p&gt;avc:  denied  { name_connect }&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Nginx is a httpd.
-    &lt;blockquote&gt;
-      &lt;p&gt;exe=/usr/sbin/nginx subj=system_u:system_r:httpd_t:s0&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The target is a normal tcp port, which is what my web service listens to.
-    &lt;blockquote&gt;
-      &lt;p&gt;tcontext=system_u:object_r:port_t:s0&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; by http_d to a tcp port is not allowed.
-    &lt;blockquote&gt;
-      &lt;p&gt;permissive=0&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Nginx was doing a <code class="highlighter-rouge">connect</code> syscall, but has no permission to do it.
+    <blockquote>
+      <p>syscall=connect success=no exit=EACCES(Permission denied)</p>
+    </blockquote>
+  </li>
+  <li>The actual denied action was <code class="highlighter-rouge">name_connect</code>.
+    <blockquote>
+      <p>avc:  denied  { name_connect }</p>
+    </blockquote>
+  </li>
+  <li>Nginx is a httpd.
+    <blockquote>
+      <p>exe=/usr/sbin/nginx subj=system_u:system_r:httpd_t:s0</p>
+    </blockquote>
+  </li>
+  <li>The target is a normal tcp port, which is what my web service listens to.
+    <blockquote>
+      <p>tcontext=system_u:object_r:port_t:s0</p>
+    </blockquote>
+  </li>
+  <li><code class="highlighter-rouge">name_connect</code> by http_d to a tcp port is not allowed.
+    <blockquote>
+      <p>permissive=0</p>
+    </blockquote>
+  </li>
+</ul>
 
-&lt;p&gt;Great, but how do we know what does it allow?&lt;/p&gt;
+<p>Great, but how do we know what does it allow?</p>
 
-&lt;p&gt;We can do &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch --allow -s httpd_t | grep name_connect&lt;/code&gt; to further investigate, the &lt;code class=&quot;highlighter-rouge&quot;&gt;sesearch&lt;/code&gt; statement would output all rules which apply to action comes from a httpd and is an allow rule, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;grep&lt;/code&gt; statement filters lines contains &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt;.&lt;/p&gt;
+<p>We can do <code class="highlighter-rouge">sesearch --allow -s httpd_t | grep name_connect</code> to further investigate, the <code class="highlighter-rouge">sesearch</code> statement would output all rules which apply to action comes from a httpd and is an allow rule, then the <code class="highlighter-rouge">grep</code> statement filters lines contains <code class="highlighter-rouge">name_connect</code>.</p>
 
-&lt;p&gt;The output should looks like:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
+<p>The output should looks like:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
 allow httpd_t http_port_t:tcp_socket name_connect; [ httpd_can_network_relay ]:True
 ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;The line is saying that if &lt;code class=&quot;highlighter-rouge&quot;&gt;httpd_can_network_relay&lt;/code&gt; is true, &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; from a httpd to any port of &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt; is allowed. There was no line starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;allow httpd_t port_t:tcp_socket&lt;/code&gt;.&lt;/p&gt;
+<p>The line is saying that if <code class="highlighter-rouge">httpd_can_network_relay</code> is true, <code class="highlighter-rouge">name_connect</code> from a httpd to any port of <code class="highlighter-rouge">http_port_t</code> is allowed. There was no line starts with <code class="highlighter-rouge">allow httpd_t port_t:tcp_socket</code>.</p>
 
-&lt;p&gt;So it’s much clear about what happened. So, to solve this, we need to enable the option &lt;code class=&quot;highlighter-rouge&quot;&gt;httpd_can_network_relay&lt;/code&gt; first with &lt;code class=&quot;highlighter-rouge&quot;&gt;setsebool -P  httpd_can_network_relay on&lt;/code&gt; (-P means it does not revert after reboot)&lt;/p&gt;
+<p>So it’s much clear about what happened. So, to solve this, we need to enable the option <code class="highlighter-rouge">httpd_can_network_relay</code> first with <code class="highlighter-rouge">setsebool -P  httpd_can_network_relay on</code> (-P means it does not revert after reboot)</p>
 
-&lt;p&gt;Then we have 2 options:&lt;/p&gt;
+<p>Then we have 2 options:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Allow httpd do &lt;code class=&quot;highlighter-rouge&quot;&gt;name_connect&lt;/code&gt; to all tcp port.&lt;/li&gt;
-  &lt;li&gt;Add the port we want to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Allow httpd do <code class="highlighter-rouge">name_connect</code> to all tcp port.</li>
+  <li>Add the port we want to <code class="highlighter-rouge">http_port_t</code>.</li>
+</ul>
 
-&lt;p&gt;Comparing the two, it’s very easy to comes to a conclusion that, the second one, which allows 1 more tcp port to be connected, is much safer than the first one, which allows all tcp ports to be connected.&lt;/p&gt;
+<p>Comparing the two, it’s very easy to comes to a conclusion that, the second one, which allows 1 more tcp port to be connected, is much safer than the first one, which allows all tcp ports to be connected.</p>
 
-&lt;p&gt;If we do &lt;code class=&quot;highlighter-rouge&quot;&gt;semanage port -l | grep http_port_t&lt;/code&gt;, we can see all the ports belonging to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;.&lt;/p&gt;
+<p>If we do <code class="highlighter-rouge">semanage port -l | grep http_port_t</code>, we can see all the ports belonging to <code class="highlighter-rouge">http_port_t</code>.</p>
 
-&lt;p&gt;To add a port to &lt;code class=&quot;highlighter-rouge&quot;&gt;http_port_t&lt;/code&gt;, do &lt;code class=&quot;highlighter-rouge&quot;&gt;semanage port -a -t http_port_t -p tcp [PORT NUMBER]&lt;/code&gt;.&lt;/p&gt;
+<p>To add a port to <code class="highlighter-rouge">http_port_t</code>, do <code class="highlighter-rouge">semanage port -a -t http_port_t -p tcp [PORT NUMBER]</code>.</p>
 
-&lt;p&gt;The permission issue was fixed.&lt;/p&gt;
+<p>The permission issue was fixed.</p>
 
-&lt;h3 id=&quot;firewalld&quot;&gt;Firewalld&lt;/h3&gt;
+<h3 id="firewalld">Firewalld</h3>
 
-&lt;p&gt;After all these done, it still did not work. What could still be wrong… after all these obstacles I overcame?&lt;/p&gt;
+<p>After all these done, it still did not work. What could still be wrong… after all these obstacles I overcame?</p>
 
-&lt;p&gt;The good old firewall.&lt;/p&gt;
+<p>The good old firewall.</p>
 
-&lt;p&gt;What was happening is that  &lt;em&gt;curl&lt;/em&gt; says &lt;code class=&quot;highlighter-rouge&quot;&gt;No route to host&lt;/code&gt;  when I told it to connect to my domain. The message sounds very much like a DNS issue, or like the machine is not exposed to internet… Hey, that means there’s no route to get to my domain, is it?&lt;/p&gt;
+<p>What was happening is that  <em>curl</em> says <code class="highlighter-rouge">No route to host</code>  when I told it to connect to my domain. The message sounds very much like a DNS issue, or like the machine is not exposed to internet… Hey, that means there’s no route to get to my domain, is it?</p>
 
-&lt;p&gt;Firewalld can be adjusted with &lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd&lt;/code&gt;, I did these to open the door:&lt;/p&gt;
+<p>Firewalld can be adjusted with <code class="highlighter-rouge">firewall-cmd</code>, I did these to open the door:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --list-all&lt;/code&gt;, from the output it seems that 80 (http) is not allowed&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --permanent --add-service=http&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --reload&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;firewall-cmd --permanent --list-services&lt;/code&gt;, now the output shows that http is enabled&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><code class="highlighter-rouge">firewall-cmd --list-all</code>, from the output it seems that 80 (http) is not allowed</li>
+  <li><code class="highlighter-rouge">firewall-cmd --permanent --add-service=http</code></li>
+  <li><code class="highlighter-rouge">firewall-cmd --reload</code></li>
+  <li><code class="highlighter-rouge">firewall-cmd --permanent --list-services</code>, now the output shows that http is enabled</li>
+</ul>
 
-&lt;p&gt;&lt;strong&gt;Bingo! My web service is online.&lt;/strong&gt;&lt;/p&gt;</content><author><name>BA</name></author><category term="web" /><category term="linux" /><summary type="html">I just started hosting a private web service on Vultr, a VPS provider, for my own convenience.</summary></entry><entry><title type="html">Unity: iOS PVRTC Compression Requires Square Textures</title><link href="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en" rel="alternate" type="text/html" title="Unity: iOS PVRTC Compression Requires Square Textures" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id><content type="html" xml:base="https://no3371.github.io/blog/posts/unity-ios-pvrtc-compression-requires-square-textures/en">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
+<p><strong>Bingo! My web service is online.</strong></p>]]></content><author><name>BA</name></author><category term="web" /><category term="linux" /><summary type="html"><![CDATA[I just started hosting a private web service on Vultr, a VPS provider, for my own convenience.]]></summary></entry><entry><title type="html">Unity: iOS PVRTC Compression Requires Square Textures</title><link href="http://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/en" rel="alternate" type="text/html" title="Unity: iOS PVRTC Compression Requires Square Textures" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>http://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id><content type="html" xml:base="http://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/en"><![CDATA[<p>Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp; iOS.</p>
 
-&lt;p&gt;It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, &lt;strong&gt;if the texture is not square, Unity stretch it without warning you.&lt;/strong&gt; For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.&lt;/p&gt;
+<p>It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, <strong>if the texture is not square, Unity stretch it without warning you.</strong> For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://docs.unity3d.com/Manual/class-TextureImporterOverride.html&quot;&gt;Source&lt;/a&gt;:&lt;/p&gt;
+<p><a href="https://docs.unity3d.com/Manual/class-TextureImporterOverride.html">Source</a>:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;iOS and tvOS
-For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended texture compression format for RGB and RGBA textures. This format allows you to choose between texture quality and size on a granular level: all the way from eight bits/pixel (4x4 block size) down to 0.89 bits/pixel (12x12 block size). If support for older devices is needed, or you want additional Crunch compression, then Apple devices support ETC/ETC2 formats starting with A7 chip (2013). For even older devices, PVRTC is the compression format to use. On iOS, Unity’s default texture compression format is PVRTC, for the broadest possible compatibility. ASTC is preferred, but is not supported on A7 devices (the very first Metal-enabled devices) and will be unpacked at runtime.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>BA</name></author><category term="unity" /><category term="pitfall" /><summary type="html">Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS. It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, if the texture is not square, Unity stretch it without warning you. For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures. Source: iOS and tvOS For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended texture compression format for RGB and RGBA textures. This format allows you to choose between texture quality and size on a granular level: all the way from eight bits/pixel (4x4 block size) down to 0.89 bits/pixel (12x12 block size). If support for older devices is needed, or you want additional Crunch compression, then Apple devices support ETC/ETC2 formats starting with A7 chip (2013). For even older devices, PVRTC is the compression format to use. On iOS, Unity’s default texture compression format is PVRTC, for the broadest possible compatibility. ASTC is preferred, but is not supported on A7 devices (the very first Metal-enabled devices) and will be unpacked at runtime.</summary></entry><entry><title type="html">Git 客戶端換用 Fork 快到起飛</title><link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/tw" rel="alternate" type="text/html" title="Git 客戶端換用 Fork 快到起飛" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/tw">&lt;p&gt;這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。&lt;/p&gt;
+<blockquote>
+  <p>iOS and tvOS
+For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended texture compression format for RGB and RGBA textures. This format allows you to choose between texture quality and size on a granular level: all the way from eight bits/pixel (4x4 block size) down to 0.89 bits/pixel (12x12 block size). If support for older devices is needed, or you want additional Crunch compression, then Apple devices support ETC/ETC2 formats starting with A7 chip (2013). For even older devices, PVRTC is the compression format to use. On iOS, Unity’s default texture compression format is PVRTC, for the broadest possible compatibility. ASTC is preferred, but is not supported on A7 devices (the very first Metal-enabled devices) and will be unpacked at runtime.</p>
+</blockquote>]]></content><author><name>BA</name></author><category term="unity" /><category term="pitfall" /><summary type="html"><![CDATA[Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp; iOS. It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, if the texture is not square, Unity stretch it without warning you. For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures. Source: iOS and tvOS For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended texture compression format for RGB and RGBA textures. This format allows you to choose between texture quality and size on a granular level: all the way from eight bits/pixel (4x4 block size) down to 0.89 bits/pixel (12x12 block size). If support for older devices is needed, or you want additional Crunch compression, then Apple devices support ETC/ETC2 formats starting with A7 chip (2013). For even older devices, PVRTC is the compression format to use. On iOS, Unity’s default texture compression format is PVRTC, for the broadest possible compatibility. ASTC is preferred, but is not supported on A7 devices (the very first Metal-enabled devices) and will be unpacked at runtime.]]></summary></entry><entry><title type="html">Git 客戶端換用 Fork 快到起飛</title><link href="http://blog.3371.online/posts/fork-goes-brrrrrrr/tw" rel="alternate" type="text/html" title="Git 客戶端換用 Fork 快到起飛" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>http://blog.3371.online/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="http://blog.3371.online/posts/fork-goes-brrrrrrr/tw"><![CDATA[<p>這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。</p>
 
-&lt;p&gt;但是！GitKraken 是有名地慢，尤其是開啟大 Repo 的時候其效能出奇地差，最早的討論甚至可以追溯到&lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;十年前&lt;/a&gt;。我在一間不算小的公司工作，會碰到一些肥大的專案，有時候光是程式碼就高達數十 mb，在這些專案使用 GitKraken 簡直是一種折磨。&lt;/p&gt;
+<p>但是！GitKraken 是有名地慢，尤其是開啟大 Repo 的時候其效能出奇地差，最早的討論甚至可以追溯到<a href="https://github.com/git-cola/git-cola/issues/48">十年前</a>。我在一間不算小的公司工作，會碰到一些肥大的專案，有時候光是程式碼就高達數十 mb，在這些專案使用 GitKraken 簡直是一種折磨。</p>
 
-&lt;p&gt;光是顯示單一個檔案的內容就可以跑好幾秒鐘，這完全沒辦法幫它找到正當的理由……說真的，三小？就連 🗒記事本 都比它快，讀取檔案內容根本不需要經由 git 吧？到底在跑什麼？我真的不知道這幾年我哪來的耐心跟它耗。&lt;/p&gt;
+<p>光是顯示單一個檔案的內容就可以跑好幾秒鐘，這完全沒辦法幫它找到正當的理由……說真的，三小？就連 🗒記事本 都比它快，讀取檔案內容根本不需要經由 git 吧？到底在跑什麼？我真的不知道這幾年我哪來的耐心跟它耗。</p>
 
-&lt;p&gt;一直以來， 我時不時都會搜尋替代的 Git 客戶端，希望能找到擁有跟 GitKraken 一樣棒的 UI/UX 的新選擇，這很重要，不然我寧可直接用 Git Cli，就當作順便訓練自己成為 Git 大師。很可惜我一直沒找到，不得不說，GitKraken 的介面難以取代，所以我一直沒嘗試過別的客戶端。&lt;/p&gt;
+<p>一直以來， 我時不時都會搜尋替代的 Git 客戶端，希望能找到擁有跟 GitKraken 一樣棒的 UI/UX 的新選擇，這很重要，不然我寧可直接用 Git Cli，就當作順便訓練自己成為 Git 大師。很可惜我一直沒找到，不得不說，GitKraken 的介面難以取代，所以我一直沒嘗試過別的客戶端。</p>
 
-&lt;p&gt;但現在我真的是受不了了，每個點擊都要花好幾秒才有反應，簡直是效率/體驗毀滅者，也像是在羞辱這幾年每年為了 GitKraken 付費的我。所以我去了官方 &lt;a href=&quot;https://git-scm.com/downloads/guis&quot;&gt;GUI Clients&lt;/a&gt;清單血拚，最後選擇了 &lt;a href=&quot;https://git-fork.com/&quot;&gt;Fork&lt;/a&gt;。它的官網標榜 &lt;code class=&quot;highlighter-rouge&quot;&gt;Fast and Friendly&lt;/code&gt;還真是沒在蓋的，就連 UI/UX 都比我想像中還要優秀得多。&lt;/p&gt;
+<p>但現在我真的是受不了了，每個點擊都要花好幾秒才有反應，簡直是效率/體驗毀滅者，也像是在羞辱這幾年每年為了 GitKraken 付費的我。所以我去了官方 <a href="https://git-scm.com/downloads/guis">GUI Clients</a>清單血拚，最後選擇了 <a href="https://git-fork.com/">Fork</a>。它的官網標榜 <code class="highlighter-rouge">Fast and Friendly</code>還真是沒在蓋的，就連 UI/UX 都比我想像中還要優秀得多。</p>
 
-&lt;p&gt;順帶一提，有一款叫做 Ungit 用 node js 寫的 web 客戶端，應該是單緒執行，連這東西都跑得比 GitKraken 還快……我的天……&lt;/p&gt;</content><author><name>BA</name></author><category term="git" /><summary type="html">這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。 但是！GitKraken 是有名地慢，尤其是開啟大 Repo 的時候其效能出奇地差，最早的討論甚至可以追溯到十年前。我在一間不算小的公司工作，會碰到一些肥大的專案，有時候光是程式碼就高達數十 mb，在這些專案使用 GitKraken 簡直是一種折磨。 光是顯示單一個檔案的內容就可以跑好幾秒鐘，這完全沒辦法幫它找到正當的理由……說真的，三小？就連 🗒記事本 都比它快，讀取檔案內容根本不需要經由 git 吧？到底在跑什麼？我真的不知道這幾年我哪來的耐心跟它耗。 一直以來， 我時不時都會搜尋替代的 Git 客戶端，希望能找到擁有跟 GitKraken 一樣棒的 UI/UX 的新選擇，這很重要，不然我寧可直接用 Git Cli，就當作順便訓練自己成為 Git 大師。很可惜我一直沒找到，不得不說，GitKraken 的介面難以取代，所以我一直沒嘗試過別的客戶端。 但現在我真的是受不了了，每個點擊都要花好幾秒才有反應，簡直是效率/體驗毀滅者，也像是在羞辱這幾年每年為了 GitKraken 付費的我。所以我去了官方 GUI Clients清單血拚，最後選擇了 Fork。它的官網標榜 Fast and Friendly還真是沒在蓋的，就連 UI/UX 都比我想像中還要優秀得多。 順帶一提，有一款叫做 Ungit 用 node js 寫的 web 客戶端，應該是單緒執行，連這東西都跑得比 GitKraken 還快……我的天……</summary></entry><entry><title type="html">Learning C#: Bit-Twiddling-Abs</title><link href="https://no3371.github.io/blog/posts/learning-csharp-bittwiddling/en" rel="alternate" type="text/html" title="Learning C#: Bit-Twiddling-Abs" /><published>2021-08-26T00:00:00+00:00</published><updated>2021-08-26T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id><content type="html" xml:base="https://no3371.github.io/blog/posts/learning-csharp-bittwiddling/en">&lt;p&gt;NOTE: C# numbers are stored in 2’s complement.&lt;/p&gt;
+<p>順帶一提，有一款叫做 Ungit 用 node js 寫的 web 客戶端，應該是單緒執行，連這東西都跑得比 GitKraken 還快……我的天……</p>]]></content><author><name>BA</name></author><category term="git" /><summary type="html"><![CDATA[這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。 但是！GitKraken 是有名地慢，尤其是開啟大 Repo 的時候其效能出奇地差，最早的討論甚至可以追溯到十年前。我在一間不算小的公司工作，會碰到一些肥大的專案，有時候光是程式碼就高達數十 mb，在這些專案使用 GitKraken 簡直是一種折磨。 光是顯示單一個檔案的內容就可以跑好幾秒鐘，這完全沒辦法幫它找到正當的理由……說真的，三小？就連 🗒記事本 都比它快，讀取檔案內容根本不需要經由 git 吧？到底在跑什麼？我真的不知道這幾年我哪來的耐心跟它耗。 一直以來， 我時不時都會搜尋替代的 Git 客戶端，希望能找到擁有跟 GitKraken 一樣棒的 UI/UX 的新選擇，這很重要，不然我寧可直接用 Git Cli，就當作順便訓練自己成為 Git 大師。很可惜我一直沒找到，不得不說，GitKraken 的介面難以取代，所以我一直沒嘗試過別的客戶端。 但現在我真的是受不了了，每個點擊都要花好幾秒才有反應，簡直是效率/體驗毀滅者，也像是在羞辱這幾年每年為了 GitKraken 付費的我。所以我去了官方 GUI Clients清單血拚，最後選擇了 Fork。它的官網標榜 Fast and Friendly還真是沒在蓋的，就連 UI/UX 都比我想像中還要優秀得多。 順帶一提，有一款叫做 Ungit 用 node js 寫的 web 客戶端，應該是單緒執行，連這東西都跑得比 GitKraken 還快……我的天……]]></summary></entry><entry><title type="html">Learning C#: Bit-Twiddling-Abs</title><link href="http://blog.3371.online/posts/learning-csharp-bittwiddling/en" rel="alternate" type="text/html" title="Learning C#: Bit-Twiddling-Abs" /><published>2021-08-26T00:00:00+00:00</published><updated>2021-08-26T00:00:00+00:00</updated><id>http://blog.3371.online/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id><content type="html" xml:base="http://blog.3371.online/posts/learning-csharp-bittwiddling/en"><![CDATA[<p>NOTE: C# numbers are stored in 2’s complement.</p>
 
-&lt;p&gt;We’ll use int (32bit) P = 17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;0000 0000 0000 0000 0000 0000 0001 0001&lt;/code&gt;) and N = -17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1111 1111 1111 1111 1111 1111 1110 1111&lt;/code&gt;) to demonstrate.&lt;/p&gt;
+<p>We’ll use int (32bit) P = 17 (<code class="highlighter-rouge">0000 0000 0000 0000 0000 0000 0001 0001</code>) and N = -17 (<code class="highlighter-rouge">1111 1111 1111 1111 1111 1111 1110 1111</code>) to demonstrate.</p>
 
-&lt;h3 id=&quot;extract-the-sign-bit&quot;&gt;Extract the sign bit&lt;/h3&gt;
+<h3 id="extract-the-sign-bit">Extract the sign bit</h3>
 
-&lt;p&gt;We shift 32 bits right to get the sign bit:&lt;/p&gt;
+<p>We shift 32 bits right to get the sign bit:</p>
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1N&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// = -1, 1111 1111 1111 1111 1111 1111 1111 1111&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1P&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// = 0,  0000 0000 0000 0000 0000 0000 0000 0000&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">step1N</span> <span class="p">=</span> <span class="p">-</span><span class="m">17</span> <span class="p">&gt;&gt;</span> <span class="m">31</span><span class="p">;</span> <span class="c1">// = -1, 1111 1111 1111 1111 1111 1111 1111 1111</span>
+<span class="kt">int</span> <span class="n">step1P</span> <span class="p">=</span>  <span class="m">17</span> <span class="p">&gt;&gt;</span> <span class="m">31</span><span class="p">;</span> <span class="c1">// = 0,  0000 0000 0000 0000 0000 0000 0000 0000</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;xor-the-original-value-and-the-mask&quot;&gt;XOR the original value and the mask&lt;/h3&gt;
+<h3 id="xor-the-original-value-and-the-mask">XOR the original value and the mask</h3>
 
-&lt;p&gt;XOR means output 1 if the bits are different.&lt;/p&gt;
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step2N&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// After XOR, step2N is now `0000 0000 0000 0000 0000 0000 0001 0000`, which is 16&lt;/span&gt;
+<p>XOR means output 1 if the bits are different.</p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">step2N</span> <span class="p">=</span> <span class="p">-</span><span class="m">17</span> <span class="p">^</span> <span class="n">step1N</span><span class="p">;</span>
+<span class="c1">// The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive.</span>
+<span class="c1">// After XOR, step2N is now `0000 0000 0000 0000 0000 0000 0001 0000`, which is 16</span>
 
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step2P&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The leftmost bit of 17 is 0, the the one of step1P is also 0, they are the same, so the XOR result bit would be 0, which is not changed (17 is positive too).&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// After XOR, step2P is now `0000 0000 0000 0000 0000 0000 0001 0001`, which is 17&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="kt">int</span> <span class="n">step2P</span> <span class="p">=</span>  <span class="m">17</span> <span class="p">^</span> <span class="n">step1P</span><span class="p">;</span>
+<span class="c1">// The leftmost bit of 17 is 0, the the one of step1P is also 0, they are the same, so the XOR result bit would be 0, which is not changed (17 is positive too).</span>
+<span class="c1">// After XOR, step2P is now `0000 0000 0000 0000 0000 0000 0001 0001`, which is 17</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;subtact-the-step2-values&quot;&gt;Subtact the step2 values&lt;/h3&gt;
+<h3 id="subtact-the-step2-values">Subtact the step2 values</h3>
 
-&lt;p&gt;We need to adjust the value for N to makes the abs result correct.&lt;/p&gt;
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step2N&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// = 17, 16 - -1&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absP&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step2P&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step1P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// = 17, 17 - 0&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// As you can see, this step does not modify the result if the original value is positive.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>We need to adjust the value for N to makes the abs result correct.</p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">absN</span> <span class="p">=</span> <span class="n">step2N</span> <span class="p">-</span> <span class="n">step1N</span><span class="p">;</span> <span class="c1">// = 17, 16 - -1</span>
+<span class="kt">int</span> <span class="n">absP</span> <span class="p">=</span> <span class="n">step2P</span> <span class="p">-</span> <span class="n">step1P</span><span class="p">;</span> <span class="c1">// = 17, 17 - 0</span>
+<span class="c1">// As you can see, this step does not modify the result if the original value is positive.</span>
+</code></pre></div></div>
 
-&lt;h3 id=&quot;not-safe-intminvalue&quot;&gt;Not Safe: int.MinValue&lt;/h3&gt;
+<h3 id="not-safe-intminvalue">Not Safe: int.MinValue</h3>
 
-&lt;p&gt;Let’s perform the above technique for &lt;code class=&quot;highlighter-rouge&quot;&gt;int.MinValue&lt;/code&gt;, -2147483648, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;1000 0000 0000 0000 0000 0000 0000 0000&lt;/code&gt;.&lt;/p&gt;
+<p>Let’s perform the above technique for <code class="highlighter-rouge">int.MinValue</code>, -2147483648, which is <code class="highlighter-rouge">1000 0000 0000 0000 0000 0000 0000 0000</code>.</p>
 
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2147483648&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -1, 1111 1111 1111 1111 1111 1111 1111 1111&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2147483648&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// After XOR, x is now 0111 1111 1111 1111 1111 1111 1111 1111, which is 2147483647, the `int.MaxValue`&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// it's supposed to be 2147483647+1, but 2147483647 is already `int.MaxValue`, this will results in a overflow, makes it again -2147483648.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="p">-</span><span class="m">2147483648</span> <span class="p">&gt;&gt;</span> <span class="m">31</span><span class="p">;</span> <span class="c1">// -1, 1111 1111 1111 1111 1111 1111 1111 1111</span>
+<span class="n">x</span> <span class="p">=</span> <span class="p">-</span><span class="m">2147483648</span> <span class="p">^</span> <span class="n">x</span><span class="p">;</span>
+<span class="c1">// The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive.</span>
+<span class="c1">// After XOR, x is now 0111 1111 1111 1111 1111 1111 1111 1111, which is 2147483647, the `int.MaxValue`</span>
+<span class="n">x</span> <span class="p">=</span> <span class="n">x</span> <span class="p">-</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span> <span class="c1">// it's supposed to be 2147483647+1, but 2147483647 is already `int.MaxValue`, this will results in a overflow, makes it again -2147483648.</span>
+</code></pre></div></div>
 
-&lt;p&gt;So if the value is possibliy &lt;code class=&quot;highlighter-rouge&quot;&gt;int.MinValue&lt;/code&gt;, we have to avoid using this trick.&lt;/p&gt;
+<p>So if the value is possibliy <code class="highlighter-rouge">int.MinValue</code>, we have to avoid using this trick.</p>
 
-&lt;p&gt;Also, this does not necessarily makes your program faster because modern compiler is good at optimization, it’s often faster then manual optimization.&lt;/p&gt;</content><author><name>BA</name></author><category term="csharp" /><summary type="html">NOTE: C# numbers are stored in 2’s complement. We’ll use int (32bit) P = 17 (0000 0000 0000 0000 0000 0000 0001 0001) and N = -17 (1111 1111 1111 1111 1111 1111 1110 1111) to demonstrate. Extract the sign bit We shift 32 bits right to get the sign bit: int step1N = -17 &amp;gt;&amp;gt; 31; // = -1, 1111 1111 1111 1111 1111 1111 1111 1111 int step1P = 17 &amp;gt;&amp;gt; 31; // = 0, 0000 0000 0000 0000 0000 0000 0000 0000 XOR the original value and the mask XOR means output 1 if the bits are different. int step2N = -17 ^ step1N; // The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive. // After XOR, step2N is now `0000 0000 0000 0000 0000 0000 0001 0000`, which is 16 int step2P = 17 ^ step1P; // The leftmost bit of 17 is 0, the the one of step1P is also 0, they are the same, so the XOR result bit would be 0, which is not changed (17 is positive too). // After XOR, step2P is now `0000 0000 0000 0000 0000 0000 0001 0001`, which is 17 Subtact the step2 values We need to adjust the value for N to makes the abs result correct. int absN = step2N - step1N; // = 17, 16 - -1 int absP = step2P - step1P; // = 17, 17 - 0 // As you can see, this step does not modify the result if the original value is positive. Not Safe: int.MinValue Let’s perform the above technique for int.MinValue, -2147483648, which is 1000 0000 0000 0000 0000 0000 0000 0000. int x = -2147483648 &amp;gt;&amp;gt; 31; // -1, 1111 1111 1111 1111 1111 1111 1111 1111 x = -2147483648 ^ x; // The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive. // After XOR, x is now 0111 1111 1111 1111 1111 1111 1111 1111, which is 2147483647, the `int.MaxValue` x = x - -1; // it's supposed to be 2147483647+1, but 2147483647 is already `int.MaxValue`, this will results in a overflow, makes it again -2147483648. So if the value is possibliy int.MinValue, we have to avoid using this trick. Also, this does not necessarily makes your program faster because modern compiler is good at optimization, it’s often faster then manual optimization.</summary></entry><entry><title type="html">Free &amp;amp; Private PushBullet with PatchBay</title><link href="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en" rel="alternate" type="text/html" title="Free &amp;amp; Private PushBullet with PatchBay" /><published>2021-08-20T00:00:00+00:00</published><updated>2021-08-20T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id><content type="html" xml:base="https://no3371.github.io/blog/posts/free-private-pushbullet-with-patchbay/en">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; together. For example, you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt; and POST “321” to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; side will receive “321”.&lt;/p&gt;
+<p>Also, this does not necessarily makes your program faster because modern compiler is good at optimization, it’s often faster then manual optimization.</p>]]></content><author><name>BA</name></author><category term="csharp" /><summary type="html"><![CDATA[NOTE: C# numbers are stored in 2’s complement. We’ll use int (32bit) P = 17 (0000 0000 0000 0000 0000 0000 0001 0001) and N = -17 (1111 1111 1111 1111 1111 1111 1110 1111) to demonstrate. Extract the sign bit We shift 32 bits right to get the sign bit: int step1N = -17 &gt;&gt; 31; // = -1, 1111 1111 1111 1111 1111 1111 1111 1111 int step1P = 17 &gt;&gt; 31; // = 0, 0000 0000 0000 0000 0000 0000 0000 0000 XOR the original value and the mask XOR means output 1 if the bits are different. int step2N = -17 ^ step1N; // The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive. // After XOR, step2N is now `0000 0000 0000 0000 0000 0000 0001 0000`, which is 16 int step2P = 17 ^ step1P; // The leftmost bit of 17 is 0, the the one of step1P is also 0, they are the same, so the XOR result bit would be 0, which is not changed (17 is positive too). // After XOR, step2P is now `0000 0000 0000 0000 0000 0000 0001 0001`, which is 17 Subtact the step2 values We need to adjust the value for N to makes the abs result correct. int absN = step2N - step1N; // = 17, 16 - -1 int absP = step2P - step1P; // = 17, 17 - 0 // As you can see, this step does not modify the result if the original value is positive. Not Safe: int.MinValue Let’s perform the above technique for int.MinValue, -2147483648, which is 1000 0000 0000 0000 0000 0000 0000 0000. int x = -2147483648 &gt;&gt; 31; // -1, 1111 1111 1111 1111 1111 1111 1111 1111 x = -2147483648 ^ x; // The leftmost bit of -17 is 1, the the one of step1N is also 1, they are the same, so the XOR result bit would be 0, which makes the value positive. // After XOR, x is now 0111 1111 1111 1111 1111 1111 1111 1111, which is 2147483647, the `int.MaxValue` x = x - -1; // it's supposed to be 2147483647+1, but 2147483647 is already `int.MaxValue`, this will results in a overflow, makes it again -2147483648. So if the value is possibliy int.MinValue, we have to avoid using this trick. Also, this does not necessarily makes your program faster because modern compiler is good at optimization, it’s often faster then manual optimization.]]></summary></entry><entry><title type="html">Free &amp;amp; Private PushBullet with PatchBay</title><link href="http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/en" rel="alternate" type="text/html" title="Free &amp;amp; Private PushBullet with PatchBay" /><published>2021-08-20T00:00:00+00:00</published><updated>2021-08-20T00:00:00+00:00</updated><id>http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id><content type="html" xml:base="http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/en"><![CDATA[<p><a href="https://patchbay.pub">PatchBay</a> is a free and public service that “patch” Http <code class="highlighter-rouge">GET</code> and <code class="highlighter-rouge">POST</code> together. For example, you <code class="highlighter-rouge">GET</code> from <code class="highlighter-rouge">https://patchbay.pub/123</code> and POST “321” to <code class="highlighter-rouge">https://patchbay.pub/123</code>, the <code class="highlighter-rouge">GET</code> side will receive “321”.</p>
 
-&lt;p&gt;Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities.&lt;/p&gt;
+<p>Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities.</p>
 
-&lt;p&gt;I’ve made several personal tools based on PatchBay, for example, PushBullet:&lt;/p&gt;
+<p>I’ve made several personal tools based on PatchBay, for example, PushBullet:</p>
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/1f16e99fc1b49cdd4be25adc9aaab025.js&quot;&gt; &lt;/script&gt;
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/1f16e99fc1b49cdd4be25adc9aaab025.js"> </script>
 
-&lt;p&gt;The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from/&lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; to, so as long as no one share the same channel name with you, we can say the channel is yours.&lt;/p&gt;
+<p>The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you <code class="highlighter-rouge">GET</code> from/<code class="highlighter-rouge">POST</code> to, so as long as no one share the same channel name with you, we can say the channel is yours.</p>
 
-&lt;p&gt;As you may have noticed, the script actually use &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/pubsub/&lt;/code&gt;, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.&lt;/p&gt;
+<p>As you may have noticed, the script actually use <code class="highlighter-rouge">https://patchbay.pub/pubsub/</code>, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC.</p>
 
-&lt;p&gt;I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; everywhere as long as you are connected.&lt;/p&gt;
+<p>I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http <code class="highlighter-rouge">GET</code> and <code class="highlighter-rouge">POST</code> everywhere as long as you are connected.</p>
 
-&lt;p&gt;The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful.&lt;/p&gt;
+<p>The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful.</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;EDIT 2021/09/22
-It seems patchbay.pub is down :sad:&lt;/p&gt;
+<p>EDIT 2021/09/22
+It seems patchbay.pub is down :sad:</p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;p&gt;EDIT 2021/10/02
-So I grabbed &lt;a href=&quot;https://github.com/schollz/duct&quot;&gt;duct&lt;/a&gt; and starting to host my own service for myself.&lt;/p&gt;
+<p>EDIT 2021/10/02
+So I grabbed <a href="https://github.com/schollz/duct">duct</a> and starting to host my own service for myself.</p>
 
-&lt;p&gt;I chose &lt;a href=&quot;vultr.com&quot;&gt;Vultr&lt;/a&gt; and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. &lt;a href=&quot;/blog/posts/hosting-a-web-service-on-vultr/en&quot;&gt;Here is a blog post about it&lt;/a&gt;.&lt;/p&gt;</content><author><name>BA</name></author><category term="foss" /><category term="patchbay" /><category term="qol" /><summary type="html">PatchBay is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive “321”. Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities. I’ve made several personal tools based on PatchBay, for example, PushBullet: 400: Invalid request The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours. As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC. I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http GET and POST everywhere as long as you are connected. The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful. EDIT 2021/09/22 It seems patchbay.pub is down :sad: EDIT 2021/10/02 So I grabbed duct and starting to host my own service for myself. I chose Vultr and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp;amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Here is a blog post about it.</summary></entry><entry><title type="html">Git Client: Fork Goes Brrrrr</title><link href="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en" rel="alternate" type="text/html" title="Git Client: Fork Goes Brrrrr" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="https://no3371.github.io/blog/posts/fork-goes-brrrrrrr/en">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;
+<p>I chose <a href="vultr.com">Vultr</a> and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. <a href="/posts/hosting-a-web-service-on-vultr/en">Here is a blog post about it</a>.</p>]]></content><author><name>BA</name></author><category term="foss" /><category term="patchbay" /><category term="qol" /><summary type="html"><![CDATA[PatchBay is a free and public service that “patch” Http GET and POST together. For example, you GET from https://patchbay.pub/123 and POST “321” to https://patchbay.pub/123, the GET side will receive “321”. Sounds boring, eh? But it could be the most clever thing I’ve seen these years, and it’s free for anyone to use without any authentication, which enable a lot of possibilities. I’ve made several personal tools based on PatchBay, for example, PushBullet: 400: Invalid request The powershell script takes 1 parameter: the channel name. Channel Name is the only input to PatchBay that decide where you GET from/POST to, so as long as no one share the same channel name with you, we can say the channel is yours. As you may have noticed, the script actually use https://patchbay.pub/pubsub/, which is the pubsub mode of PatchBay, this means all PC running this script will receive data POSTed to the pubsub channel, not just 1 PC. I mainly POST stuff I wanna read later with curl from my joc PC to my home PC, if I really need it, I can also POST from my Android phone, working with PatchBay feels really nice and easy, because you can do Http GET and POST everywhere as long as you are connected. The reason why I don’t use the actual PushBullet but this is that, I don’t want to login on my job PC, I’m the type that feels insecure and cares alot about my privacy. For people like me, things like PatchBat is really awesome, though it’s not actually “secure”, but its login-less nature is trully useful. EDIT 2021/09/22 It seems patchbay.pub is down :sad: EDIT 2021/10/02 So I grabbed duct and starting to host my own service for myself. I chose Vultr and deployed a machine and is now hosting the program on it. It was a fun and fresh experience, I learned about how domain name &amp; dns works, how to setup linux systemd service, how to work with SElinux, etc. Here is a blog post about it.]]></summary></entry><entry><title type="html">Git Client: Fork Goes Brrrrr</title><link href="http://blog.3371.online/posts/fork-goes-brrrrrrr/en" rel="alternate" type="text/html" title="Git Client: Fork Goes Brrrrr" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>http://blog.3371.online/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id><content type="html" xml:base="http://blog.3371.online/posts/fork-goes-brrrrrrr/en"><![CDATA[<p>I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.</p>
 
-&lt;p&gt;But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… &lt;a href=&quot;https://github.com/git-cola/git-cola/issues/48&quot;&gt;for at least 10 years&lt;/a&gt;. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of &lt;strong&gt;scripts&lt;/strong&gt; in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.&lt;/p&gt;
+<p>But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… <a href="https://github.com/git-cola/git-cola/issues/48">for at least 10 years</a>. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of <strong>scripts</strong> in the projects. It’s really a PITA for a long time to work with GitKraken for these repos.</p>
 
-&lt;p&gt;It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even 🗒NotePad can do better than that, reading a file has nothing to do with git, right? I don’t know how I’ve been so patient these years.&lt;/p&gt;
+<p>It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even 🗒NotePad can do better than that, reading a file has nothing to do with git, right? I don’t know how I’ve been so patient these years.</p>
 
-&lt;p&gt;In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any.&lt;/p&gt;
+<p>In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any.</p>
 
-&lt;p&gt;Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official &lt;a href=&quot;https://git-scm.com/downloads/guis&quot;&gt;GUI Clients&lt;/a&gt; page and did some shopping, eventually settled in &lt;a href=&quot;https://git-fork.com/&quot;&gt;Fork&lt;/a&gt;. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined!&lt;/p&gt;
+<p>Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official <a href="https://git-scm.com/downloads/guis">GUI Clients</a> page and did some shopping, eventually settled in <a href="https://git-fork.com/">Fork</a>. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined!</p>
 
-&lt;p&gt;BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…&lt;/p&gt;</content><author><name>BA</name></author><category term="git" /><summary type="html">I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand. But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… for at least 10 years. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of scripts in the projects. It’s really a PITA for a long time to work with GitKraken for these repos. It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even 🗒NotePad can do better than that, reading a file has nothing to do with git, right? I don’t know how I’ve been so patient these years. In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any. Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official GUI Clients page and did some shopping, eventually settled in Fork. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined! BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…</summary></entry><entry><title type="html">Unity Memory Leak With GooglePlay Plugins</title><link href="https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/en" rel="alternate" type="text/html" title="Unity Memory Leak With GooglePlay Plugins" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id><content type="html" xml:base="https://no3371.github.io/blog/posts/unity-memory-leak-with-google-play-plugins/en">&lt;p&gt;So it seems if you have Google Play Plugins in your Unity project and you have &lt;strong&gt;Auto Resolution On Build&lt;/strong&gt; toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize.&lt;/p&gt;
+<p>BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…</p>]]></content><author><name>BA</name></author><category term="git" /><summary type="html"><![CDATA[I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand. But! Here comes the “but”, GitKraken is notorious for its performance issue with big repo… for at least 10 years. I work in a not-so-small company that we’d deal with huge projects, like tens of mbs of scripts in the projects. It’s really a PITA for a long time to work with GitKraken for these repos. It just doesn’t work, nothing can justify the fact that it needs several seconds to display one single file… I mean, what the fuck? Even 🗒NotePad can do better than that, reading a file has nothing to do with git, right? I don’t know how I’ve been so patient these years. In the past, I sometimes searched for a alternative git client that looks and feels good like GitKraken, for me, UI/UX is important, or I’d rather to mess with git-cli training myself to become a git-guru. Unfortunately there’s none, I must say, none of them has UI as polished as GitKraken, so I never really gave a try to any. Finally, I got pissed off today, every click takes seconds, It’s a disaster and a insult to the money I pay every year to them. I went to the official GUI Clients page and did some shopping, eventually settled in Fork. On it’s official page it’s titled “Fast and Friendly” and it’s no advertisement but just honest bio, even the UI/UX is much better then I imagined! BTW, there’s something calls Ungit which is a web-based git client which runs on node js and that thing runs faster then GitKraken… man…]]></summary></entry><entry><title type="html">Unity Memory Leak With GooglePlay Plugins</title><link href="http://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/en" rel="alternate" type="text/html" title="Unity Memory Leak With GooglePlay Plugins" /><published>2021-08-17T00:00:00+00:00</published><updated>2021-08-17T00:00:00+00:00</updated><id>http://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id><content type="html" xml:base="http://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/en"><![CDATA[<p>So it seems if you have Google Play Plugins in your Unity project and you have <strong>Auto Resolution On Build</strong> toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize.</p>
 
-&lt;p&gt;Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan.&lt;/p&gt;
+<p>Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan.</p>
 
-&lt;p&gt;Unity 2018.4.35f1&lt;/p&gt;
+<p>Unity 2018.4.35f1</p>
 
-&lt;p&gt;GooglePlayPlugins 1.5.0&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="pitfall" /><summary type="html">So it seems if you have Google Play Plugins in your Unity project and you have Auto Resolution On Build toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize. Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan. Unity 2018.4.35f1 GooglePlayPlugins 1.5.0</summary></entry><entry><title type="html">Unity 插件：Keep</title><link href="https://no3371.github.io/blog/posts/project-untiy-keep/tw" rel="alternate" type="text/html" title="Unity 插件：Keep" /><published>2021-05-10T00:00:00+00:00</published><updated>2021-05-10T00:00:00+00:00</updated><id>https://no3371.github.io/blog/posts/project-untiy-keep/project-untiy-keep</id><content type="html" xml:base="https://no3371.github.io/blog/posts/project-untiy-keep/tw">&lt;p&gt;Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。&lt;/p&gt;
+<p>GooglePlayPlugins 1.5.0</p>]]></content><author><name>BA</name></author><category term="unity" /><category term="pitfall" /><summary type="html"><![CDATA[So it seems if you have Google Play Plugins in your Unity project and you have Auto Resolution On Build toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize. Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan. Unity 2018.4.35f1 GooglePlayPlugins 1.5.0]]></summary></entry><entry><title type="html">Unity 插件：Keep</title><link href="http://blog.3371.online/posts/project-untiy-keep/tw" rel="alternate" type="text/html" title="Unity 插件：Keep" /><published>2021-05-10T00:00:00+00:00</published><updated>2021-05-10T00:00:00+00:00</updated><id>http://blog.3371.online/posts/project-untiy-keep/project-untiy-keep</id><content type="html" xml:base="http://blog.3371.online/posts/project-untiy-keep/tw"><![CDATA[<p>Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。</p>
 
-&lt;p&gt;自己邊使用邊開發了大概一個月，整體來說非常滿意，覺得好看又好用簡直回不去了，所以決定認真整理一下發布出來。&lt;/p&gt;
+<p>自己邊使用邊開發了大概一個月，整體來說非常滿意，覺得好看又好用簡直回不去了，所以決定認真整理一下發布出來。</p>
 
-&lt;h2 id=&quot;讓-keep-改變你的習慣&quot;&gt;讓 Keep 改變你的習慣&lt;/h2&gt;
+<h2 id="讓-keep-改變你的習慣">讓 Keep 改變你的習慣</h2>
 
-&lt;p&gt;我們可以將 Asset 以使用頻率/週期做一個分類：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;剛才用到的 -&amp;gt; 「我剛才開的那個在哪？」&lt;/li&gt;
-  &lt;li&gt;等一下/今天會用到的 -&amp;gt; 「要先做別的事，晚點再來改…」&lt;/li&gt;
-  &lt;li&gt;在同一個專案中，今後總會用到的 -&amp;gt; 「每次都在找這個 Asset 有點煩啊？」&lt;/li&gt;
-&lt;/ul&gt;
+<p>我們可以將 Asset 以使用頻率/週期做一個分類：</p>
+<ul>
+  <li>剛才用到的 -&gt; 「我剛才開的那個在哪？」</li>
+  <li>等一下/今天會用到的 -&gt; 「要先做別的事，晚點再來改…」</li>
+  <li>在同一個專案中，今後總會用到的 -&gt; 「每次都在找這個 Asset 有點煩啊？」</li>
+</ul>
 
-&lt;p&gt;Keep 提供 4 個工具面板來幫助你快速存取物件，意圖成為你不可或缺的夥伴，Recents 紀錄你剛剛點選了什麼，Laters 讓你暫存之後會用到的東西，Forevers 讓你永久保存常用的 Asset，再附帶一個 InMind——撥號鍵盤型的 Forevers，更小的面板上保存更多快速存取選項。&lt;/p&gt;
+<p>Keep 提供 4 個工具面板來幫助你快速存取物件，意圖成為你不可或缺的夥伴，Recents 紀錄你剛剛點選了什麼，Laters 讓你暫存之後會用到的東西，Forevers 讓你永久保存常用的 Asset，再附帶一個 InMind——撥號鍵盤型的 Forevers，更小的面板上保存更多快速存取選項。</p>
 
-&lt;p&gt;Keep 會幫助你習慣將 Asset 依據重要程度、使用頻繁程度分級，漸漸地，在 Project 視窗裡東翻西找的時間將會大幅減少。&lt;/p&gt;
+<p>Keep 會幫助你習慣將 Asset 依據重要程度、使用頻繁程度分級，漸漸地，在 Project 視窗裡東翻西找的時間將會大幅減少。</p>
 
-&lt;h2 id=&quot;keeprecents&quot;&gt;Keep.Recents&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;ldDjBkMiBx.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Recents 是你的點選歷史，最後點選的物件會排在最上面（FIFO）。&lt;/li&gt;
-  &lt;li&gt;Recents 會保存最近的 30 筆選項，但不提供捲動功能、不鼓勵你去回想「我剛剛點了什麼」，如果你真的有需要，你可以拉長介面。&lt;/li&gt;
-  &lt;li&gt;Recents 經過優化，沒有顯示的選項不會繪製。&lt;/li&gt;
-  &lt;li&gt;右鍵選項，可以將物件保存到 Laters；若 Laters 未開啟，會自動開啟 Laters；若 Laters 未開啟，但 Forevers 已開啟的情況，會保存到 Forevers。&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="keeprecents">Keep.Recents</h2>
+<p><img src="ldDjBkMiBx.gif" alt="" /></p>
+<ul>
+  <li>Recents 是你的點選歷史，最後點選的物件會排在最上面（FIFO）。</li>
+  <li>Recents 會保存最近的 30 筆選項，但不提供捲動功能、不鼓勵你去回想「我剛剛點了什麼」，如果你真的有需要，你可以拉長介面。</li>
+  <li>Recents 經過優化，沒有顯示的選項不會繪製。</li>
+  <li>右鍵選項，可以將物件保存到 Laters；若 Laters 未開啟，會自動開啟 Laters；若 Laters 未開啟，但 Forevers 已開啟的情況，會保存到 Forevers。</li>
+</ul>
 
-&lt;h2 id=&quot;keeplaters&quot;&gt;Keep.Laters&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;recents-to-laters.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Laters 代表「你之後會用到的東西」，和 Recents 一樣是 FIFO 清單，隨著你的工作進行，不再需要的東西自然而然會消失在清單底部。&lt;/li&gt;
-  &lt;li&gt;Laters 接收從 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
-  &lt;li&gt;Laters 比 Recents 優化更佳，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
-  &lt;li&gt;右鍵選項可以將物件保存到 Forevers。&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="keeplaters">Keep.Laters</h2>
+<p><img src="recents-to-laters.gif" alt="" /></p>
+<ul>
+  <li>Laters 代表「你之後會用到的東西」，和 Recents 一樣是 FIFO 清單，隨著你的工作進行，不再需要的東西自然而然會消失在清單底部。</li>
+  <li>Laters 接收從 Recents「升級」保存的物件，也接受直接拖拉新增物件。</li>
+  <li>Laters 比 Recents 優化更佳，捲動視野外的選項幾乎不佔用繪製效能。</li>
+  <li>右鍵選項可以將物件保存到 Forevers。</li>
+</ul>
 
-&lt;h2 id=&quot;keepforevers&quot;&gt;Keep.Forevers&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;forevers.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Forevers 用來保存那些只要你還在做同一個專案，就總是會存取的東西，比如說遊戲的啟動場景、主選單 Prefab。Forevers 的選項在你右鍵移除之前會永遠存在。&lt;/li&gt;
-  &lt;li&gt;Forevers 接受從 Laters 或 Recents「升級」保存的物件，也接受直接拖拉新增物件。&lt;/li&gt;
-  &lt;li&gt;Forevers 和 Laters 使用了相等的優化，捲動視野外的選項幾乎不佔用繪製效能。&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="keepforevers">Keep.Forevers</h2>
+<p><img src="forevers.gif" alt="" /></p>
+<ul>
+  <li>Forevers 用來保存那些只要你還在做同一個專案，就總是會存取的東西，比如說遊戲的啟動場景、主選單 Prefab。Forevers 的選項在你右鍵移除之前會永遠存在。</li>
+  <li>Forevers 接受從 Laters 或 Recents「升級」保存的物件，也接受直接拖拉新增物件。</li>
+  <li>Forevers 和 Laters 使用了相等的優化，捲動視野外的選項幾乎不佔用繪製效能。</li>
+</ul>
 
-&lt;h2 id=&quot;keepinmind&quot;&gt;Keep.InMind&lt;/h2&gt;
+<h2 id="keepinmind">Keep.InMind</h2>
 
-&lt;p&gt;&lt;img src=&quot;3cVPjgb28U.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="3cVPjgb28U.gif" alt="" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;InMind 跟 Forevers 具有相同的功能，但是以 Dialpad 形式呈現，節省你珍貴的螢幕空間（real-e$tate）。相對的，InMind 要求你對物件的熟悉度更高，不需要多想就記得各個按鈕分別是什麼物件。&lt;/li&gt;
-  &lt;li&gt;InMind 對每個新增的物件提供 UID 標記，直到你使用視窗選單中 FullReset 功能之前，每個按鈕都會有一個獨一無二的編號，幫助你記憶。&lt;/li&gt;
-  &lt;li&gt;即使一時記不住也沒關係，在滑鼠指向按鈕時，視窗下方會顯示物件名稱。&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>InMind 跟 Forevers 具有相同的功能，但是以 Dialpad 形式呈現，節省你珍貴的螢幕空間（real-e$tate）。相對的，InMind 要求你對物件的熟悉度更高，不需要多想就記得各個按鈕分別是什麼物件。</li>
+  <li>InMind 對每個新增的物件提供 UID 標記，直到你使用視窗選單中 FullReset 功能之前，每個按鈕都會有一個獨一無二的編號，幫助你記憶。</li>
+  <li>即使一時記不住也沒關係，在滑鼠指向按鈕時，視窗下方會顯示物件名稱。</li>
+</ul>
 
-&lt;h2 id=&quot;推薦的面板排列&quot;&gt;推薦的面板排列&lt;/h2&gt;
-&lt;p&gt;透過將四個面板排成一條線，由低至高對於物件的重要性一目了然，右鍵時升級（escalate）的概念也更明確。
-&lt;img src=&quot;snipaste_20210511_002243.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<h2 id="推薦的面板排列">推薦的面板排列</h2>
+<p>透過將四個面板排成一條線，由低至高對於物件的重要性一目了然，右鍵時升級（escalate）的概念也更明確。
+<img src="snipaste_20210511_002243.png" alt="" /></p>
 
-&lt;hr /&gt;
+<hr />
 
-&lt;h3 id=&quot;unity-keep&quot;&gt;&lt;a href=&quot;https://github.com/BA-Studio/Unity-Keep&quot;&gt;Unity-Keep&lt;/a&gt;&lt;/h3&gt;
+<h3 id="unity-keep"><a href="https://github.com/BA-Studio/Unity-Keep">Unity-Keep</a></h3>
 
-&lt;p&gt;沒賣過東西本來想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制…而且還要準備說明文件檔案…&lt;/p&gt;
+<p>沒賣過東西本來想感受一下，才發現現在 Asset Store 有最低 4.99 售價的限制…而且還要準備說明文件檔案…</p>
 
-&lt;p&gt;我太懶了，而且這東西沒什麼料，&lt;del&gt;不讓我便宜賣，只好開源&lt;/del&gt;&lt;/p&gt;
+<p>我太懶了，而且這東西沒什麼料，<del>不讓我便宜賣，只好開源</del></p>
 
-&lt;p&gt;順手給個星星吧！&lt;/p&gt;</content><author><name>BA</name></author><category term="unity" /><category term="diy" /><summary type="html">Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。</summary></entry></feed>
+<p>順手給個星星吧！</p>]]></content><author><name>BA</name></author><category term="unity" /><category term="diy" /><summary type="html"><![CDATA[Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。]]></summary></entry></feed>

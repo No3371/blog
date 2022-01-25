@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-05T07:33:47+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://blog.3371.online//"/>
+ <updated>2022-01-25T16:47:24+00:00</updated>
+ <id>http://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -19,9 +19,9 @@
    
    <entry>
      <title>Hosting A Web Service on Vultr</title>
-     <link href="https://no3371.github.io/blog/posts/hosting-a-web-service-on-vultr/en"/>
+     <link href="http://blog.3371.online//posts/hosting-a-web-service-on-vultr/en"/>
      <updated>2021-10-02T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id>
+     <id>http://blog.3371.online/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id>
      <content type="html">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;
 
 &lt;p&gt;Though It has been 1~2 years since I started messing with stuff like tcp, http, server development, nginx…  I’ve never really touch some of the key parts: how domain name works, how to configure dns, how to properly setup a web server machine.&lt;/p&gt;

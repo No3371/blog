@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>#</title>
- <link href="/blog/atom.xml" rel="self"/>
- <link href="https://no3371.github.io/blog/"/>
- <updated>2021-10-05T07:33:47+00:00</updated>
- <id>https://no3371.github.io</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="http://blog.3371.online//"/>
+ <updated>2022-01-25T16:47:24+00:00</updated>
+ <id>http://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -25,9 +25,9 @@
    
    <entry>
      <title>Learning C#: Bit-Twiddling-Abs</title>
-     <link href="https://no3371.github.io/blog/posts/learning-csharp-bittwiddling/en"/>
+     <link href="http://blog.3371.online//posts/learning-csharp-bittwiddling/en"/>
      <updated>2021-08-26T00:00:00+00:00</updated>
-     <id>https://no3371.github.io/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id>
+     <id>http://blog.3371.online/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id>
      <content type="html">&lt;p&gt;NOTE: C# numbers are stored in 2’s complement.&lt;/p&gt;
 
 &lt;p&gt;We’ll use int (32bit) P = 17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;0000 0000 0000 0000 0000 0000 0001 0001&lt;/code&gt;) and N = -17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1111 1111 1111 1111 1111 1111 1110 1111&lt;/code&gt;) to demonstrate.&lt;/p&gt;
