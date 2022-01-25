@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online//"/>
- <updated>2022-01-25T16:47:24+00:00</updated>
+ <link href="http://blog.3371.online/"/>
+ <updated>2022-01-25T19:04:47+00:00</updated>
  <id>http://blog.3371.online</id>
  <author>
    <name></name>
@@ -19,7 +19,7 @@
    
    <entry>
      <title>Hosting A Web Service on Vultr</title>
-     <link href="http://blog.3371.online//posts/hosting-a-web-service-on-vultr/en"/>
+     <link href="http://blog.3371.online/posts/hosting-a-web-service-on-vultr/en"/>
      <updated>2021-10-02T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/hosting-a-web-service-on-vultr/hosting-a-web-service-on-vultr</id>
      <content type="html">&lt;p&gt;I just started hosting a private web service on &lt;a href=&quot;https://vultr.com&quot;&gt;Vultr&lt;/a&gt;, a VPS provider, for my own convenience.&lt;/p&gt;

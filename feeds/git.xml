@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online//"/>
- <updated>2022-01-25T16:47:24+00:00</updated>
+ <link href="http://blog.3371.online/"/>
+ <updated>2022-01-25T19:04:47+00:00</updated>
  <id>http://blog.3371.online</id>
  <author>
    <name></name>
@@ -15,7 +15,7 @@
    
    <entry>
      <title>像個現代人一樣使用 Windows 搜尋</title>
-     <link href="http://blog.3371.online//posts/search-in-windows-like-it's-2021/tw"/>
+     <link href="http://blog.3371.online/posts/search-in-windows-like-it's-2021/tw"/>
      <updated>2021-10-05T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/search-in-windows-like-it's-2021/search-in-windows-like-it's-2021</id>
      <content type="html">&lt;p&gt;大部分有用電腦的人一生中都至少用過一次 Windows File Explorer 的搜尋功能列，但應該很少人懂得搜尋語法。&lt;/p&gt;
@@ -60,7 +60,7 @@
    
    <entry>
      <title>Git 客戶端換用 Fork 快到起飛</title>
-     <link href="http://blog.3371.online//posts/fork-goes-brrrrrrr/tw"/>
+     <link href="http://blog.3371.online/posts/fork-goes-brrrrrrr/tw"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;這兩三年來我一直是忠實的 GitKraken 使用者，我真的很喜歡它的 UI/UX 跟使用體驗，甚至熱情地推薦給很多人——雖然一隻手數得過來，但對我來說已經很多了，畢竟我實在是沒幾個朋友。&lt;/p&gt;
@@ -89,7 +89,7 @@
    
    <entry>
      <title>Git Client: Fork Goes Brrrrr</title>
-     <link href="http://blog.3371.online//posts/fork-goes-brrrrrrr/en"/>
+     <link href="http://blog.3371.online/posts/fork-goes-brrrrrrr/en"/>
      <updated>2021-08-17T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/fork-goes-brrrrrrr/fork-goes-brrrrrrr</id>
      <content type="html">&lt;p&gt;I’ve been a loyal GitKraken user for about 2-3 years… I love the UI/UX, love the experience, I recommended it to a lot of people… well, it’s a lot to me, I don’t really have friends, you need to understand.&lt;/p&gt;

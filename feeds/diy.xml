@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online//"/>
- <updated>2022-01-25T16:47:24+00:00</updated>
+ <link href="http://blog.3371.online/"/>
+ <updated>2022-01-25T19:04:47+00:00</updated>
  <id>http://blog.3371.online</id>
  <author>
    <name></name>
@@ -33,7 +33,7 @@
    
    <entry>
      <title>Unity 插件：Keep</title>
-     <link href="http://blog.3371.online//posts/project-untiy-keep/tw"/>
+     <link href="http://blog.3371.online/posts/project-untiy-keep/tw"/>
      <updated>2021-05-10T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/project-untiy-keep/project-untiy-keep</id>
      <content type="html">&lt;p&gt;Keep 是一套輔助插件，起因是因為我接手負責一個巨大的專案，檔案繁多、安排的方式又很不得我意，一直花很多時間在翻 Project 視窗，Asset Store 上的免費插件又不能滿足挑剔的我，所以決定自己寫一個簡單的點選歷史紀錄面板…一發不可收拾，又寫了好幾個面板，變成了一套完整的工具。&lt;/p&gt;

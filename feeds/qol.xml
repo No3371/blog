@@ -3,8 +3,8 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online//"/>
- <updated>2022-01-25T16:47:24+00:00</updated>
+ <link href="http://blog.3371.online/"/>
+ <updated>2022-01-25T19:04:47+00:00</updated>
  <id>http://blog.3371.online</id>
  <author>
    <name></name>
@@ -27,7 +27,7 @@
    
    <entry>
      <title>Free &amp; Private PushBullet with PatchBay</title>
-     <link href="http://blog.3371.online//posts/free-private-pushbullet-with-patchbay/en"/>
+     <link href="http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/en"/>
      <updated>2021-08-20T00:00:00+00:00</updated>
      <id>http://blog.3371.online/posts/free-private-pushbullet-with-patchbay/free-private-pushbullet-with-patchbay</id>
      <content type="html">&lt;p&gt;&lt;a href=&quot;https://patchbay.pub&quot;&gt;PatchBay&lt;/a&gt; is a free and public service that “patch” Http &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; together. For example, you &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt; and POST “321” to &lt;code class=&quot;highlighter-rouge&quot;&gt;https://patchbay.pub/123&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; side will receive “321”.&lt;/p&gt;
