@@ -3,9 +3,9 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online/"/>
- <updated>2022-01-26T07:08:22+00:00</updated>
- <id>http://blog.3371.online</id>
+ <link href="https://blog.3371.online/"/>
+ <updated>2022-01-26T07:41:06+00:00</updated>
+ <id>https://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -17,9 +17,9 @@
    
    <entry>
      <title>Who Took My Hotkey?</title>
-     <link href="http://blog.3371.online/posts/who-took-my-hotkey/en"/>
+     <link href="https://blog.3371.online/posts/who-took-my-hotkey/en"/>
      <updated>2021-10-04T00:00:00+00:00</updated>
-     <id>http://blog.3371.online/posts/who-took-my-hotkey/who-took-my-hotkey</id>
+     <id>https://blog.3371.online/posts/who-took-my-hotkey/who-took-my-hotkey</id>
      <content type="html">&lt;p&gt;The original &lt;a href=&quot;https://stackoverflow.com/questions/829007/find-out-what-process-registered-a-global-hotkey-windows-api&quot;&gt;post&lt;/a&gt; was by &lt;a href=&quot;https://stackoverflow.com/users/995048/user995048&quot;&gt;user995048&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Copy-pasted for my own convenience:&lt;/p&gt;

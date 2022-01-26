@@ -3,9 +3,9 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online/"/>
- <updated>2022-01-26T07:08:22+00:00</updated>
- <id>http://blog.3371.online</id>
+ <link href="https://blog.3371.online/"/>
+ <updated>2022-01-26T07:41:06+00:00</updated>
+ <id>https://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -23,9 +23,9 @@
    
    <entry>
      <title>Unity: iOS PVRTC Compression Requires Square Textures</title>
-     <link href="http://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/en"/>
+     <link href="https://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/en"/>
      <updated>2021-09-23T00:00:00+00:00</updated>
-     <id>http://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id>
+     <id>https://blog.3371.online/posts/unity-ios-pvrtc-compression-requires-square-textures/unity-ios-pvrtc-compression-requires-square-textures</id>
      <content type="html">&lt;p&gt;Today my collegue noticed that same animation looks different on iOS and Android, after digging around for a short period, we figured that the related atlas has different imported size on Android &amp;amp; iOS.&lt;/p&gt;
 
 &lt;p&gt;It seems that by default, Unity select PVRTC compression format for iOS to support older devices (~2013). PVRTC format requires square textures, &lt;strong&gt;if the texture is not square, Unity stretch it without warning you.&lt;/strong&gt; For not-so-old (2014~) iOS devices, ATSC is recommened and it supports non-square textures.&lt;/p&gt;
@@ -47,9 +47,9 @@ For Apple devices that use the A8 chip (2014) or above, ATSC is the recommended 
    
    <entry>
      <title>Unity Memory Leak With GooglePlay Plugins</title>
-     <link href="http://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/en"/>
+     <link href="https://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/en"/>
      <updated>2021-08-17T00:00:00+00:00</updated>
-     <id>http://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id>
+     <id>https://blog.3371.online/posts/unity-memory-leak-with-google-play-plugins/unity-memory-leak-with-google-play-plugins</id>
      <content type="html">&lt;p&gt;So it seems if you have Google Play Plugins in your Unity project and you have &lt;strong&gt;Auto Resolution On Build&lt;/strong&gt; toggled on in Play Service Resolver (Android), everytime you build, some junk is left in the heap and counted in ManagedHeap.UsedSize.&lt;/p&gt;
 
 &lt;p&gt;Unity will try to GC.Collect from time to time and that makes Editor freeze without any of the leak gets collected, FeelsBadMan.&lt;/p&gt;

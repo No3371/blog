@@ -3,9 +3,9 @@
 
  <title>#</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://blog.3371.online/"/>
- <updated>2022-01-26T07:08:22+00:00</updated>
- <id>http://blog.3371.online</id>
+ <link href="https://blog.3371.online/"/>
+ <updated>2022-01-26T07:41:06+00:00</updated>
+ <id>https://blog.3371.online</id>
  <author>
    <name></name>
    <email></email>
@@ -25,9 +25,9 @@
    
    <entry>
      <title>Learning C#: Bit-Twiddling-Abs</title>
-     <link href="http://blog.3371.online/posts/learning-csharp-bittwiddling/en"/>
+     <link href="https://blog.3371.online/posts/learning-csharp-bittwiddling/en"/>
      <updated>2021-08-26T00:00:00+00:00</updated>
-     <id>http://blog.3371.online/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id>
+     <id>https://blog.3371.online/posts/learning-csharp-bittwiddling/learning-csharp-bittwiddling</id>
      <content type="html">&lt;p&gt;NOTE: C# numbers are stored in 2’s complement.&lt;/p&gt;
 
 &lt;p&gt;We’ll use int (32bit) P = 17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;0000 0000 0000 0000 0000 0000 0001 0001&lt;/code&gt;) and N = -17 (&lt;code class=&quot;highlighter-rouge&quot;&gt;1111 1111 1111 1111 1111 1111 1110 1111&lt;/code&gt;) to demonstrate.&lt;/p&gt;
